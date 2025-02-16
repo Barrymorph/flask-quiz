@@ -90,7 +90,7 @@ document.addEventListener("DOMContentLoaded", function () {
     function showQuestion() {
         if (currentQuestionIndex >= questions.length) {
             clearInterval(timerInterval);
-           alert(`Quiz terminato! Punteggio finale: ${score.toFixed(2)}`);
+            showFinalScore();
             sendResults();
             return;
         }
@@ -126,7 +126,6 @@ document.addEventListener("DOMContentLoaded", function () {
             quizContainer.appendChild(button);
         });
 
-        // Aggiunge il pulsante "Salta"
         const skipButton = document.createElement("button");
         skipButton.textContent = "Salta";
         skipButton.classList.add("skip-btn");
@@ -149,20 +148,33 @@ document.addEventListener("DOMContentLoaded", function () {
         scoreDisplay.innerText = `Punteggio: ${score.toFixed(2)}`;
     }
 
+    function showFinalScore() {
+        quizContainer.innerHTML = `
+            <h2>Quiz terminato!</h2>
+            <p><strong>Punteggio finale:</strong> ${score.toFixed(2)}</p>
+            <p><strong>Risposte corrette:</strong> ${correctAnswers} (${((correctAnswers / totalQuestions) * 100).toFixed(2)}%)</p>
+            <p><strong>Risposte sbagliate:</strong> ${wrongAnswers} (${((wrongAnswers / totalQuestions) * 100).toFixed(2)}%)</p>
+            <p><strong>Domande saltate:</strong> ${skippedAnswers} (${((skippedAnswers / totalQuestions) * 100).toFixed(2)}%)</p>
+            <button onclick="location.reload()">Riprova il Test</button>
+        `;
+    }
+
     function sendResults() {
-        fetch("/save_score", {
+        const formData = new FormData();
+        formData.append("action", "save_quiz_score");
+        formData.append("user_name", playerName);
+        formData.append("test_type", selectedMateria);
+        formData.append("total_questions", totalQuestions);
+        formData.append("score", score.toFixed(2));
+        formData.append("correct_percentage", ((correctAnswers / totalQuestions) * 100).toFixed(2));
+        formData.append("wrong_percentage", ((wrongAnswers / totalQuestions) * 100).toFixed(2));
+        formData.append("skipped_percentage", ((skippedAnswers / totalQuestions) * 100).toFixed(2));
+
+        fetch("https://www.generazionefuturacaivano.it/wp-admin/admin-post.php", {
             method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({
-                user_name: playerName,
-                test_type: selectedMateria,
-                total_questions: totalQuestions,
-                correct_answers: correctAnswers,
-                wrong_answers: wrongAnswers,
-                skipped_answers: skippedAnswers
-            })
+            body: formData
         })
-        .then(response => response.json())
+        .then(response => response.text())
         .then(data => {
             alert("Punteggio inviato a WordPress!");
             console.log("Risultato salvato:", data);
