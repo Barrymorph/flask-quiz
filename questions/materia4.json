@@ -1,0 +1,1002 @@
+[
+    {
+        "question": "Individuare, tra le alternative proposte, il termine da scartare:",
+        "options": [
+            "Maria Vergine",
+            "Allah",
+            "Mitra",
+            "Afrodite"
+        ],
+        "answer": "Maria Vergine"
+    },
+    {
+        "question": "Individuare, tra le alternative proposte, il termine da scartare:",
+        "options": [
+            "Galeno",
+            "Maxwell",
+            "Ohm",
+            "Bit"
+        ],
+        "answer": "Galeno"
+    },
+    {
+        "question": "Individuare, tra le alternative proposte, il termine da scartare:",
+        "options": [
+            "Foscolo",
+            "Manzoni",
+            "Carlo Felice",
+            "Massimo"
+        ],
+        "answer": "Foscolo"
+    },
+    {
+        "question": "Quali tra i termini proposti completano correttamente la seguente proporzione? \"Gertrude : x = Josef K. : y\"",
+        "options": [
+            "x = Amleto; y = Il processo",
+            "x = I promessi sposi; y = L'idiota",
+            "x = I promessi sposi; y = Pan",
+            "I malavoglia; y = La metamorfosi"
+        ],
+        "answer": "x = Amleto; y = Il processo"
+    },
+    {
+        "question": "Individuare l'abbinamento errato: ",
+        "options": [
+            "Enrico - amico ",
+            "Sciatto - costati",
+            "Medico - decimo",
+            "Prestito - potresti"
+        ],
+        "answer": "Enrico - amico "
+    },
+    {
+        "question": "Continua la serie seguente: \"cuocere, cocente, cotto, essere, ente, stato, splendente, …\"",
+        "options": [
+            "La serie non può essere proseguita",
+            "Splendendo",
+            "Splendido",
+            "Spleso"
+        ],
+        "answer": "La serie non può essere proseguita"
+    },
+    {
+        "question": "Tra le seguenti parole trovare quella che abbia lo stesso significato di \"amato\" e \"costoso\"",
+        "options": [
+            "Caro",
+            "Desiderato",
+            "Lussuoso",
+            "Beniamino"
+        ],
+        "answer": "Caro"
+    },
+    {
+        "question": "Individuare il termine che completa la seguenza \"tu, egli, musica, …\"",
+        "options": [
+            "Compagno",
+            "Amici ",
+            "Ascoltare",
+            "Nessuna delle risposte è corretta"
+        ],
+        "answer": "Compagno"
+    },
+    {
+        "question": "Se Beatrice sta con Claudio e Daniela sta con Enrico, con chi sta Federico?",
+        "options": [
+            "Giulia",
+            "Anna",
+            "Monica",
+            "Ilaria"
+        ],
+        "answer": "Giulia"
+    },
+    {
+        "question": "Qual è il significato di \"nullipara\"?",
+        "options": [
+            "Donna senza figli ",
+            "Donna nubile ",
+            "Donna senza figli maschi ",
+            "Suocera"
+        ],
+        "answer": "Donna senza figli "
+    },
+    {
+        "question": "Individua la figura retorica presente nei seguenti versi: ma la gloria non vedo non vedo il lauro e 'l ferro ond'eran carchi",
+        "options": [
+            "Anadiplosi",
+            "Poliptoto",
+            "Sinestesia",
+            "Litote"
+        ],
+        "answer": "Anadiplosi"
+    },
+    {
+        "question": "Completa la seguente proporzione: \"Lentamente : lento = x : dubbio\"",
+        "options": [
+            "Forse ",
+            "Dubitare",
+            "Scettico",
+            "Verità"
+        ],
+        "answer": "Forse "
+    },
+    {
+        "question": "Completa la seguente proporzione: \"x : reni = y : ossa\"",
+        "options": [
+            "x = nefrologo; y = ortopedico",
+            "x = urologo; y = ginecologo",
+            "x = neurologo; y = nefrologo",
+            "x = nefrologo; y = andrologo"
+        ],
+        "answer": "x = nefrologo; y = ortopedico"
+    },
+    {
+        "question": "Quale dei seguenti termini è sinonimo di dagherrotipo?",
+        "options": [
+            "fotografia ",
+            "specie ",
+            "fenotipo",
+            "cromosoma"
+        ],
+        "answer": "fotografia "
+    },
+    {
+        "question": "Qual è il contrario del termine \"esecrabile\"?",
+        "options": [
+            "Bello ",
+            "Che suscita disprezzo ",
+            "Saggio",
+            "Giusto"
+        ],
+        "answer": "Bello "
+    },
+    {
+        "question": "Qual è il contrario del termine \"laico\"?",
+        "options": [
+            "Chierico",
+            "Religioso",
+            "Santo",
+            "Battezzato"
+        ],
+        "answer": "Chierico"
+    },
+    {
+        "question": "Qual è il contrario del termine \"fulgito\"?",
+        "options": [
+            "fosco",
+            "nero",
+            "spezzato",
+            "trasparente"
+        ],
+        "answer": "fosco"
+    },
+    {
+        "question": "Quali dei seguenti termini non è un anagramma del nome di un frutto?",
+        "options": [
+            "Abolite",
+            "Lame ",
+            "Rape",
+            "Magno "
+        ],
+        "answer": "Abolite"
+    },
+    {
+        "question": "Quali dei seguenti termini italiani non ha origine latina?",
+        "options": [
+            "Assassino ",
+            "Carta ",
+            "Amicizia",
+            "I termini hanno tutti origine latina"
+        ],
+        "answer": "Assassino "
+    },
+    {
+        "question": "Completare correttamente il seguente enunciato: \"Credo che ti stia imbarcando in un'impresa degna di biasimo e riprovazione, dire…\"",
+        "options": [
+            "Deprecabile ",
+            "Ragionata",
+            "Furba",
+            "Avventurosa"
+        ],
+        "answer": "Deprecabile "
+    },
+    {
+        "question": "Individuare la figura retorica presente nei seguenti versi: Godi, Fiorenza, poi che se' si grande che per mare  e per terra batti l'ali, e per lo 'nferno tuo nome si spande!(Dante, Inferno, canto XXVI)",
+        "options": [
+            "Apostrofe",
+            "Climax",
+            "Ossimoro",
+            "Metonimia"
+        ],
+        "answer": "Apostrofe"
+    },
+    {
+        "question": "Completa la seguente proporzione:\"Surrealismo:x=Impressionismo y\"",
+        "options": [
+            "Luis Buñuel - Edgar Degas",
+            "Salvador Dalì - Lucio Fontana ",
+            "Salvador Dalì - Vincent Van Gogh",
+            "Alberto Giacometti - Giorgio De Chirico"
+        ],
+        "answer": "Luis Buñuel - Edgar Degas"
+    },
+    {
+        "question": "Quali dei seguenti termini non hs un'origine greca?",
+        "options": [
+            "Algebra",
+            "Biologia",
+            "Psicologia",
+            "Geometria"
+        ],
+        "answer": "Algebra"
+    },
+    {
+        "question": "Individua l'elemento estraneo:",
+        "options": [
+            "Augusto",
+            "Giulio Cesare ",
+            "Tucidide",
+            "Erodoto"
+        ],
+        "answer": "Augusto"
+    },
+    {
+        "question": "Solo una delle seguenti riposte riporta il numero di errori presenti nella traccia di questo quesito. Qual è?",
+        "options": [
+            "1",
+            "0",
+            "2",
+            "3"
+        ],
+        "answer": "1"
+    },
+    {
+        "question": "Individuare l'elemento estraneo:",
+        "options": [
+            "Creazionismo",
+            "Relatività",
+            "Evoluzionismo",
+            "Gravitazione Universale"
+        ],
+        "answer": "Creazionismo"
+    },
+    {
+        "question": "Quale termine integra la serie: \"Cara - doccia - carta - musica - …\"",
+        "options": [
+            "Busta",
+            "Caro",
+            "Cavallo",
+            "Busto"
+        ],
+        "answer": "Busta"
+    },
+    {
+        "question": "Quale termine integra la serie: \"Rosa - verdesca - genero - moviola - …\"",
+        "options": [
+            "Marrone",
+            "Cappello",
+            "Borbone",
+            "Acidità"
+        ],
+        "answer": "Marrone"
+    },
+    {
+        "question": "Quale termine integra la serie: \"Uva - tavolo - sax - …\" ",
+        "options": [
+            "Rosso",
+            "Valeriana",
+            "Amore",
+            "Sale"
+        ],
+        "answer": "Rosso"
+    },
+    {
+        "question": "Individuare l'elemento estraneo:",
+        "options": [
+            "Arancia Dolce ",
+            "Ragazzina poliglotta",
+            "Porro marchigiano",
+            "Alba riparata"
+        ],
+        "answer": "Arancia Dolce "
+    },
+    {
+        "question": "Quale dei seguenti non è un significato di \"ruminare\"",
+        "options": [
+            "Borbottare",
+            "Rimurginare",
+            "Masticare lentamente ",
+            "Tutti sono significati di \"ruminare\""
+        ],
+        "answer": "Borbottare"
+    },
+    {
+        "question": "Quale dei seguenti non è un significato di \"senso\"",
+        "options": [
+            "Tutti sono significati di \"senso\"",
+            "Direzione",
+            "Significato",
+            "Facoltà degli essere viventi di ricevere stimoli esterni"
+        ],
+        "answer": "Tutti sono significati di \"senso\""
+    },
+    {
+        "question": "Completare la seguente uguaglianza: x : y = Carlo Alberto : Vittorio Emanuele II",
+        "options": [
+            "Luigi XIV - Luigi XV",
+            "Pietro il grande - Pietro II",
+            "Elisabetta I - Carlo I",
+            "Maria Teresa - Leopoldo"
+        ],
+        "answer": "Luigi XIV - Luigi XV"
+    },
+    {
+        "question": "Quale dei seguenti termini non deriva dal greco?",
+        "options": [
+            "Vietare",
+            "Farmaco",
+            "Psiche",
+            "Diabete"
+        ],
+        "answer": "Vietare"
+    },
+    {
+        "question": "Si individui la frase che contiene un errore ortografico",
+        "options": [
+            "Abbiamo un eclissi di sole",
+            "ho incontrato un amico ",
+            "ho sentito un'eco",
+            "l'insegnante ha interrogato un'allieva "
+        ],
+        "answer": "Abbiamo un eclissi di sole"
+    },
+    {
+        "question": "Si individui la frase che contiene un errore ",
+        "options": [
+            "In quella missiva sono contenuti raccomandazioni e richieste",
+            "io, tu e Marco non andiamo d'accordo",
+            "le erbe e i fiori sono bagnati di rugiada ",
+            "Lo zio e la zia sono usciti"
+        ],
+        "answer": "In quella missiva sono contenuti raccomandazioni e richieste"
+    },
+    {
+        "question": "In quale delle seguenti coppie di sostantivi il plurale è errato?",
+        "options": [
+            "Dinamo/dinami",
+            "effigie/effigi",
+            "analisi/analisi",
+            "sciame/sciami"
+        ],
+        "answer": "Dinamo/dinami"
+    },
+    {
+        "question": "Individuare tra le alternative proposte un sinonimo del seguente termine TETRAGONO:",
+        "options": [
+            "irremovibile",
+            "insensibile",
+            "vanitoso",
+            "opportunista"
+        ],
+        "answer": "irremovibile"
+    },
+    {
+        "question": "Individuare il numero mancante nella seguente serie 42 39 37 34:",
+        "options": [
+            "32",
+            "33",
+            "31",
+            "43"
+        ],
+        "answer": "32"
+    },
+    {
+        "question": "Marco, Claudio, Luca e Paolo stanno giocando a poker con tutte le carte dell'8 (8,9,10,J,Q,K e asso). Che probabilità (%) ha Paolo di vedersi servito un colore (tutte e cinque le carte dello stesso seme)?",
+        "options": [
+            "0.0009",
+            "0.01",
+            "0.0003",
+            "0.005"
+        ],
+        "answer": "0.0009"
+    },
+    {
+        "question": "Individuare la lettera che completa la serie: F I G L H",
+        "options": [
+            "M",
+            "N",
+            "O",
+            "C"
+        ],
+        "answer": "M"
+    },
+    {
+        "question": "In una seguenza di 10 numeri interi consegutivi la somma dei primi 5 è di 560. Qual è la somma degli ultimi 5?",
+        "options": [
+            "585",
+            "580",
+            "575",
+            "570"
+        ],
+        "answer": "585"
+    },
+    {
+        "question": "Quali delle seguenti coppie è anomala?",
+        "options": [
+            "Andrejtarkovskij - Underground ",
+            "Joel Cohen - il grande Lebowski",
+            "Sofia Coppola - Lost in traslation ",
+            "Stanley Kubrick - Shining "
+        ],
+        "answer": "Andrejtarkovskij - Underground "
+    },
+    {
+        "question": "Camilleri : Montalbano = X : Y",
+        "options": [
+            "X = Stendhal; Y = J. Sorel ",
+            "x = Renzo; y = Manzoni ",
+            "x = il visconte dimezzato; Y = Italo Calvino",
+            "x = Joice; y = la ricerca del tempo perduto"
+        ],
+        "answer": "X = Stendhal; Y = J. Sorel "
+    },
+    {
+        "question": "Quali delle parole minuscole ha significato opposto a quella scritta in caratteri maiuscoli? ORRIBILE ",
+        "options": [
+            "stupendo",
+            "carino",
+            "normale ",
+            "accettabile "
+        ],
+        "answer": "stupendo"
+    },
+    {
+        "question": "Individuare il termine anomalo",
+        "options": [
+            "Eunuco ",
+            "Eucariote ",
+            "Eupeptico ",
+            "Eufemistico"
+        ],
+        "answer": "Eunuco "
+    },
+    {
+        "question": "Sbadiglio : noia = - : - ",
+        "options": [
+            "pianto : dolore ",
+            "bicicletta : veicolo ",
+            "elettricità : scossa ",
+            "cammello : deserto"
+        ],
+        "answer": "pianto : dolore "
+    },
+    {
+        "question": "Quali tra i temini proposti completano correttamente la seguente proporzione? Adda : X = Y : Mare ",
+        "options": [
+            "X = Fiume; Y = Tirreno ",
+            "X = Fiume; Y = Sila ",
+            "X = Po; Y = Fiume ",
+            "X = Lago; Y = Jonio"
+        ],
+        "answer": "X = Fiume; Y = Tirreno "
+    },
+    {
+        "question": "Indicare l'elemento estraneo nel seguente gruppo di parole ",
+        "options": [
+            "Automobile ",
+            "Volante ",
+            "Sedile ",
+            "Cambio"
+        ],
+        "answer": "Automobile "
+    },
+    {
+        "question": "Individuare il termine etimologicamente anomalo:",
+        "options": [
+            "Panflettista ",
+            "Panteista",
+            "Panlogismo",
+            "Paneuropeo"
+        ],
+        "answer": "Panflettista "
+    },
+    {
+        "question": "Marco ha 3 libri più di Flavio e la metà di Andrea; Flavio ne ha 10 meno di Guido, mentre i 4 amici insieme hanno 169 libri. Quanti libri possiede Guido?",
+        "options": [
+            "40",
+            "65",
+            "30",
+            "33"
+        ],
+        "answer": "40"
+    },
+    {
+        "question": "Individuare il termine contrario alla parola laconico",
+        "options": [
+            "Verboso ",
+            "Pigro ",
+            "Triste",
+            "Segreto"
+        ],
+        "answer": "Verboso "
+    },
+    {
+        "question": "Individuare la coppia che completa correttamente l'uguaglianza: x: Molly Bloom = Y : Von Aschenbach",
+        "options": [
+            "X : Dublino; Y : Venezia",
+            "X = Parigi; Y = Milano",
+            "X = New York; Y = Trieste",
+            "X = Londra; Y = Berlino"
+        ],
+        "answer": "X : Dublino; Y : Venezia"
+    },
+    {
+        "question": "Se mi ammalo, non andrò al mare. In base alla precedente affermazione, è necessariamente vero che: ",
+        "options": [
+            "Se sono andata al mare significa che non mi sono ammalata ",
+            "Se non mi ammalo allora andrò al mare ",
+            "Solo se mi ammalo non andrò al mare ",
+            "Bisogna che mi ammali per non andare al mare"
+        ],
+        "answer": "Se sono andata al mare significa che non mi sono ammalata "
+    },
+    {
+        "question": "\"Tutti i cuochi sono grassi\". \"Tutti i cuochi sono buongustai\". \"Alcuni camerieri sono grassi\". Dalle precedenti affermazioni si deduce che:",
+        "options": [
+            "tra le persone grasse vi sono sia cuochi sia camerieri",
+            "tutti i buongustai sono cuochi",
+            "tutti i cuochi sono stati camerieri ",
+            "tutti i buongustai sono grassi"
+        ],
+        "answer": "tra le persone grasse vi sono sia cuochi sia camerieri"
+    },
+    {
+        "question": "Cinque stati sono tra loro confinanti. A confina solo con B, B confina con C e con D, inoltre D confina anche con E. qual è il numero minimo di confini da attraversare per una persona che debba recarsi da A ad E",
+        "options": [
+            "3",
+            "2",
+            "4",
+            "1"
+        ],
+        "answer": "3"
+    },
+    {
+        "question": "La frase \" Ogni giorno in cui vado al mare c'è vento\" è falsa. Allora è vero che: ",
+        "options": [
+            "Vi è almeno una giornata in cui sono andata al mare e non c'era vento",
+            "non ho mai trovato vento al mare",
+            "quando c'è il vento io sono al mare",
+            "vado al mare perché c'è vento "
+        ],
+        "answer": "Vi è almeno una giornata in cui sono andata al mare e non c'era vento"
+    },
+    {
+        "question": "\"Se e solo se studio con impegno, supero l'esame di Stato\". In base alla precedente informazione, quale delle seguenti affermazioni è certamente falsa?",
+        "options": [
+            "Se non supero l'esame di Stato significa che ho studiato con impegno",
+            "è necessario che io studi con impegno affinchè io superi l'esame di Stato",
+            "supero l'esame di Stato solo se studio con impegno ",
+            "solo se non studio con impegno, non supero l'esame di Stato"
+        ],
+        "answer": "Se non supero l'esame di Stato significa che ho studiato con impegno"
+    },
+    {
+        "question": "L'isola è una colonia, sebbene in molte aree sia_____________________ e non riceva ordini dalla madre patria",
+        "options": [
+            "Autonoma ",
+            "Sottomessa",
+            "Indifferente ",
+            "Collegata "
+        ],
+        "answer": "Autonoma "
+    },
+    {
+        "question": "Tutti i cani sono fedeli e tutti gli animali fedeli sono mammiferi. Alcuni mammiferi possono passeggiare sui tetti. Una sola delle deduzioni qui elencate completa correttamente il sillogismo.",
+        "options": [
+            "Non è impossibile che alcuni cani possano passeggiare sui tetti ",
+            "è impossibile che alcuni cani possano passeggiare sui tetti",
+            "gli animali che possono passeggiare sui tetti sono mammiferi",
+            "è impossibile che alcuni mammiferi non siano fedeli "
+        ],
+        "answer": "Non è impossibile che alcuni cani possano passeggiare sui tetti "
+    },
+    {
+        "question": "\"Gli italiani sono sciatori. Gli sciatori possono essere tennisti\". Indicare con quali delle seguenti conclusioni può essere logicamente completato il sillogismo proposto.",
+        "options": [
+            "Gli italiani possono essere tennisti ",
+            "Gli italiani sono tennisti ",
+            "Alcuni tennisti sono italiani",
+            "Alcuni italiani sono tennisti"
+        ],
+        "answer": "Gli italiani possono essere tennisti "
+    },
+    {
+        "question": "Alcuni x sono y. Nessun z è x. Quali delle seguenti conclusioni è valida?",
+        "options": [
+            "Alcuni y non sono z ",
+            "Nessun y è z ",
+            "Tutti i y sono z ",
+            "Alcuni z non sono y"
+        ],
+        "answer": "Alcuni y non sono z "
+    },
+    {
+        "question": "Qual è la conclusione del seguente ragionamento? Se qualche x è y e nessun y è z allora:",
+        "options": [
+            "qualche z non è x ",
+            "tutti gli z sono x ",
+            "tutti gli x sono z ",
+            "qualche z è x "
+        ],
+        "answer": "qualche z non è x "
+    },
+    {
+        "question": "Se l'affermazione \"tutte le barche a remi sono leggere\" è falsa, quali delle seguenti affermazioni è necessariamente vera?",
+        "options": [
+            "Almeno una barca a remi non è leggera ",
+            "non esistono barche a remi leggere ",
+            "tutte le barche a remi sono leggere ",
+            "almeno una barca a remi è leggera"
+        ],
+        "answer": "Almeno una barca a remi non è leggera "
+    },
+    {
+        "question": "Se Marina mi telefona, andiamo insieme al cinema. In base alla precedente affermazione, è necessariamente vero che:",
+        "options": [
+            "se io e Marina non siamo andate insieme al cinema, vuol dire che Marina non mi ha telefonato",
+            "Se Marina non telefona, io e Marina  andiamo insieme al cinema ",
+            "Io e Marina andiamo insieme al cinema",
+            "se io e Marina andiamo insieme al cinema, significa che Marina non mi ha telefonato"
+        ],
+        "answer": "se io e Marina non siamo andate insieme al cinema, vuol dire che Marina non mi ha telefonato"
+    },
+    {
+        "question": "\"Stefano è una persona paziente\"; \"tutti i cacciatori sono persone pazienti\"; \"Carlo è un cacciatore\". In base alle precedenti informazioni, quali delle seguenti affermazioni è necessariamente vera?",
+        "options": [
+            "Carlo è una persona paziente ",
+            "Chi non caccia è impaziente ",
+            "Stefano è un cacciatore ",
+            "Stefano e Carlo sono cacciatori "
+        ],
+        "answer": "Carlo è una persona paziente "
+    },
+    {
+        "question": "Avvocato : x = y : scrivere ",
+        "options": [
+            "x = difendere; y = poeta ",
+            "x = aula; y = banco",
+            "x = legge; y = leggere",
+            "x = laureato; y = diplomato"
+        ],
+        "answer": "x = difendere; y = poeta "
+    },
+    {
+        "question": "Fugace : duraturo = x : y ",
+        "options": [
+            "x = sterile; y = produttivo",
+            "x = ludico; y = giocoso",
+            "x = fertile; y = fecondo",
+            "x = consumato; y = logoro"
+        ],
+        "answer": "x = sterile; y = produttivo"
+    },
+    {
+        "question": "x : nave = decollare : y ",
+        "options": [
+            "x = salpare; y = aeroplano ",
+            "x = capitano; y = pilota",
+            "x = navigare; y = aeroplano",
+            "x = aeroplano; y = approdare"
+        ],
+        "answer": "x = salpare; y = aeroplano "
+    },
+    {
+        "question": "vocabolario : traduttore = x : y ",
+        "options": [
+            "x = pianta; y = guida ",
+            "x = elefanti; y = annibale",
+            "x = appetito; y = ristorante",
+            "x = giornali; y = edicolante"
+        ],
+        "answer": "x = pianta; y = guida "
+    },
+    {
+        "question": "x : spesso = poco : y",
+        "options": [
+            "x = raramente; y = molto",
+            "x = mai; y = tanto",
+            "x = talvolta; y = tfrequente",
+            "x = abituale; y = occasionale"
+        ],
+        "answer": "x = raramente; y = molto"
+    },
+    {
+        "question": "medico : y = avvocato : y ",
+        "options": [
+            "y = paziente; y = cliente",
+            "y = cliente; y = malato",
+            "y = paziente; y = causa",
+            "y = disputa; y = malattia"
+        ],
+        "answer": "y = paziente; y = cliente"
+    },
+    {
+        "question": "Indicare la parola da scartare.",
+        "options": [
+            "albero",
+            "ramo",
+            "fusto",
+            "foglia"
+        ],
+        "answer": "albero"
+    },
+    {
+        "question": "Indicare la parola da scartare.",
+        "options": [
+            "intervista",
+            "articolo",
+            "romanzo",
+            "biografia"
+        ],
+        "answer": "intervista"
+    },
+    {
+        "question": "Indicare la parola da scartare.",
+        "options": [
+            "ciliegia",
+            "mandarino",
+            "limone ",
+            "pompelmo"
+        ],
+        "answer": "ciliegia"
+    },
+    {
+        "question": "Indicare la parola da scartare.",
+        "options": [
+            "giustificare",
+            "avvalorare ",
+            "confermare",
+            "convalidare"
+        ],
+        "answer": "giustificare"
+    },
+    {
+        "question": "Indicare la parola da scartare.",
+        "options": [
+            "regime",
+            "sindaco",
+            "nerone",
+            "grosso"
+        ],
+        "answer": "regime"
+    },
+    {
+        "question": "Indicare la parola da scartare.",
+        "options": [
+            "cipresso",
+            "mosso",
+            "rossore",
+            "fosso"
+        ],
+        "answer": "cipresso"
+    },
+    {
+        "question": "Quale delle seguenti frasi completa in modo corretto l'affermazione proposta? \"ti direi di andare se____________\"",
+        "options": [
+            "sapessi guidare la macchina",
+            "non avresti la febbre ",
+            "non avessi avuto la gamba rotta",
+            "non saprei come spiegarti la strada"
+        ],
+        "answer": "sapessi guidare la macchina"
+    },
+    {
+        "question": "Nonostante fosse una persona particolarmente_________________________________, il suo intervento al convegno era stato molto______________",
+        "options": [
+            "leale - scorretto ",
+            "intelligente - critico",
+            "brillante - ascoltato",
+            "timido - sommesso "
+        ],
+        "answer": "leale - scorretto "
+    },
+    {
+        "question": "Previo significa",
+        "options": [
+            "precedente",
+            "breve ",
+            "unico",
+            "divaricato"
+        ],
+        "answer": "precedente"
+    },
+    {
+        "question": "Chiosare significa",
+        "options": [
+            "annotare ",
+            "omettere",
+            "attendere",
+            "ridere"
+        ],
+        "answer": "annotare "
+    },
+    {
+        "question": "Se gli studenti si applicano, conseguiranno la promozione. Se quanto affermato è vero, quali delle seguenti affermazioni è vera?",
+        "options": [
+            "se uno studente è stato promosso è possibile che si sia applicato",
+            "se uno studente non si applica, verrà bocciato",
+            "verranno promossi solo gli studendi che si sono applicati",
+            "se uno studente si applica, conseguirà il massimo risultato"
+        ],
+        "answer": "se uno studente è stato promosso è possibile che si sia applicato"
+    },
+    {
+        "question": "\"soltanto chi possiede un computer può navigare in internet\". Se l'affermazione appena riportata è vera, quali delle seguenti conclusioni risulta corretta?",
+        "options": [
+            "chi naviga in internet possiede un computer",
+            "chi possiede un computer naviga in internet",
+            "chi non naviga in internet non possiede un computer ",
+            "Paolo possiede un computer ma non è interessato a navigare in internet"
+        ],
+        "answer": "chi naviga in internet possiede un computer"
+    },
+    {
+        "question": "Se fossero vere le seguenti premesse: \"ogni animale vola\"; \" l'asino è un animale\" ne deriverebbe che:",
+        "options": [
+            "l'asino vola",
+            "l'asino non può volare",
+            "non è vero che ogni animale vola ",
+            "non tutti gli asini volano"
+        ],
+        "answer": "l'asino vola"
+    },
+    {
+        "question": "Dire che la seguente frase è falsa \"nessun cavallo ha 3 zampe\" significa che:",
+        "options": [
+            "almeno un cavallo ha 3 zampe",
+            "tutti i cavalli hanno un numero di zampe diverso da 3",
+            "tutti i cavalli hanno 3 zampe",
+            "tutti i cavalli hanno 4 zampe"
+        ],
+        "answer": "almeno un cavallo ha 3 zampe"
+    },
+    {
+        "question": "La frase \"non c'è giorno senza discussione\" è equivalente a: ",
+        "options": [
+            "ogni giorno c'è almeno una discussione",
+            "i giorni non sono tutti tranquilli ",
+            "ogni giorno si fanno molte discussioni",
+            "qualche giorno si riesce a stare tranquilli senza discutere"
+        ],
+        "answer": "ogni giorno c'è almeno una discussione"
+    },
+    {
+        "question": "Solo se mangi proteine diventi forte. Per essere forte è sufficiente mangiare proteine. Se sono vere entrambe le precedenti affermazioni, quali delle seguenti è falsa?",
+        "options": [
+            "mangiare proteine è condizione sufficiente ma non necessaria per diventare forte",
+            "se non mangi proteine non diventi forte ",
+            "è necessario mangiare proteine per diventare forti ",
+            "è sufficiente mangiare proteine per diventare forti"
+        ],
+        "answer": "mangiare proteine è condizione sufficiente ma non necessaria per diventare forte"
+    },
+    {
+        "question": "Di quale numero 35 è il 10%?",
+        "options": [
+            "350",
+            "3500",
+            "3.5",
+            "0.35"
+        ],
+        "answer": "350"
+    },
+    {
+        "question": "Trovare il 20% di 75 ",
+        "options": [
+            "15",
+            "115",
+            "7.5",
+            "0.55"
+        ],
+        "answer": "15"
+    },
+    {
+        "question": "Una scatola contiene 12 matite: 8 rosse e 4 blu. Qual e la probabilità che estraendo 2 matite dalla scatola siano entrambe blu",
+        "options": [
+            "01/11",
+            "9/25",
+            "2/3",
+            "1/3"
+        ],
+        "answer": "01/11"
+    },
+    {
+        "question": "Se 12 donne su 100 sono bionde, quante sonne su 300 sono bionde?",
+        "options": [
+            "264",
+            "224",
+            "240",
+            "34"
+        ],
+        "answer": "264"
+    },
+    {
+        "question": "Marco ha 3 libri più di Flavio e la metà di Andrea; Flavio ne ha 10 meno di Guido, mentre i 4 amici insieme hanno 169 libri. Quanti libri possiede Guido?",
+        "options": [
+            "40",
+            "65",
+            "30",
+            "33"
+        ],
+        "answer": "40"
+    },
+    {
+        "question": "3,9,81,___________",
+        "options": [
+            "6561",
+            "729",
+            "90",
+            "2187"
+        ],
+        "answer": "6561"
+    },
+    {
+        "question": "Qual è il numero mancate 2,7,12,17,22__________32",
+        "options": [
+            "27",
+            "21",
+            "10",
+            "28"
+        ],
+        "answer": "27"
+    },
+    {
+        "question": "Quante probabilità ci sono che lanciando 2 dadi contemporaneamente si totalizzi il punteggio di 9?",
+        "options": [
+            "4 su 36 ",
+            "9 su 36",
+            "18 su 36",
+            "2 su 6"
+        ],
+        "answer": "4 su 36 "
+    },
+    {
+        "question": "Individuare la lettera che completa la serie: A B D H - ?",
+        "options": [
+            "R",
+            "P",
+            "S",
+            "T"
+        ],
+        "answer": "R"
+    },
+    {
+        "question": "Una corda di 40 metri viene tagliata in 2 spezzoni. Se un pezzo è 18 metri più lungo dell'altro, qual è la lunghezza dello spezzone più corto?",
+        "options": [
+            "11",
+            "18",
+            "22",
+            "9"
+        ],
+        "answer": "11"
+    },
+    {
+        "question": "Individuare il numero mancante nella seguente serie: 10 17 13 20 ",
+        "options": [
+            "16",
+            "15",
+            "32",
+            "38"
+        ],
+        "answer": "16"
+    },
+    {
+        "question": "Individuare il numero mancante nella seguente serie:29 32 ? 41 47",
+        "options": [
+            "36",
+            "31",
+            "30",
+            "27"
+        ],
+        "answer": "36"
+    }
+]

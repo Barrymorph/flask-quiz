@@ -1,0 +1,3012 @@
+[
+    {
+        "question": "Per Account si intende: ",
+        "options": [
+            "Un profilo di un utente che corrisponde ad una casella di posta ",
+            "Uno spazio pubblicitario che compare in siti Web di terzi",
+            "Una banca dati contenente tutti i virus noti",
+            "Un sistema hardware e software"
+        ],
+        "answer": "Un profilo di un utente che corrisponde ad una casella di posta "
+    },
+    {
+        "question": "Cosa succede se si toglie la scheda madre da un computer?",
+        "options": [
+            "Non si avvia il computer",
+            "Alcune funzioni del sistema operativo sono disabilitate",
+            "Non è possibile collegarsi in rete",
+            "Il computer si avvia con degli errori e potranno essere utilizzate solo le periferiche"
+        ],
+        "answer": "Non si avvia il computer"
+    },
+    {
+        "question": "L' Attachment è:",
+        "options": [
+            "Un file allegato a un messaggio di posta elettronica",
+            "Un dispositivo hardware",
+            "Un componente elettronico in cui sono concentrati, grazie a particolari tecniche, milioni di microcomponenti",
+            "Un'operazione che permette di creare una copia di comodo di un file"
+        ],
+        "answer": "Un file allegato a un messaggio di posta elettronica"
+    },
+    {
+        "question": "Cosa possono essere gli attachment?",
+        "options": [
+            "Qualsiasi tipo di file",
+            "Solo immagini",
+            "Un file in formato compresso",
+            "Programmi in formato eseguibile"
+        ],
+        "answer": "Qualsiasi tipo di file"
+    },
+    {
+        "question": "Cosa si intende generalmente per Netiquette?",
+        "options": [
+            "Una serie di regole comportamentali per gli utenti di internet",
+            "Una regola di formattazione per i messaggi di posta elettronica",
+            "Un software per la condivisione di periferiche tra i computer di una rete",
+            "Un protocollo di comunicazione tra computer collegati in una rete locale"
+        ],
+        "answer": "Una serie di regole comportamentali per gli utenti di internet"
+    },
+    {
+        "question": "L' Antivirus è:",
+        "options": [
+            "Un programma in grado di riconoscere un virus presente in un file e di eliminarlo",
+            "Un sistema hardware e software",
+            "Una banca dati contenente tutti i virus noti",
+            "Un dispositivo hardware"
+        ],
+        "answer": "Un programma in grado di riconoscere un virus presente in un file e di eliminarlo"
+    },
+    {
+        "question": "Il Banner è: ",
+        "options": [
+            "Uno spazio pubblicitario che compare in siti Web di terzi",
+            "Un file allegato a un messaggio di posta elettronica",
+            "Un profilo di un utente",
+            "Un'operazione che permette di creare una copia di sicurezza di un file"
+        ],
+        "answer": "Uno spazio pubblicitario che compare in siti Web di terzi"
+    },
+    {
+        "question": "La procedura di login ad un sistema consente di :",
+        "options": [
+            "Accedere al sistema tramite le proprie credenziali",
+            "Visualizzare i dati relativi agli utenti del sistema",
+            "Lasciare un commento che sarà visibile agli amministratori del sistema",
+            "Uscire dal sistema su cui si stava operando"
+        ],
+        "answer": "Accedere al sistema tramite le proprie credenziali"
+    },
+    {
+        "question": "Il Backup è: ",
+        "options": [
+            "Un'operazione che permette di creare una copia di sicurezza di un file",
+            "Un'operazione che permette di creare una copia di utilità di un file",
+            "Un'operazione che permette di creare una copia di comodo di un file",
+            "Un'operazione che permette di creare una copia di trasparenza di un file"
+        ],
+        "answer": "Un'operazione che permette di creare una copia di sicurezza di un file"
+    },
+    {
+        "question": "La Barra degli strumenti è la:",
+        "options": [
+            "Barra sulla quale sono raccolte delle icone che funzionano da pulsanti. Di solito è possibile personalizzare gli strumenti da richiamare",
+            "Barra sulla quale sono disponibili le principali funzioni di un’applicazione",
+            "Barra sulla quale è riportata l’intestazione di\nuna finestra di lavoro e i pulsanti per sospenderla temporaneamente, ridimensionarla, o\nchiuderla definitivamente",
+            "Barra generalmente posta nella parte bassa\ndello schermo dove sono raccolti il pulsante\ndi avvio, le icone delle applicazioni che è possibile richiamare, le icone delle finestre di lavoro aperte"
+        ],
+        "answer": "Barra sulla quale sono raccolte delle icone che funzionano da pulsanti. Di solito è possibile personalizzare gli strumenti da richiamare"
+    },
+    {
+        "question": "La Barra dei menu è la:",
+        "options": [
+            "Barra sulla quale sono disponibili le principali funzioni di un’applicazione",
+            "Barra sulla quale è riportata l’intestazione di una finestra di lavoro e i pulsanti per sospenderla temporaneamente, ridimensionarla, o\nchiuderla definitivamente",
+            "Barra presente su Excel che visualizza la cella selezionata e il suo contenuto, testo o formula",
+            "Barra sulla quale sono raccolte delle icone che funzionano da pulsanti. Di solito è\npossibile personalizzare gli strumenti da richiamare"
+        ],
+        "answer": "Barra sulla quale sono disponibili le principali funzioni di un’applicazione"
+    },
+    {
+        "question": "La Barra del titolo è la :",
+        "options": [
+            "Barra sulla quale è riportata l’intestazione di una finestra di lavoro e i pulsanti per sospenderla temporaneamente, ridimensionarla, o\nchiuderla definitivamente",
+            "Barra generalmente posta nella parte bassa\ndello schermo dove sono raccolti il pulsante\ndi avvio, le icone delle applicazioni che è possibile richiamare, le icone delle finestre di lavoro aperte",
+            "Barra verticale o orizzontale che consente di\nspostarsi in alto o in basso, a destra o a sinistra, all’interno di una finestra di lavoro",
+            "Barra nella quale i programmi visualizzano le\ninformazioni relative al documento sul quale\nsi sta lavorando. Per esempio, un programma\ndi elaborazione testi può visualizzare nella\nbarra di stato il numero di pagine totali, il\nnumero della riga e della colonna; un programma di grafica può visualizzare le coordinate del punto nel quale è posizionato il puntatore del mouse"
+        ],
+        "answer": "Barra sulla quale è riportata l’intestazione di una finestra di lavoro e i pulsanti per sospenderla temporaneamente, ridimensionarla, o\nchiuderla definitivamente"
+    },
+    {
+        "question": "La Barra delle applicazioni è la:",
+        "options": [
+            "Barra generalmente posta nella parte bassa dello schermo dove sono raccolti il pulsante di avvio, le icone delle applicazioni che è possibile richiamare, le icone delle finestre di lavoro aperte",
+            "Barra presente su Excel che visualizza la cella selezionata e il suo contenuto, testo o formula",
+            "Barra verticale o orizzontale che consente di\nspostarsi in alto o in basso, a destra o a sinistra, all’interno di una finestra di lavoro",
+            "Barra sulla quale sono disponibili le principali funzioni di un’applicazione"
+        ],
+        "answer": "Barra generalmente posta nella parte bassa dello schermo dove sono raccolti il pulsante di avvio, le icone delle applicazioni che è possibile richiamare, le icone delle finestre di lavoro aperte"
+    },
+    {
+        "question": "La Barra delle formule è la:",
+        "options": [
+            "Barra presente su Excel che visualizza la cella selezionata e il suo contenuto, testo o formula",
+            "Barra verticale o orizzontale che consente di\nspostarsi in alto o in basso, a destra o a sinistra, all’interno di una finestra di lavoro",
+            "Barra sulla quale sono disponibili le principali funzioni di un’applicazione",
+            "Barra sulla quale sono raccolte delle icone che funzionano da pulsanti. Di solito è\npossibile personalizzare gli strumenti da richiamare"
+        ],
+        "answer": "Barra presente su Excel che visualizza la cella selezionata e il suo contenuto, testo o formula"
+    },
+    {
+        "question": "La Barra di scorrimento è la:",
+        "options": [
+            "Barra verticale o orizzontale che consente di spostarsi in alto o in basso, a destra o a sinistra, all’interno di una finestra di lavoro",
+            "Barra presente su Excel che visualizza la cella selezionata e il suo contenuto, testo o formula",
+            "Barra generalmente posta nella parte bassa\ndello schermo dove sono raccolti il pulsante\ndi avvio, le icone delle applicazioni che è possibile richiamare, le icone delle finestre di lavoro aperte",
+            "Barra sulla quale è riportata l’intestazione di una finestra di lavoro e i pulsanti per sospenderla temporaneamente, ridimensionarla, o\nchiuderla definitivamente"
+        ],
+        "answer": "Barra verticale o orizzontale che consente di spostarsi in alto o in basso, a destra o a sinistra, all’interno di una finestra di lavoro"
+    },
+    {
+        "question": "La Barra di stato è la:",
+        "options": [
+            "Barra nella quale i programmi visualizzano le informazioni relative al documento sul quale si sta lavorando. Per esempio, un programma di elaborazione testi può visualizzare nella barra di stato il numero di pagine totali, il numero della riga e della colonna; un programma di grafica può visualizzare le coordinate del punto nel quale è posizionato il puntatore del mouse",
+            "Barra sulla quale è riportata l’intestazione di una finestra di lavoro e i pulsanti per sospenderla temporaneamente, ridimensionarla, o\nchiuderla definitivamente",
+            "Barra verticale o orizzontale che consente di\nspostarsi in alto o in basso, a destra o a sinistra, all’interno di una finestra di lavoro",
+            "Barra generalmente posta nella parte bassa\ndello schermo dove sono raccolti il pulsante\ndi avvio, le icone delle applicazioni che è possibile richiamare, le icone delle finestre di lavoro aperte"
+        ],
+        "answer": "Barra nella quale i programmi visualizzano le informazioni relative al documento sul quale si sta lavorando. Per esempio, un programma di elaborazione testi può visualizzare nella barra di stato il numero di pagine totali, il numero della riga e della colonna; un programma di grafica può visualizzare le coordinate del punto nel quale è posizionato il puntatore del mouse"
+    },
+    {
+        "question": "La barra delle applicazioni:",
+        "options": [
+            "permette di chiudere i programmi",
+            "permette di lanciare i programmi",
+            "permette di ridimensionare una finestra",
+            "permette  trasmissione dei dati tra i vari componenti del computer"
+        ],
+        "answer": "permette di chiudere i programmi"
+    },
+    {
+        "question": "La barra delle applicazioni:",
+        "options": [
+            "permette di ridurre a icona tutte le finestre attive e visualizzare il desktop",
+            "permette di lanciare i programmi",
+            "permette di ridimensionare una finestra",
+            "permette  trasmissione dei dati tra i vari componenti del computer"
+        ],
+        "answer": "permette di ridurre a icona tutte le finestre attive e visualizzare il desktop"
+    },
+    {
+        "question": "Per Bluetooth si intende la :",
+        "options": [
+            "Tecnica di trasmissione e ricezione a corto raggio basata su radiofrequenza",
+            "Tecnica che permette l’accesso alla rete Internet per la visualizzazione delle pagine web",
+            "Disciplina che si occupa dello studio della mente artificiale",
+            "Memoria RAM di un computer"
+        ],
+        "answer": "Tecnica di trasmissione e ricezione a corto raggio basata su radiofrequenza"
+    },
+    {
+        "question": "Il Browser è :",
+        "options": [
+            "Il programma che permette l’accesso alla rete Internet e la visualizzazione delle pagine web",
+            "Un errore in una procedura informatica",
+            "Un canale per la trasmissione dei dati tra i vari componenti del computer",
+            "Una tecnica di trasmissione e ricezione a corto raggio basata su radiofrequenza"
+        ],
+        "answer": "Il programma che permette l’accesso alla rete Internet e la visualizzazione delle pagine web"
+    },
+    {
+        "question": "Che cosa si intende per cronologia in un browser?",
+        "options": [
+            "L'elenco dei siti visitati",
+            "L'elenco dei programmi residenti sul PC",
+            "L'insieme di tutte le componenti hardware presenti nel PC",
+            "Una particolare tecnica di programmazione che facilita ricerca di informazioni in Internet"
+        ],
+        "answer": "L'elenco dei siti visitati"
+    },
+    {
+        "question": "Il Bug è: ",
+        "options": [
+            "Un errore in una procedura informatica",
+            "Un profilo di un utente che corrisponde ad una casella di posta e a un indirizzo di posta",
+            "Un programma in grado di riconoscere un virus presente in un file e di eliminarlo",
+            "Una barra sulla quale sono raccolte delle icone che funzionano da pulsanti."
+        ],
+        "answer": "Un errore in una procedura informatica"
+    },
+    {
+        "question": "I Bus sono:",
+        "options": [
+            "Canali per la trasmissione dei dati tra i vari componenti del computer",
+            "Errori in una procedura informatica",
+            "Programmi che permettono l’accesso alla rete Internet ",
+            "Collegamenti per scambiare frasi e messaggi in modo interattivo"
+        ],
+        "answer": "Canali per la trasmissione dei dati tra i vari componenti del computer"
+    },
+    {
+        "question": "Il CED, quale Centro Elaborazione Dati, è:",
+        "options": [
+            "Il dipartimento o l'area riservata in cui si trova il centro del sistema informativo e informatico di una struttura. Un tempo, era l'unica area in cui era possibile svolgere attività di elaborazione",
+            "Una disciplina che si occupa della Cibernetica",
+            "Un centro di ricerca in grado di studiare i virus presenti nei file",
+            "Il luogo di fabbricazione dei computer"
+        ],
+        "answer": "Il dipartimento o l'area riservata in cui si trova il centro del sistema informativo e informatico di una struttura. Un tempo, era l'unica area in cui era possibile svolgere attività di elaborazione"
+    },
+    {
+        "question": "La Chat è: ",
+        "options": [
+            "Un particolare tipo di applicazione in rete che permette agli utenti collegati di scambiare frasi e messaggi in modo interattivo",
+            "Il nome dato ai componenti elettronici per la loro ridotta dimensione",
+            "L'insieme degli utenti che fa riferimento a uno stesso sito o servizio",
+            "L'area riservata in cui si trova il centro del sistema informativo e informatico di una struttura"
+        ],
+        "answer": "Un particolare tipo di applicazione in rete che permette agli utenti collegati di scambiare frasi e messaggi in modo interattivo"
+    },
+    {
+        "question": "Per Chip si intende:",
+        "options": [
+            "Il nome dato ai componenti elettronici per la loro ridotta dimensione",
+            "Un particolare tipo di applicazione in rete che permette agli utenti collegati di scambiare frasi e messaggi in modo interattivo",
+            "Il rumore provocato dall’azione di uno dei tasti del mouse",
+            "L' operazione che permette di creare una copia di sicurezza di un file"
+        ],
+        "answer": "Il nome dato ai componenti elettronici per la loro ridotta dimensione"
+    },
+    {
+        "question": "La Cibernetica è la:",
+        "options": [
+            "Disciplina che si occupa, sotto diversi aspetti, dello studio della mente artificiale, della robotica e del confine tra umano e artificiale",
+            "Disciplina che si occupa dell'osservazione e della spiegazione degli eventi celesti",
+            "La disciplina che si occupa della cura dei fattori che permettono di migliorare le condizioni del posto di lavoro",
+            "La disciplina che studierebbe i rapporti tra la postura del corpo e determinate patologie algiche che, secondo i sostenitori di tale pratica, deriverebbero da un errato assetto posturale"
+        ],
+        "answer": "Disciplina che si occupa, sotto diversi aspetti, dello studio della mente artificiale, della robotica e del confine tra umano e artificiale"
+    },
+    {
+        "question": "Il Click è: ",
+        "options": [
+            "Il rumore provocato dall’azione di uno dei tasti del mouse.",
+            "Lo studio della mente artificiale",
+            "Un Circuito Integrato",
+            "Un supporto di memoria di massa"
+        ],
+        "answer": "Il rumore provocato dall’azione di uno dei tasti del mouse."
+    },
+    {
+        "question": "Il Circuito integrato è :",
+        "options": [
+            "Un componente elettronico in cui sono concentrati, grazie a particolari tecniche, milioni di microcomponenti. Un solo componente racchiude quindi in sé e integra le funzioni di moltissimi circuiti elementari",
+            "Un supporto plastico di memoria di massa, scritto e letto attraverso un laser",
+            "Un software utilizzato dal sistema operativo per gestire un dispositivo hardware",
+            "Un particolare tipo di applicazione in rete che permette agli utenti collegati di scambiare frasi e messaggi in modo interattivo"
+        ],
+        "answer": "Un componente elettronico in cui sono concentrati, grazie a particolari tecniche, milioni di microcomponenti. Un solo componente racchiude quindi in sé e integra le funzioni di moltissimi circuiti elementari"
+    },
+    {
+        "question": "Una \"Community\" è:",
+        "options": [
+            "L'insieme degli utenti che fa riferimento a uno stesso sito o servizio",
+            "Uno spazio pubblicitario che compare in siti Web di terzi",
+            "Un raccolta di domande ricorrenti relative ad un determinato argomento",
+            "Un programma che accede all'hardware"
+        ],
+        "answer": "L'insieme degli utenti che fa riferimento a uno stesso sito o servizio"
+    },
+    {
+        "question": "Un \"CD - Compact Disk\" è:",
+        "options": [
+            "Un supporto plastico di memoria di massa, scritto e letto attraverso un laser",
+            "Un dispositivo che consente di rilevare e/o bloccare programmi potenzialmente dannosi",
+            "Un' unità di controllo e visualizzazione, con la quale è possibile interagire con il\nsistema",
+            "Il nome dato ai componenti elettronici per la loro ridotta dimensione"
+        ],
+        "answer": "Un supporto plastico di memoria di massa, scritto e letto attraverso un laser"
+    },
+    {
+        "question": "Cos'è il Computer?",
+        "options": [
+            "E' una macchina logica elettronica programmabile in grado di svolgere compiti diversi in funzione del programma in esecuzione",
+            "Un' unità di controllo e visualizzazione, con la quale è possibile interagire con il\nsistema",
+            "Un supporto plastico di memoria di massa, scritto e letto attraverso un laser",
+            "Una macchina creata prettamente per rilevare, creare e/o bloccare programmi potenzialmente dannosi"
+        ],
+        "answer": "E' una macchina logica elettronica programmabile in grado di svolgere compiti diversi in funzione del programma in esecuzione"
+    },
+    {
+        "question": "La Console è : ",
+        "options": [
+            "L'unità di controllo e visualizzazione, con la quale è possibile interagire con il\nsistema",
+            "Un supporto plastico di memoria di massa, scritto e letto attraverso un laser",
+            "Un componente elettronico in cui sono concentrati, grazie a particolari tecniche, milioni di microcomponenti. Un solo componente racchiude quindi in sé e integra le funzioni di moltissimi circuiti elementari",
+            "Un dispositivo che consente di rilevare e/o bloccare programmi potenzialmente dannosi"
+        ],
+        "answer": "L'unità di controllo e visualizzazione, con la quale è possibile interagire con il\nsistema"
+    },
+    {
+        "question": "Per \"Copyright\" si intende: ",
+        "options": [
+            "Il diritto che tutela l'autore di un'opera dell'ingegno affinché l'utilizzo del suo\nlavoro sia remunerato e comunque gestito all'interno di un rapporto corretto per\nevitarne sfruttamenti illeciti",
+            "La disciplina che si occupa della cura dei fattori che permettono di migliorare le condizioni del posto di lavoro",
+            "L'insieme degli utenti che fa riferimento a uno stesso sito o servizio",
+            "Uno spazio pubblicitario che compare in siti Web di terzi"
+        ],
+        "answer": "Il diritto che tutela l'autore di un'opera dell'ingegno affinché l'utilizzo del suo\nlavoro sia remunerato e comunque gestito all'interno di un rapporto corretto per\nevitarne sfruttamenti illeciti"
+    },
+    {
+        "question": "Quale tra le seguenti tipologie di modem, è più veloce per la connessione ad Internet?",
+        "options": [
+            "ADSL",
+            "ISDN",
+            "GPRS",
+            "56K"
+        ],
+        "answer": "ADSL"
+    },
+    {
+        "question": "L'aconimo di CPU è: ",
+        "options": [
+            "L' Unità centrale di elaborazione, è il circuito integrato che elabora i dati",
+            "Un errore non previsto in un programma",
+            "Il generatore di numeri casuali del computer",
+            "Il dispositivo che consente la comunicazione tra computer che utilizzano diversi sistemi operativi"
+        ],
+        "answer": "L' Unità centrale di elaborazione, è il circuito integrato che elabora i dati"
+    },
+    {
+        "question": "Il Central Processing Unit è:",
+        "options": [
+            "In un elaboratore, il dispositivo in grado di interpretare le istruzioni e operare con esse sui dati, fornendo i risultati",
+            "Un errore non previsto in un programma",
+            "Il generatore di numeri casuali del computer",
+            "Il dispositivo che consente la comunicazione tra computer che utilizzano diversi sistemi operativi"
+        ],
+        "answer": "In un elaboratore, il dispositivo in grado di interpretare le istruzioni e operare con esse sui dati, fornendo i risultati"
+    },
+    {
+        "question": "Per \"Crash\" si intende:",
+        "options": [
+            "In un sistema informatico, un arresto per gravi motivi di una procedura o la\nrottura per ragioni diverse di una parte (anche fisica) del sistema stesso",
+            "Lo strumento che viene utilizzato per rilevare la presenza di virus informatici in un computer",
+            "La tecnica che permette di nascondere il contenuto di un messaggio in modo che\nesso possa essere correttamente compreso solo da chi ne possiede la chiave di decifrazione",
+            "In un elaboratore, il dispositivo in grado di interpretare le istruzioni e operare con esse sui dati, fornendo i risultati"
+        ],
+        "answer": "In un sistema informatico, un arresto per gravi motivi di una procedura o la\nrottura per ragioni diverse di una parte (anche fisica) del sistema stesso"
+    },
+    {
+        "question": "Per \"Crittografia\" si intende:",
+        "options": [
+            "La tecnica che permette di nascondere il contenuto di un messaggio in modo che\nesso possa essere correttamente compreso solo da chi ne possiede la chiave di decifrazione",
+            "In un sistema informatico, un arresto per gravi motivi di una procedura o la\nrottura per ragioni diverse di una parte (anche fisica) del sistema stesso",
+            "Lo strumento che viene utilizzato per rilevare la presenza di virus informatici in un computer",
+            "La tecnica che permette di evitare che un file si corrompa durante il trasferimento"
+        ],
+        "answer": "La tecnica che permette di nascondere il contenuto di un messaggio in modo che\nesso possa essere correttamente compreso solo da chi ne possiede la chiave di decifrazione"
+    },
+    {
+        "question": "Nella posta elettronica, il campo \"CC:\", in cui è possibile inserire il nome dei destinatari di una e-mail:",
+        "options": [
+            "Corrisponde alla dicitura \"copia per conoscenza\" ",
+            "Corrisponde alla dicitura \"all'attenzione\"",
+            "Specifica gli indirizzi ai quali vanno recapitate eventuali risposte",
+            "Nasconde al destinatario principale i nomi degli altri destinatari in esso contenuti"
+        ],
+        "answer": "Corrisponde alla dicitura \"copia per conoscenza\" "
+    },
+    {
+        "question": "Nella posta elettronica, il campo \"CCN:\", in cui è possibile inserire il nome dei destinatari di una e-mail:",
+        "options": [
+            "Corrisponde alla dicitura \"copia conoscenza nascosta\"; pertanto gli indirizzi inseriti in questo campo ricevono l’e-mail ma non sono visibili dal destinatario dell’e-mail",
+            "Corrisponde alla dicitura \"copia per conoscenza\" ",
+            "Corrisponde alla dicitura \"all'attenzione\"",
+            "Specifica gli indirizzi ai quali vanno recapitate eventuali risposte"
+        ],
+        "answer": "Corrisponde alla dicitura \"copia conoscenza nascosta\"; pertanto gli indirizzi inseriti in questo campo ricevono l’e-mail ma non sono visibili dal destinatario dell’e-mail"
+    },
+    {
+        "question": "Indica quale dei seguenti è il software per la progettazione:",
+        "options": [
+            "CAD (Computer Aided Design)",
+            "CAE (Computer Aided Engineering)",
+            "CAM (Computer Aided Manifacturing) ",
+            "CAI (Computer Aided Instruction) "
+        ],
+        "answer": "CAD (Computer Aided Design)"
+    },
+    {
+        "question": "Indica quale dei seguenti è il software per l’ingegneria:",
+        "options": [
+            "CAE (Computer Aided Engineering)",
+            "CAD (Computer Aided Design)",
+            "CAM (Computer Aided Manifacturing) ",
+            "CAI (Computer Aided Instruction) "
+        ],
+        "answer": "CAE (Computer Aided Engineering)"
+    },
+    {
+        "question": "Indica quale dei seguenti è il software per i processi di produzione:",
+        "options": [
+            "CAM (Computer Aided Manifacturing)",
+            "CAD (Computer Aided Design)",
+            "CAE (Computer Aided Engineering)",
+            "CAI (Computer Aided Instruction) "
+        ],
+        "answer": "CAM (Computer Aided Manifacturing)"
+    },
+    {
+        "question": "Indica quale dei seguenti è il software per l’istruzione assistita da computer:",
+        "options": [
+            "CAI (Computer Aided Instruction) ",
+            "CAM (Computer Aided Manifacturing)",
+            "CAE (Computer Aided Engineering)",
+            "CAD (Computer Aided Design)"
+        ],
+        "answer": "CAI (Computer Aided Instruction) "
+    },
+    {
+        "question": "Il software CAD (Computer Aided Design) è il:",
+        "options": [
+            "Software per la progettazione",
+            "Software per l’ingegneria",
+            "Software per i processi di produzione",
+            "Software per l’istruzione assistita da computer"
+        ],
+        "answer": "Software per la progettazione"
+    },
+    {
+        "question": "Il software CAE (Computer Aided Engineering) è il: ",
+        "options": [
+            "Software per l’ingegneria",
+            "Software per la progettazione",
+            "Software per i processi di produzione",
+            "Software per l’istruzione assistita da computer"
+        ],
+        "answer": "Software per l’ingegneria"
+    },
+    {
+        "question": "Il software CAM (Computer Aided Manifacturing) è il:",
+        "options": [
+            "Software per i processi di produzione",
+            "Software per la progettazione",
+            "Software per l’ingegneria",
+            "Software per l’istruzione assistita da computer"
+        ],
+        "answer": "Software per i processi di produzione"
+    },
+    {
+        "question": "Il software CAI (Computer Aided Instruction) è il:",
+        "options": [
+            "Software per l’istruzione assistita da computer",
+            "Software per la progettazione",
+            "Software per l’ingegneria",
+            "Software per i processi di produzione"
+        ],
+        "answer": "Software per l’istruzione assistita da computer"
+    },
+    {
+        "question": "Quale delle seguenti è la corretta definizione di ClipArt?",
+        "options": [
+            "Disegni e immagini che si possono inserire nei documenti",
+            "Software per la progettazione",
+            "Gestire i propri appunti digitali",
+            "Software per l’ingegneria"
+        ],
+        "answer": "Disegni e immagini che si possono inserire nei documenti"
+    },
+    {
+        "question": "Il Clock o orologio è:",
+        "options": [
+            "Il dispositivo dell’unità centrale che scandisce l’esecuzione delle operazioni",
+            "Il counter che si attiva all'accensione di un computer",
+            "Il segnale che regola l' orologio interno del pc con l' ora internazionale UTC",
+            "Il counter che si attiva in fase di spegnimento di un computer"
+        ],
+        "answer": "Il dispositivo dell’unità centrale che scandisce l’esecuzione delle operazioni"
+    },
+    {
+        "question": "Il \"Case\" è:",
+        "options": [
+            "La scatola metallica che racchiude tutte le componenti fisiche del computer",
+            "Il dispositivo dell’unità centrale che scandisce l’esecuzione delle operazioni",
+            "L' Unità centrale di elaborazione, è il circuito integrato che elabora i dati",
+            "La tecnica di trasmissione e ricezione a corto raggio basata su radiofrequenza"
+        ],
+        "answer": "La scatola metallica che racchiude tutte le componenti fisiche del computer"
+    },
+    {
+        "question": "Il Codice a barre è: ",
+        "options": [
+            "Sistema di rappresentazione di dati per mezzo di barre verticale di spessori differenti, possono essere letti solo con appositi lettori ottici.\nSi utilizzano per contraddistinguere un prodotto in commercio e facilitano le operazione di contabilità alle casse dei supermercati",
+            "Sistema operativo che \"sveglia\" uno dopo l'altro i componenti del PC fino a che tutto il sistema non è pronto per reagire agli stimoli dell'utente",
+            "Sistema per entrare con frode in un complesso di dati o trovare la chiave di accesso per utilizzare un software senza pagarlo",
+            "Sistema che gestisce gli indirizzi dei domini Internet"
+        ],
+        "answer": "Sistema di rappresentazione di dati per mezzo di barre verticale di spessori differenti, possono essere letti solo con appositi lettori ottici.\nSi utilizzano per contraddistinguere un prodotto in commercio e facilitano le operazione di contabilità alle casse dei supermercati"
+    },
+    {
+        "question": "Il Database è:",
+        "options": [
+            "L'archivio di dati disposti in modo organizzato e correlati tra di loro",
+            "L'insieme dei programmi che consentono l'utilizzo dei computer",
+            "L'insieme delle diapositive utili a creare presentazioni per comunicare efficacemente un messaggio",
+            "Il programma che permette l'esecuzione di calcoli e creazione di grafici"
+        ],
+        "answer": "L'archivio di dati disposti in modo organizzato e correlati tra di loro"
+    },
+    {
+        "question": "Il Desktop è:",
+        "options": [
+            "La scrivania virtuale utilizzata dalla grafica del sistema operativo",
+            "Dispositivo elettronico che permette di visualizzare cifre, lettere e oggetti grafici",
+            "Il dispositivo dell’unità centrale che scandisce l’esecuzione delle operazioni",
+            "La scatola metallica che racchiude tutte le componenti fisiche del computer"
+        ],
+        "answer": "La scrivania virtuale utilizzata dalla grafica del sistema operativo"
+    },
+    {
+        "question": "Il Display è: ",
+        "options": [
+            "Dispositivo elettronico che permette di visualizzare cifre, lettere e oggetti grafici",
+            "La scrivania virtuale utilizzata dalla grafica del sistema operativo",
+            "Il dispositivo dell’unità centrale che scandisce l’esecuzione delle operazioni",
+            "Una \"scatola metallica\" che racchiude tutte le componenti fisiche del computer"
+        ],
+        "answer": "Dispositivo elettronico che permette di visualizzare cifre, lettere e oggetti grafici"
+    },
+    {
+        "question": "Il software Norton è noto come un popolare prodotto di:",
+        "options": [
+            "Antivirus",
+            "Programma di editing video",
+            "Programma di calcolo",
+            "Foglio di calcolo"
+        ],
+        "answer": "Antivirus"
+    },
+    {
+        "question": "La Diapositiva o slide, è: ",
+        "options": [
+            "Ciascuna delle pagine che compongono una presentazione tipo PowerPoint",
+            "L'archivio di dati disposti in modo organizzato e correlati tra di loro",
+            "Il disegno o l'immagine che posso inserire nei documenti",
+            "L'agneda che permette di gestire i propri appunti digitali"
+        ],
+        "answer": "Ciascuna delle pagine che compongono una presentazione tipo PowerPoint"
+    },
+    {
+        "question": "Per \"Download\" si intende:",
+        "options": [
+            "L'perazione che permette di caricare o scaricare dalla rete un file sul proprio computer",
+            "L'operazione che si riferisce alla capacità di archivio della disco rigido",
+            "L'operazione che evidenzia l'effettiva velocità di calcolo del disco rigido",
+            "L'operazione utile al recupero dei file che sono stati cancellati dall'utente"
+        ],
+        "answer": "L'perazione che permette di caricare o scaricare dalla rete un file sul proprio computer"
+    },
+    {
+        "question": "\"Linux\", in informatica, è :",
+        "options": [
+            "Un sistema operativo ",
+            "Un tipo di licenza per software",
+            "Il nome di una casa produttrice di videogiochi ",
+            "Nessuna delle risposte precedenti è corretta"
+        ],
+        "answer": "Un sistema operativo "
+    },
+    {
+        "question": "Un Sistema Operativo è:",
+        "options": [
+            "Un'interfaccia tra l'utente e l'hardware del sistema",
+            "Un programma che permette la navigazione su internet",
+            "L'insieme di tutti gli applicativi installati in un PC",
+            "Un programma che serve per elaborare testi musicali"
+        ],
+        "answer": "Un'interfaccia tra l'utente e l'hardware del sistema"
+    },
+    {
+        "question": "Il Driver è:",
+        "options": [
+            "Un programma che serve al sistema operativo per gestire una periferica",
+            "Un modulo del sistema operativo",
+            "Un programma di videoscrittura",
+            "Un programma specifico per la gestione dei monitor LCD/LED"
+        ],
+        "answer": "Un programma che serve al sistema operativo per gestire una periferica"
+    },
+    {
+        "question": "DVD (Digital Video Disc) ",
+        "options": [
+            "Sono supporti di memoria, apparentemente identici ai CD-ROM, ma hanno capacità 26 volte superiore ai CD-ROM",
+            "Un dispositivo che consente di rilevare e/o bloccare programmi potenzialmente dannosi",
+            "Un' unità di controllo e visualizzazione, con la quale è possibile interagire con il\nsistema",
+            "Il nome dato ai componenti elettronici per la loro ridotta dimensione"
+        ],
+        "answer": "Sono supporti di memoria, apparentemente identici ai CD-ROM, ma hanno capacità 26 volte superiore ai CD-ROM"
+    },
+    {
+        "question": "Per \"E-commerce\" si intende:",
+        "options": [
+            "Commercio elettronico, vendita di oggetti o servizi per via telematica",
+            "La pubblicazione su internet di informazioni false",
+            "La compravendita di azioni su Internet",
+            "Un'asta giudiziaria"
+        ],
+        "answer": "Commercio elettronico, vendita di oggetti o servizi per via telematica"
+    },
+    {
+        "question": "Che cosa è una e-mail (Electronic mail)?",
+        "options": [
+            "Un servizio che consente di scambiare messaggi elettonici tra utenti di computers utilizzando la rete internet",
+            "Uno strumento software che consente di conversare in rete in tempo reale",
+            "Un programma di gestione delle risorse del computer",
+            "L'insieme degli utenti che fa riferimento a uno stesso sito o servizio"
+        ],
+        "answer": "Un servizio che consente di scambiare messaggi elettonici tra utenti di computers utilizzando la rete internet"
+    },
+    {
+        "question": "Le FAQ sono:",
+        "options": [
+            "Domande ricorrenti relative a un argomento, a un sito Internet, raccolte, assieme alle risposte, in un unico file",
+            "Servizi che consentono di dare valore legale ad un messaggio di posta elettronica al pari di una raccomandata con avviso di ricevimento",
+            "Errori in una procedura informatica",
+            "Canali per la trasmissione dei dati tra i vari componenti del computer"
+        ],
+        "answer": "Domande ricorrenti relative a un argomento, a un sito Internet, raccolte, assieme alle risposte, in un unico file"
+    },
+    {
+        "question": "DOS è l'acronimo di:",
+        "options": [
+            "Disk Operating System",
+            "Disk Old System",
+            "Disk Only System",
+            "Domain of System"
+        ],
+        "answer": "Disk Operating System"
+    },
+    {
+        "question": "Il software Avira è noto come un popolare prodotto di:",
+        "options": [
+            "Antivirus",
+            "Programma di editing video",
+            "Programma di calcolo",
+            "Foglio di calcolo"
+        ],
+        "answer": "Antivirus"
+    },
+    {
+        "question": "Per \"Ergonomia\" si intende:",
+        "options": [
+            "La cura dei fattori che permettono di migliorare le condizioni del posto di lavoro",
+            "La branca della medicina non scientifica e non verificata che studierebbe i rapporti tra la postura del corpo e determinate patologie algiche che, secondo i sostenitori di tale pratica, deriverebbero da un errato assetto posturale",
+            "La disciplina che si occupa, sotto diversi aspetti, dello studio della mente artificiale, della robotica e del confine tra umano e artificiale",
+            "L'osservazione e la spiegazione degli eventi celesti"
+        ],
+        "answer": "La cura dei fattori che permettono di migliorare le condizioni del posto di lavoro"
+    },
+    {
+        "question": "Per una postazione di lavoro ergonomica non è importante:",
+        "options": [
+            "La potenza di calcolo del monitor",
+            "La tipologia di monitor",
+            "Il sedile",
+            "L'illuminazione della stanza"
+        ],
+        "answer": "La potenza di calcolo del monitor"
+    },
+    {
+        "question": "Coa si intende per \"File\"?",
+        "options": [
+            "Un singolo documento di lavoro individuato da un nome",
+            "Un software privato",
+            "Un dispositivo hardware",
+            "Nessuna delle risposte precedenti è corretta"
+        ],
+        "answer": "Un singolo documento di lavoro individuato da un nome"
+    },
+    {
+        "question": "In presenza di un cartello Wi-Fi ZONE, si deduce che:",
+        "options": [
+            "Il luogo dove ci troviamo è coperto da una rete Wireless",
+            "Il luogo dove ci troviamo è coperto da una rete Wi-Max",
+            "Il luogo dove ci troviamo è coperto da una rete Worm Internet Firewall",
+            "Il luogo dove ci troviamo non ha alcuna copertura di rete"
+        ],
+        "answer": "Il luogo dove ci troviamo è coperto da una rete Wireless"
+    },
+    {
+        "question": "Cosa è un Firewall?",
+        "options": [
+            "Un sistema di protezione del computer da accessi non desiderati",
+            "Un software presente nella memoria ROM che gestisce le funzioni di base del sistema",
+            "Parti di una pagina web inserite in cornici e indipendenti l’una dall’altra",
+            "Un software gratuito ma tutelato dalle leggi sul\ncopyright, può essere utilizzato gratuitamente ma non può essere venduto"
+        ],
+        "answer": "Un sistema di protezione del computer da accessi non desiderati"
+    },
+    {
+        "question": "Un sistema che consente di controllare i dati in entrata e in uscita in una rete locale, è chiamato:",
+        "options": [
+            "Firewall",
+            "Antivirus",
+            "Router",
+            "Hub"
+        ],
+        "answer": "Firewall"
+    },
+    {
+        "question": "Firmware",
+        "options": [
+            "Software presente nella memoria ROM che gestisce le funzioni di base del sistema",
+            "Sistema di protezione del computer da accessi non desiderati",
+            "Parti di una pagina web inserite in cornici e indipendenti l’una dall’altra",
+            "Software gratuito ma tutelato dalle leggi sul\ncopyright, può essere utilizzato gratuitamente ma non può essere venduto"
+        ],
+        "answer": "Software presente nella memoria ROM che gestisce le funzioni di base del sistema"
+    },
+    {
+        "question": "Frame",
+        "options": [
+            "Parti di una pagina web inserite in cornici e\nindipendenti l’una dall’altra",
+            "Sistema di protezione del computer da accessi non desiderati",
+            "Software presente nella memoria ROM che\ngestisce le funzioni di base del sistema",
+            "Software gratuito ma tutelato dalle leggi sul\ncopyright, può essere utilizzato gratuitamente ma non può essere venduto"
+        ],
+        "answer": "Parti di una pagina web inserite in cornici e\nindipendenti l’una dall’altra"
+    },
+    {
+        "question": "Font",
+        "options": [
+            "Insieme completo di caratteri con lo stesso stile, per esempio Arial, Times New Roman",
+            "Parti di una pagina web inserite in cornici e\nindipendenti l’una dall’altra",
+            "Software gratuito presente nella memoria RAM che\ngestisce le funzioni di base del sistema",
+            "Sistema di protezione del computer da accessi non desiderati"
+        ],
+        "answer": "Insieme completo di caratteri con lo stesso stile, per esempio Arial, Times New Roman"
+    },
+    {
+        "question": "Il Forum è:",
+        "options": [
+            "Uno spazio su Internet in cui si incontrano gruppi di persone per scambiarsi opinioni su argomenti specifici ",
+            "Un'insieme di utenti che fa riferimento ad uno stesso sito o servizio",
+            "Uno spazio pubblicitario che compare in siti Web di terzi",
+            "Un raccolta di domande ricorrenti relative ad un determinato argomento"
+        ],
+        "answer": "Uno spazio su Internet in cui si incontrano gruppi di persone per scambiarsi opinioni su argomenti specifici "
+    },
+    {
+        "question": "Freeware",
+        "options": [
+            "Software gratuito ma tutelato dalle leggi sul copyright, può essere utilizzato gratuitamente ma non può essere venduto",
+            "Sistema di protezione del computer da accessi non desiderati",
+            "Software presente nella memoria ROM che\ngestisce le funzioni di base del sistema",
+            "Parti di una pagina web inserite in cornici e indipendenti l’una dall’altra"
+        ],
+        "answer": "Software gratuito ma tutelato dalle leggi sul copyright, può essere utilizzato gratuitamente ma non può essere venduto"
+    },
+    {
+        "question": "Indica quale dei seguenti supporti di memoria è sempre riscrivibile:",
+        "options": [
+            "Disco fisso esterno",
+            "DVD",
+            "CD",
+            "Blu-ray"
+        ],
+        "answer": "Disco fisso esterno"
+    },
+    {
+        "question": "Le opzioni per migliorare l'accessibilità:",
+        "options": [
+            "sono finalizzate a facilitare l'uso degli strumenti informatici alle persone con disabilità",
+            "sono utilizzate nei dispositivi moderni per evitare l'uso delle userID e delle password",
+            "riguardano la creazione di nuovi software progettati con interfacce semplici per le persone che non hanno molta dimestichezza con il computer",
+            "riguardano la creazione di nuovi hardware progettati con lo scopo di migliorare l'ergonomia"
+        ],
+        "answer": "sono finalizzate a facilitare l'uso degli strumenti informatici alle persone con disabilità"
+    },
+    {
+        "question": "Una password per essere efficace:",
+        "options": [
+            "deve contenere anche caratteri numerici",
+            "è preferibile che non contenga caratteri numerici",
+            "deve essere di poche lettere, così si ricorda più facilmente",
+            "deve fare riferimento a dati personali dell'utente, così si ricorda più facilmente"
+        ],
+        "answer": "deve contenere anche caratteri numerici"
+    },
+    {
+        "question": "Una password per essere efficace:",
+        "options": [
+            "deve essere sostituita spesso",
+            "è preferibile che non venga sostituita spesso",
+            "è preferibile che non contenga caratteri numerici",
+            "deve fare riferimento a dati personali dell'utente, così si ricorda più facilmente"
+        ],
+        "answer": "deve essere sostituita spesso"
+    },
+    {
+        "question": "Quale tra i seguenti non è un social network?",
+        "options": [
+            "Telegram",
+            "Twitter",
+            "Instagram",
+            "Facebook"
+        ],
+        "answer": "Telegram"
+    },
+    {
+        "question": "Per spegnere il computer (con sistema operativo Windows), quale successione di comandi devo usare ?",
+        "options": [
+            "Start - Spegni computer - Spegni",
+            "Spegni computer - Spegni",
+            "Start - Disconnetti - Disconnetti",
+            "Start - Spegni"
+        ],
+        "answer": "Start - Spegni computer - Spegni"
+    },
+    {
+        "question": "La velocità di un processore viene calcolata in ?",
+        "options": [
+            "Hertz",
+            "Micron",
+            "Metri al secondo",
+            "Pixel"
+        ],
+        "answer": "Hertz"
+    },
+    {
+        "question": "L'inserimento di informazioni nel pc viene detto ?",
+        "options": [
+            "Input",
+            "Output",
+            "Hertz",
+            "Megabyte"
+        ],
+        "answer": "Input"
+    },
+    {
+        "question": "Per visualizzare il contenuto di una cartella ?",
+        "options": [
+            "Faccio doppio clic sulla cartella",
+            "Faccio doppio clic sullicona Risorse del Computer",
+            "Seleziono la cartella e dalla barra dei menu clicco su Visualizza - Dettagli",
+            "Clicco con il tasto destro sulla cartella e dal menu contestuale clicco su Proprietà"
+        ],
+        "answer": "Faccio doppio clic sulla cartella"
+    },
+    {
+        "question": "Si possono aprire più finestre nel desktop ?",
+        "options": [
+            "Si",
+            "Si, al massimo due",
+            "Si, al massimo quattro",
+            "No"
+        ],
+        "answer": "Si"
+    },
+    {
+        "question": "Per spostare un file da una cartella all'altra ?",
+        "options": [
+            "Uso i comandi taglia ed incolla",
+            "Uso i comandi copia ed incolla",
+            "Uso i comandi sposta ed incolla",
+            "Uso il comando invia alla cartella"
+        ],
+        "answer": "Uso i comandi taglia ed incolla"
+    },
+    {
+        "question": "RAM sta ad indicare:",
+        "options": [
+            "RANDOM ACCESS MEMORY",
+            "REDUCED ACCESS MEMORY",
+            "READ-ONLY ACCESS MEMORY",
+            "READ ACCESS MEMORY"
+        ],
+        "answer": "RANDOM ACCESS MEMORY"
+    },
+    {
+        "question": "Cos'è la RAM ?",
+        "options": [
+            "Una memoria",
+            "Un software",
+            "Un file",
+            "Una cartella"
+        ],
+        "answer": "Una memoria"
+    },
+    {
+        "question": "Quale successione di comandi mi permette di copiare file dal disco fisso al floppy, in modo veloce ?",
+        "options": [
+            "Tasto destro - Invia a - Floppy",
+            "Tasto destro - Copia - Incolla",
+            "Tasto destro - Crea collegamento - Floppy",
+            "Tasto destro - Copia in - Floppy"
+        ],
+        "answer": "Tasto destro - Invia a - Floppy"
+    },
+    {
+        "question": "A cosa serve il programma Excel ?",
+        "options": [
+            "Eseguire calcoli e creare grafici",
+            "Elaborare testi ed interi libri",
+            "Creare presentazioni",
+            "Gestire file e cartelle"
+        ],
+        "answer": "Eseguire calcoli e creare grafici"
+    },
+    {
+        "question": "In un file Excel è possibile spostare la posizione dei vari fogli di lavoro?",
+        "options": [
+            "Si",
+            "No",
+            "Sì, ma solo a partire dalla versione 2010 del programma",
+            "Sì, ma solo dopo averli rinominati"
+        ],
+        "answer": "Si"
+    },
+    {
+        "question": "La Barra dei menu, solitamente si trova ?",
+        "options": [
+            "In alto",
+            "A destra",
+            "In basso",
+            "A sinistra"
+        ],
+        "answer": "In alto"
+    },
+    {
+        "question": "Dove si trova la scheda madre ?",
+        "options": [
+            "Nel case",
+            "Nel sistema operativo",
+            "Nel monitor",
+            "Nella tastiera"
+        ],
+        "answer": "Nel case"
+    },
+    {
+        "question": "Che tipo di computer è il notebook ?",
+        "options": [
+            "portatile",
+            "non è un computer",
+            "da tavolo",
+            "generico"
+        ],
+        "answer": "portatile"
+    },
+    {
+        "question": "Come posso selezionare file NON adiacenti (vicini) ?",
+        "options": [
+            "Tengo premuto CTRL e clicco sui file",
+            "Tengo premuto ALT e clicco sui file",
+            "Non si possono selezionare file non adiacenti",
+            "Tengo premuto F2 e clicco sui file"
+        ],
+        "answer": "Tengo premuto CTRL e clicco sui file"
+    },
+    {
+        "question": "A cosa serve il masterizzatore CD ?",
+        "options": [
+            "Per memorizzare e leggere dati su CD",
+            "Solo per memorizzare dati su CD",
+            "\nSolo per cancellare dati su CD",
+            "Solo per leggere dati su CD"
+        ],
+        "answer": "Per memorizzare e leggere dati su CD"
+    },
+    {
+        "question": "Il software applicativo più utilizzato per creare delle presentazioni è:",
+        "options": [
+            "Microsoft Power Point",
+            "Microsoft Excel",
+            " Microsoft Word",
+            "Microsoft Access"
+        ],
+        "answer": "Microsoft Power Point"
+    },
+    {
+        "question": "In Windows, quando un file ha estensione \".xlsx\", significa che stiamo lavorando su di un file:",
+        "options": [
+            "Excel",
+            "Acrobat",
+            "Access",
+            "Word"
+        ],
+        "answer": "Excel"
+    },
+    {
+        "question": "La velocità di connessione ad una rete si misura in:",
+        "options": [
+            "Bit al secondo",
+            "Pixel",
+            "Megahertz",
+            "Byte"
+        ],
+        "answer": "Bit al secondo"
+    },
+    {
+        "question": "Il modem permette di :",
+        "options": [
+            "Utilizzare la rete telefonica per connettersi ad internet",
+            "Inviare esclusivamente file audio tra sistemi operativi diversi",
+            "Utilizzare un cavo USB per il passaggio di dati tra computer",
+            "Inviare esclusivamente file video tra sistemi operativi diversi"
+        ],
+        "answer": "Utilizzare la rete telefonica per connettersi ad internet"
+    },
+    {
+        "question": "Cos'è il TCP/IP?",
+        "options": [
+            "Un protocollo di comunicazione tra i computer",
+            "Un software",
+            "Una configurazione del computer",
+            "Un linguaggio di programmazione"
+        ],
+        "answer": "Un protocollo di comunicazione tra i computer"
+    },
+    {
+        "question": "Il trasferimento di un file attraverso internet avviene tramite quale protocollo:",
+        "options": [
+            "FTP",
+            "HTML",
+            "WWW",
+            "TIFF"
+        ],
+        "answer": "FTP"
+    },
+    {
+        "question": "Per HTTP si intende:",
+        "options": [
+            "Hyper Text Transfer Protocol",
+            "Il linguaggio con cui sono scritte le pagine web",
+            "L' indirizzo di posta elettronica",
+            "Un collegamento ipertestuale"
+        ],
+        "answer": "Hyper Text Transfer Protocol"
+    },
+    {
+        "question": "Per HTML si intende :",
+        "options": [
+            "Il linguaggio con cui sono scritte le pagine web",
+            "Un collegamento ipertestuale",
+            "Un protocollo di comunicazione ",
+            "Un sistema di gestione delle pagine web"
+        ],
+        "answer": "Il linguaggio con cui sono scritte le pagine web"
+    },
+    {
+        "question": "Quale tra i seguenti è un linguaggio di programmazione utilizzato nelle pagine web?",
+        "options": [
+            "Javascript",
+            "Visual Basic",
+            "C++",
+            "Delphi"
+        ],
+        "answer": "Javascript"
+    },
+    {
+        "question": "Cos'è un Link?",
+        "options": [
+            "E' un collegamento ipertestuale",
+            "Un protocollo di comunicazione tra i computer",
+            "Un software",
+            "Il linguaggio con cui sono scritte le pagine web"
+        ],
+        "answer": "E' un collegamento ipertestuale"
+    },
+    {
+        "question": "Per hardware si intende:",
+        "options": [
+            "Le parti fisiche che contengono le componenti elettroniche dei computer",
+            "L'insieme dei programmi che consentono l'utilizzo dei computer",
+            "Quei componenti presenti solo su computer portatili",
+            "L’unità di misura delle informazioni rappresentabili in un computer"
+        ],
+        "answer": "Le parti fisiche che contengono le componenti elettroniche dei computer"
+    },
+    {
+        "question": "Per software si intende:",
+        "options": [
+            "L'insieme dei programmi che consentono l'utilizzo dei computer",
+            "Le parti fisiche che contengono le componenti elettroniche dei computer",
+            "Le componenti generalmente utilizzati su computer portatili",
+            "L’insieme della documentazione che descrive le funzionalità di un sistema di elaborazione "
+        ],
+        "answer": "L'insieme dei programmi che consentono l'utilizzo dei computer"
+    },
+    {
+        "question": "Per inviare un fax, il computer deve essere collegato:",
+        "options": [
+            "Alla rete telefonica",
+            "A internet",
+            "Alla rete ISDN",
+            "Ad una speciale rete di trasmissione"
+        ],
+        "answer": "Alla rete telefonica"
+    },
+    {
+        "question": "La posta elettronica certificata:",
+        "options": [
+            "É un servizio che consente di dare ad un messaggio di posta elettronica il valore legale di una raccomandata con avviso di ricevimento",
+            "É un servizio che consente di inviare messaggi di posta elettronica ad alta velocità",
+            "É un servizio che consente di inviare messaggi di posta elettronica allegati superiori a 2 GB",
+            "É un servizio che consente di inviare messaggi di posta elettronica con allegati superiori ad 1 GB"
+        ],
+        "answer": "É un servizio che consente di dare ad un messaggio di posta elettronica il valore legale di una raccomandata con avviso di ricevimento"
+    },
+    {
+        "question": "Con la formattazione si esegue:",
+        "options": [
+            "La cancellazione dei dati presenti nel disco",
+            "Una organizzazione dei dati nel disco",
+            "La creazione di più partizioni del disco",
+            "Il ripristino dei file cancellati dal disco"
+        ],
+        "answer": "La cancellazione dei dati presenti nel disco"
+    },
+    {
+        "question": "Per creare una nuova mail, si deve utilizzare la funzione:",
+        "options": [
+            "Nuovo Messaggio",
+            "Invia/Ricevi",
+            "Rispondi",
+            "Inoltra"
+        ],
+        "answer": "Nuovo Messaggio"
+    },
+    {
+        "question": "Per creare tabelle e grafici, si utilizza:",
+        "options": [
+            "Excel",
+            "Outlook",
+            "Access",
+            "OneNote"
+        ],
+        "answer": "Excel"
+    },
+    {
+        "question": "Un computer viene esposto a virus attraverso:",
+        "options": [
+            "Internet, posta eletronica, pen-drive",
+            "Continue accensioni e spegnimenti",
+            "Eccessivo calore",
+            "Polvere"
+        ],
+        "answer": "Internet, posta eletronica, pen-drive"
+    },
+    {
+        "question": "Una scheda di rete è un elemento:",
+        "options": [
+            "Hardware",
+            "Software",
+            "Firmware",
+            "Midleware"
+        ],
+        "answer": "Hardware"
+    },
+    {
+        "question": "I pixel in uno schermo misurano:",
+        "options": [
+            "La risoluzione",
+            "La luminosità",
+            "La dimensione",
+            "La gamma di colori"
+        ],
+        "answer": "La risoluzione"
+    },
+    {
+        "question": "Cosa succede quando si sceglie l'opzione \"elimina\" per un file?",
+        "options": [
+            "Il file viene spostato nel cestino",
+            "Il computer si spegne",
+            "Il contenuto del file viene cancellato",
+            "Il file viene eliminato e non può essere recuperato"
+        ],
+        "answer": "Il file viene spostato nel cestino"
+    },
+    {
+        "question": "É possibile recuperare un file precedentemente cancellato dopo averlo spostato nel cestino?",
+        "options": [
+            "Sì, ma solo se il cestino non è già stato svuotato",
+            "Solo entro 24 ore dalla cancellazione",
+            "Solo usando programmi specifici",
+            "No, non è possibile"
+        ],
+        "answer": "Sì, ma solo se il cestino non è già stato svuotato"
+    },
+    {
+        "question": "L'acronimo WWW significa:",
+        "options": [
+            "World Wide Web",
+            "World Wild Wolf",
+            "Wizard Wide Web",
+            "Wide Wild West"
+        ],
+        "answer": "World Wide Web"
+    },
+    {
+        "question": "Il gruppo di continuità è:",
+        "options": [
+            "Un sistema a batterie che serve a non far spegnere il PC quando manca la corrente",
+            "Un periferica che permette di mantenere i dati al sicuro",
+            "Un programma per l'elaborazione dei file multimediali",
+            "Un sistema per raffreddare meglio il PC"
+        ],
+        "answer": "Un sistema a batterie che serve a non far spegnere il PC quando manca la corrente"
+    },
+    {
+        "question": "In Outlook il file di posta elettronica ha un'estensione:",
+        "options": [
+            "pst",
+            "mdb",
+            "mkv",
+            "ddr"
+        ],
+        "answer": "pst"
+    },
+    {
+        "question": "L'acronimo LAN significa:",
+        "options": [
+            "Local Area Network",
+            "Live Area Network",
+            "Living Area Network",
+            "Loader Area Network"
+        ],
+        "answer": "Local Area Network"
+    },
+    {
+        "question": "L'acronimo PDF significa:",
+        "options": [
+            "Portable Document Format",
+            "Portable Display File",
+            "Public Document File",
+            "Private Document File"
+        ],
+        "answer": "Portable Document Format"
+    },
+    {
+        "question": "Il protocollo \"HTTPS\" rispetto al protocollo \"HTTP\", offre in più:",
+        "options": [
+            "Sicurezza",
+            "Risparmio Energetico",
+            "Velocità Maggiore",
+            "Luminosità"
+        ],
+        "answer": "Sicurezza"
+    },
+    {
+        "question": "La CPU è composta da :",
+        "options": [
+            "Unita di Controllo e ALU",
+            "ROM e LAN",
+            "ALU e ROM",
+            "ALU e LAN"
+        ],
+        "answer": "Unita di Controllo e ALU"
+    },
+    {
+        "question": "Che cosa è una LAN?",
+        "options": [
+            "Una rete di computer situati in un'area limitata, tipicamente nello stesso edificio o azienda",
+            "Un sistema per la condivisione di risorse quali stampanti, unità di memoria di massa, etc",
+            "Un protocollo di trasmissione che permette il collegamento dei\ncellulari",
+            "Un sistema di gestione della posta elettronica nell'ambito dello stesso edificio o azienda"
+        ],
+        "answer": "Una rete di computer situati in un'area limitata, tipicamente nello stesso edificio o azienda"
+    },
+    {
+        "question": "Per connettere un computer ad una rete LAN occorre:",
+        "options": [
+            "Una scheda di rete",
+            "Un modem",
+            "Una porta USB",
+            "Una porta parallela"
+        ],
+        "answer": "Una scheda di rete"
+    },
+    {
+        "question": "L'aconimo URL significa:",
+        "options": [
+            "Uniform Resource Locator",
+            "Una tipologia di rete",
+            "Un tipo di protocollo",
+            "Una componente hardware"
+        ],
+        "answer": "Uniform Resource Locator"
+    },
+    {
+        "question": "Prima dello schermo a LCD, i monitor erano:",
+        "options": [
+            "Tubo a raggi catodici",
+            "Tubo di Pitot",
+            "Tubo a raggi ionici",
+            "Tubo a cationi"
+        ],
+        "answer": "Tubo a raggi catodici"
+    },
+    {
+        "question": "L'estensione \".RAR\" indica:",
+        "options": [
+            "File compressi",
+            "File di testo",
+            "Virus",
+            "Database"
+        ],
+        "answer": "File compressi"
+    },
+    {
+        "question": "In una e-mail, gli indirizzi che non si vogliono rendere noti agli altri destinatari, devono essere inseriti nel campo:",
+        "options": [
+            "CCN",
+            "CC",
+            "A",
+            "Oggetto"
+        ],
+        "answer": "CCN"
+    },
+    {
+        "question": "L'acronimo VPN significa:",
+        "options": [
+            "Virtual Private Network",
+            "Very Private Network",
+            "Virtual Public Network",
+            "Varied Privat Network"
+        ],
+        "answer": "Virtual Private Network"
+    },
+    {
+        "question": "In power point per aggiungere una nuova slide, la combinazione dei tasti è:",
+        "options": [
+            "CTRL+M",
+            "CTRL+C",
+            "CTRL+L",
+            "CTRL+P"
+        ],
+        "answer": "CTRL+M"
+    },
+    {
+        "question": "Per aprire un file con estensione \".pptx\", occorre:",
+        "options": [
+            "Power Point",
+            "Excel",
+            "Access",
+            "Word"
+        ],
+        "answer": "Power Point"
+    },
+    {
+        "question": "Per aprire un file con estensione \".xlsx\", occorre:",
+        "options": [
+            "Excel",
+            "Power Point",
+            "Word",
+            "Access"
+        ],
+        "answer": "Excel"
+    },
+    {
+        "question": "Per aprire un file con estensione \".docx\", occorre:",
+        "options": [
+            "Word",
+            "Power Point",
+            "Access",
+            "Excel"
+        ],
+        "answer": "Word"
+    },
+    {
+        "question": "Per aprire un file con estensione \".mdb\", occorre:",
+        "options": [
+            "Access",
+            "Power Point",
+            "Word",
+            "Excel"
+        ],
+        "answer": "Access"
+    },
+    {
+        "question": "Cosa si può fare per liberare spazio sul disco dal sistema operativo:",
+        "options": [
+            "Eseguire pulizia disco",
+            "Cancellare il sistema operativo",
+            "Eliminare i file doppioni",
+            "Cancellare i precedenti aggiornamenti"
+        ],
+        "answer": "Eseguire pulizia disco"
+    },
+    {
+        "question": "Cosa si deve digitare per accedere alla propria posta elettronica?",
+        "options": [
+            "Username e Password",
+            "Codice Fiscale e Password",
+            "Codice Fiscale e Username",
+            "Codice Fiscale e Cognome"
+        ],
+        "answer": "Username e Password"
+    },
+    {
+        "question": "Quali fra questi è un file immagine?",
+        "options": [
+            "Mare.jpg",
+            "Mare.docx",
+            "Mare.txt",
+            "Mare.csv"
+        ],
+        "answer": "Mare.jpg"
+    },
+    {
+        "question": "Quale indirizzo e-mail è errato?",
+        "options": [
+            "luca;bianchi@gmail.com",
+            "luca.bianchi@gmail.com",
+            "luca-bianchi@gmail.com",
+            "luca_bianchi@gmail.com"
+        ],
+        "answer": "luca;bianchi@gmail.com"
+    },
+    {
+        "question": "Un programma software è costituito da:",
+        "options": [
+            "Una sequenza di istruzioni",
+            "Un insieme di record",
+            "Un insieme di e-mail",
+            "Un insieme di foto"
+        ],
+        "answer": "Una sequenza di istruzioni"
+    },
+    {
+        "question": "Cosa si intende per \"ʌ\" in una formula di Excel?",
+        "options": [
+            "Elevamento a potenza",
+            "Divisione",
+            "Moltiplicazione",
+            "Somma"
+        ],
+        "answer": "Elevamento a potenza"
+    },
+    {
+        "question": "Cosa occorre per ascoltare musica da un computer?",
+        "options": [
+            "Scheda Audio",
+            "Lettore DVD",
+            "Porta USB",
+            "Modem"
+        ],
+        "answer": "Scheda Audio"
+    },
+    {
+        "question": "Il comanda \"Salva\", in word, serve per:",
+        "options": [
+            "Salvare un documento sostituendo la versione precedente",
+            "Attivare il controllo ortografico di un documento aperto",
+            "Modificare i paragrafi ed i margini del documento",
+            "Salvare un documento in una cartella diversa da quella originale"
+        ],
+        "answer": "Salvare un documento sostituendo la versione precedente"
+    },
+    {
+        "question": "É possibile inserire tabelle nei documenti Word?",
+        "options": [
+            "Sì, tramite il comando \"inserisci tabella\"",
+            "No, non è possibile",
+            "Sì, ma solo come immagine",
+            "Sì, tramite un collegamento con il programma Excel"
+        ],
+        "answer": "Sì, tramite il comando \"inserisci tabella\""
+    },
+    {
+        "question": "Il GPS permette di rilevare l'altitudine e la posizione:",
+        "options": [
+            "Si, è vero",
+            "No, è falso",
+            "Si, è vero ma serve uno strumento accessorio",
+            "Si, è vero, ma dipende dalla longitudine"
+        ],
+        "answer": "Si, è vero"
+    },
+    {
+        "question": "Quale tra le seguenti unità non alloggia nel case ?",
+        "options": [
+            "Mouse",
+            "RAM",
+            "Scheda Madre",
+            "CPU"
+        ],
+        "answer": "Mouse"
+    },
+    {
+        "question": "I PC desktop ed i portatili hanno la stessa RAM?",
+        "options": [
+            "No, in quanto hanno dimensioni differenti",
+            "Dipende dal tipo di RAM",
+            "Dipende dalla marca dei computer",
+            "Si, non ci sono differenze"
+        ],
+        "answer": "No, in quanto hanno dimensioni differenti"
+    },
+    {
+        "question": "E' possibile utilizzare un cellulare per poter connettere il PC portatile ad internet?",
+        "options": [
+            "Si",
+            "No",
+            "E' necessario un cavo specifico",
+            "Dipende dal BIOS"
+        ],
+        "answer": "Si"
+    },
+    {
+        "question": "Come bisogna procedere per digitare i numeri utilizzando il tastierino numerico?",
+        "options": [
+            "Attivare, se non lo è già, il tasto BLOC NUM",
+            "Attivare, se non lo è già, il tasto CAPS LOCK",
+            "Attivare, se non lo è già, il tasto SHIFT",
+            "Attivare, se non lo è già, il tasto CTRL"
+        ],
+        "answer": "Attivare, se non lo è già, il tasto BLOC NUM"
+    },
+    {
+        "question": "Il tasto \"BLOC NUM\" viene utilizzato per :",
+        "options": [
+            "Attivare il tastierino numerico ",
+            "Attivare i tasti funzione",
+            "Attivare i tasti di controllo",
+            "Attivare i tasti di spostamento"
+        ],
+        "answer": "Attivare il tastierino numerico "
+    },
+    {
+        "question": "E' possibile cambiare l'orientamento dell'immagine sul monitor da orizzontale a verticale?",
+        "options": [
+            "Si",
+            "No",
+            "Si può fare solo su i tablet e sui portatili",
+            "Si rischia la rottura dello schermo"
+        ],
+        "answer": "Si"
+    },
+    {
+        "question": "La rete aziendale geografics, che collega sedi distaccate, si chiama:",
+        "options": [
+            "Extranet",
+            "Intranet",
+            "Internet",
+            "Privynet"
+        ],
+        "answer": "Extranet"
+    },
+    {
+        "question": "Il tasto CAPS LOCK sulla tastiera serve per :",
+        "options": [
+            "Attivare una modalità di inserimento del testo in cui le lettere sono sempre maiuscole",
+            "Permette di spostare il cursore in avanti di alcuni spazi o passare alla casella di testo successiva in un modulo",
+            "Permetti di eliminare il carattere che precede il cursore oppure il testo selezionato",
+            "Permette di spostare il cursore in avanti di uno spazio"
+        ],
+        "answer": "Attivare una modalità di inserimento del testo in cui le lettere sono sempre maiuscole"
+    },
+    {
+        "question": "BLOC MAIUSC",
+        "options": [
+            "Permette di digitare tutte le lettere in maiuscolo",
+            "Permette di spostare il cursore in avanti di alcuni spazi o passare alla casella di testo successiva in un modulo",
+            "Permette di spostare il cursore all'inizio della riga successiva",
+            "Permette di spostare il cursore in avanti di uno spazio"
+        ],
+        "answer": "Permette di digitare tutte le lettere in maiuscolo"
+    },
+    {
+        "question": "TAB",
+        "options": [
+            "Permette di spostare il cursore in avanti di alcuni spazi o passare alla casella di testo successiva in un modulo",
+            "Permette di, in combinazione con una lettera, digitare la lettera corrispondente in maiuscolo",
+            "Permetti di eliminare il carattere che precede il cursore oppure il testo selezionato",
+            "Permette di spostare il cursore in avanti di uno spazio"
+        ],
+        "answer": "Permette di spostare il cursore in avanti di alcuni spazi o passare alla casella di testo successiva in un modulo"
+    },
+    {
+        "question": "INVIO",
+        "options": [
+            "Permette di spostare il cursore all'inizio della riga successiva",
+            "Permette di, in combinazione con una lettera, digitare la lettera corrispondente in maiuscolo",
+            "Permette di spostare il cursore in avanti di alcuni spazi o passare alla casella di testo successiva in un modulo",
+            "Permette di spostare il cursore in avanti di uno spazio"
+        ],
+        "answer": "Permette di spostare il cursore all'inizio della riga successiva"
+    },
+    {
+        "question": "BARRA SPAZIATRICE",
+        "options": [
+            "Permette di spostare il cursore in avanti di uno spazio",
+            "Permette di spostare il cursore all'inizio della riga successiva",
+            "Permetti di eliminare il carattere che precede il cursore oppure il testo selezionato",
+            "Permette di digitare tutte le lettere in maiuscolo"
+        ],
+        "answer": "Permette di spostare il cursore in avanti di uno spazio"
+    },
+    {
+        "question": "BACKSPACE",
+        "options": [
+            "Permetti di eliminare il carattere che precede il cursore oppure il testo selezionato",
+            "Permette di digitare tutte le lettere in maiuscolo",
+            "Permette di spostare il cursore in avanti di alcuni spazi o passare alla casella di testo successiva in un modulo",
+            "Permette di spostare il cursore all'inizio della riga successiva"
+        ],
+        "answer": "Permetti di eliminare il carattere che precede il cursore oppure il testo selezionato"
+    },
+    {
+        "question": "Per digitare una lettera specifica in maiuscolo devo utilizzare il tasto:",
+        "options": [
+            "CAPS LOCK",
+            "TAB",
+            "INVIO",
+            "BACKSPACE"
+        ],
+        "answer": "CAPS LOCK"
+    },
+    {
+        "question": "Per digitare tutte le lettere in maiuscolo devo utilizzare il tasto:",
+        "options": [
+            "BLOC MAIUSC",
+            "TAB",
+            "INVIO",
+            "BACKSPACE"
+        ],
+        "answer": "BLOC MAIUSC"
+    },
+    {
+        "question": "Per spostare il cursore in avanti di alcuni spazi o passare alla casella di testo successiva in un modulo devo utilizzare il tasto:",
+        "options": [
+            "TAB",
+            "CAPS LOCK",
+            "BARRA SPAZIATRICE",
+            "INVIO"
+        ],
+        "answer": "TAB"
+    },
+    {
+        "question": "Per spostare il cursore all'inizio della riga successiva devo utilizzare il tasto:",
+        "options": [
+            "INVIO",
+            "BARRA SPAZIATRICE",
+            "BLOC MAIUSC",
+            "BACKSPACE"
+        ],
+        "answer": "INVIO"
+    },
+    {
+        "question": "Per spostare il cursore in avanti di uno spazio devo utilizzare il tasto:",
+        "options": [
+            "BARRA SPAZIATRICE",
+            "BACKSPACE",
+            "BLOC MAIUSC",
+            "CAPS LOCK"
+        ],
+        "answer": "BARRA SPAZIATRICE"
+    },
+    {
+        "question": "Per eliminare il carattere che precede il cursore oppure il testo selezionato devo utilizzare il tasto:",
+        "options": [
+            "BACKSPACE",
+            "BARRA SPAZIATRICE",
+            "BLOC MAIUSC",
+            "TAB"
+        ],
+        "answer": "BACKSPACE"
+    },
+    {
+        "question": "Nel caso di un guasto alla ventola del PC cosa bisogna fare?",
+        "options": [
+            "Spegnere il PC",
+            "Continuare a lavorare",
+            "Mettere un ventilatore all'esterno",
+            "Spruzzare acqua per consentire il raffreddamento"
+        ],
+        "answer": "Spegnere il PC"
+    },
+    {
+        "question": "Il profilo di un utente che corrisponde ad una casella di posta prende il nome di:",
+        "options": [
+            "Account",
+            "Attachment",
+            "Freeware",
+            "Firewall"
+        ],
+        "answer": "Account"
+    },
+    {
+        "question": "Un file allegato a un messaggio di posta elettronica prende il nome di:",
+        "options": [
+            "Attachment",
+            "Account",
+            "Development",
+            "Entertainment"
+        ],
+        "answer": "Attachment"
+    },
+    {
+        "question": "Un programma in grado di riconoscere un virus presente in un file e di eliminarlo viene definito:",
+        "options": [
+            "Antivirus",
+            "Firmware",
+            "Firewall",
+            "Account"
+        ],
+        "answer": "Antivirus"
+    },
+    {
+        "question": "Lo spazio pubblicitario che compare in siti Web di terzi prende il nome di :",
+        "options": [
+            "Banner",
+            "Backup",
+            "Bus",
+            "Bug"
+        ],
+        "answer": "Banner"
+    },
+    {
+        "question": "Un'operazione che permette di creare una copia di sicurezza di un file prende il nome di :",
+        "options": [
+            "Backup",
+            "Banner",
+            "Bug",
+            "Bus"
+        ],
+        "answer": "Backup"
+    },
+    {
+        "question": "La barra sulla quale sono raccolte delle icone che funzionano da pulsanti. Di solito è possibile personalizzare gli strumenti da richiamare, è la:",
+        "options": [
+            "Barra degli strumenti ",
+            "Barra dei menu",
+            "Barra del titolo",
+            "Barra delle applicazioni"
+        ],
+        "answer": "Barra degli strumenti "
+    },
+    {
+        "question": "La barra sulla quale sono disponibili le principali funzioni di un’applicazione, è la:",
+        "options": [
+            "Barra dei menu",
+            "Barra degli strumenti ",
+            "Barra del titolo",
+            "Barra delle applicazioni"
+        ],
+        "answer": "Barra dei menu"
+    },
+    {
+        "question": "La barra sulla quale è riportata l’intestazione di una finestra di lavoro e i pulsanti per sospenderla temporaneamente, ridimensionarla, o\nchiuderla definitivamente, è la:",
+        "options": [
+            "Barra del titolo",
+            "Barra dei menu",
+            "Barra delle applicazioni",
+            "Barra delle formule"
+        ],
+        "answer": "Barra del titolo"
+    },
+    {
+        "question": "La barra generalmente posta nella parte bassa dello schermo dove sono raccolti il pulsante di avvio, le icone delle applicazioni che è possibile richiamare, le icone delle finestre di lavoro aperte, è la:",
+        "options": [
+            "Barra delle applicazioni",
+            "Barra di scorrimento",
+            "Barra degli strumenti ",
+            "Barra di stato"
+        ],
+        "answer": "Barra delle applicazioni"
+    },
+    {
+        "question": "La barra presente su Excel che visualizza la cella selezionata e il suo contenuto, testo o formula, è la:",
+        "options": [
+            "Barra delle formule",
+            "Barra dei menu",
+            "Barra di stato",
+            "Barra degli strumenti "
+        ],
+        "answer": "Barra delle formule"
+    },
+    {
+        "question": "La barra verticale o orizzontale che consente di spostarsi in alto o in basso, a destra o a sinistra, all’interno di una finestra di lavoro, è la:",
+        "options": [
+            "Barra di scorrimento",
+            "Barra delle formule",
+            "Barra delle applicazioni",
+            "Barra del titolo"
+        ],
+        "answer": "Barra di scorrimento"
+    },
+    {
+        "question": "La barra nella quale i programmi visualizzano le informazioni relative al documento sul quale si sta lavorando. Per esempio, un programma di elaborazione testi può visualizzare nella barra di stato il numero di pagine totali, il numero della riga e della colonna; un programma di grafica può visualizzare le coordinate del punto nel quale è posizionato il puntatore del mouse, è la:",
+        "options": [
+            "Barra di stato",
+            "Barra di scorrimento",
+            "Barra delle formule",
+            "Barra degli strumenti "
+        ],
+        "answer": "Barra di stato"
+    },
+    {
+        "question": "Il modem è:",
+        "options": [
+            "Un apparato che consente la trasmissione di dati su linea telefonica mediante modulazione",
+            "Un apparato di modulazione che consente la trasmissione di collegare più apparati alla stessa linea telefonica",
+            "Un strumento digitale utilizzato per ricevere la TV satellitare",
+            "Un strumento digitale utilizzato per tasmettere Sky"
+        ],
+        "answer": "Un apparato che consente la trasmissione di dati su linea telefonica mediante modulazione"
+    },
+    {
+        "question": "La tecnica di trasmissione e ricezione a corto raggio basata su radiofrequenza viene definita:",
+        "options": [
+            "Bluetooth",
+            "Browser",
+            "Bug",
+            "Bus"
+        ],
+        "answer": "Bluetooth"
+    },
+    {
+        "question": "Il programma che permette l’accesso alla rete Internet e la visualizzazione delle pagine web, viene definito:",
+        "options": [
+            "Browser",
+            "Bus",
+            "Bluetooth",
+            "Bug"
+        ],
+        "answer": "Browser"
+    },
+    {
+        "question": "Un errore in una procedura informatica prende il nome di: ",
+        "options": [
+            "Bug",
+            "Bus",
+            "Banner",
+            "Backup"
+        ],
+        "answer": "Bug"
+    },
+    {
+        "question": "Il canale per la trasmissione dei dati tra i vari componenti del computer prende il nome di:",
+        "options": [
+            "Bus",
+            "Bug",
+            "Backup",
+            "Banner"
+        ],
+        "answer": "Bus"
+    },
+    {
+        "question": "Come si chiama il dipartimento o l'area riservata in cui si trova il centro del sistema informativo e informatico di una struttura; un tempo unica area in cui era possibile svolgere attività di elaborazione?",
+        "options": [
+            "CED - Centro Elaborazione\nDati",
+            "CEP - Centro Elaborazione Progetti",
+            "DEP - Dipartimento Elaborazione Progetti",
+            "ADP - Area Dipartimentale Progettuale"
+        ],
+        "answer": "CED - Centro Elaborazione\nDati"
+    },
+    {
+        "question": "Un particolare tipo di applicazione in rete che permette agli utenti collegati di scambiare frasi e messaggi in modo interattivo prende il nome di :",
+        "options": [
+            "Chat",
+            "Chip",
+            "Click",
+            "Clock"
+        ],
+        "answer": "Chat"
+    },
+    {
+        "question": "Il nome dato ai componenti elettronici per la loro ridotta dimensione: ",
+        "options": [
+            "Chip",
+            "Click",
+            "Clock",
+            "Console"
+        ],
+        "answer": "Chip"
+    },
+    {
+        "question": "La disciplina che si occupa, sotto diversi aspetti, dello studio della mente artificiale, della robotica e del confine tra umano e artificiale prende il nome di :",
+        "options": [
+            "Cibernetica",
+            "Ergonomia",
+            "Biotecnologia",
+            "Posturologia"
+        ],
+        "answer": "Cibernetica"
+    },
+    {
+        "question": "Il rumore provocato dall’azione di uno dei tasti del mouse. Se il puntatore,\nspostato dal mouse, si trova in una zona attiva dello schermo, in corrispondenza\ndel click si ha l’inizio o l’attivazione di una procedura",
+        "options": [
+            "Click",
+            "Bug",
+            "Chip",
+            "Clock"
+        ],
+        "answer": "Click"
+    },
+    {
+        "question": "Il componente elettronico in cui sono concentrati, grazie a particolari tecniche,\nmilioni di microcomponenti; un solo componente racchiude quindi in sé e integra le funzioni di moltissimi circuiti elementari, prende il nome di :",
+        "options": [
+            "Circuito integrato",
+            "Click",
+            "Bug",
+            "Clock"
+        ],
+        "answer": "Circuito integrato"
+    },
+    {
+        "question": "Nel mondo Internet, l'insieme degli utenti che fa riferimento a uno stesso sito o\nservizio, prende il nome di:",
+        "options": [
+            "Community",
+            "Console",
+            "Cibernetica",
+            "CED - Centro Elaborazione\nDati"
+        ],
+        "answer": "Community"
+    },
+    {
+        "question": "Il supporto plastico di memoria di massa, scritto e letto attraverso un laser, prende il nome di:",
+        "options": [
+            "CD - Compact Disk",
+            "Bug",
+            "Click",
+            "Console"
+        ],
+        "answer": "CD - Compact Disk"
+    },
+    {
+        "question": "La macchina logica elettronica programmabile in grado di svolgere compiti diversi in funzione del programma in esecuzione, prende il nome di :",
+        "options": [
+            "Computer",
+            "Desktop",
+            "Display",
+            "Console"
+        ],
+        "answer": "Computer"
+    },
+    {
+        "question": "L'unità di controllo e visualizzazione, con la quale è possibile interagire con il\nsistema, prende il nome di:",
+        "options": [
+            "Console",
+            "Computer",
+            "CD - Compact Disk",
+            "Community"
+        ],
+        "answer": "Console"
+    },
+    {
+        "question": "Il diritto che tutela l'autore di un'opera dell'ingegno affinché l'utilizzo del suo\nlavoro sia remunerato e comunque gestito all'interno di un rapporto corretto per\nevitarne sfruttamenti illeciti, si chiama:",
+        "options": [
+            "Copyright",
+            "Community",
+            "FAQ",
+            "Forum"
+        ],
+        "answer": "Copyright"
+    },
+    {
+        "question": "L' unità centrale di elaborazione, il circuito integrato che elabora i dati, è:",
+        "options": [
+            "La CPU",
+            "Il Case",
+            "Il Bug",
+            "Il Clock"
+        ],
+        "answer": "La CPU"
+    },
+    {
+        "question": "In un elaboratore, il dispositivo in grado di interpretare le istruzioni e operare con esse sui dati, fornendo i risultati prende il nome di:",
+        "options": [
+            "Central Processing\nUnit",
+            "CED - Centro Elaborazione\nDati",
+            "Chip",
+            "Click"
+        ],
+        "answer": "Central Processing\nUnit"
+    },
+    {
+        "question": "In un sistema informatico, un arresto per gravi motivi di una procedura o la\nrottura per ragioni diverse di una parte (anche fisica) del sistema stesso prende il nome di:",
+        "options": [
+            "Crash",
+            "Chip",
+            "Click",
+            "Clock"
+        ],
+        "answer": "Crash"
+    },
+    {
+        "question": "La tecnica che permette di nascondere il contenuto di un messaggio in modo che\nesso possa essere correttamente compreso solo da chi ne possiede la chiave di\ndecifrazione, prende il nome di:",
+        "options": [
+            "Crittografia",
+            "Copyright",
+            "Community",
+            "Cibernetica"
+        ],
+        "answer": "Crittografia"
+    },
+    {
+        "question": "Il dispositivo dell’unità centrale che scandisce\nl’esecuzione delle operazioni, prende il nome di:",
+        "options": [
+            "Clock o orologio ",
+            "Click",
+            "Chip",
+            "Crash"
+        ],
+        "answer": "Clock o orologio "
+    },
+    {
+        "question": "La scatola metallica che racchiude tutte le componenti fisiche del computer, prende il nome di:",
+        "options": [
+            "Case",
+            "Chip",
+            "Click",
+            "Clock"
+        ],
+        "answer": "Case"
+    },
+    {
+        "question": "Il sistema di rappresentazione di dati per mezzo di barre verticale di spessori differenti, possono essere letti solo con appositi lettori ottici; si utilizzano per contraddistinguere un prodotto in commercio e facilitano le operazione di contabilità alle casse dei supermercati. Tale sistema prende il nome di:",
+        "options": [
+            "Codice a barre",
+            "Circuito integrato",
+            "Barra degli strumenti ",
+            "Barra delle applicazioni"
+        ],
+        "answer": "Codice a barre"
+    },
+    {
+        "question": "L'archivio di dati disposti in modo organizzato e correlati tra di loro, prende il nome di:",
+        "options": [
+            "Database",
+            "Diapositiva o slide",
+            "Word",
+            "Paint"
+        ],
+        "answer": "Database"
+    },
+    {
+        "question": "La scrivania virtuale utilizzata dalla grafica del sistema operativo, prende il nome di:",
+        "options": [
+            "Desktop",
+            "Display",
+            "Console",
+            "Barra dei menu"
+        ],
+        "answer": "Desktop"
+    },
+    {
+        "question": "Il dispositivo elettronico che permette di visualizzare cifre, lettere e oggetti grafici, prende il nome di:",
+        "options": [
+            "Display",
+            "Desktop",
+            "Console",
+            "Diapositiva o slide"
+        ],
+        "answer": "Display"
+    },
+    {
+        "question": "Ciascuna delle pagine che compongono una\npresentazione tipo PowerPoint, prende il nome di:",
+        "options": [
+            "Diapositiva o slide",
+            "Tabella",
+            "Formato",
+            "Carattere"
+        ],
+        "answer": "Diapositiva o slide"
+    },
+    {
+        "question": "L'operazione che permette di caricare e scaricare dalla rete un file sul proprio computer prende il nome di :",
+        "options": [
+            "Upload/Download",
+            "Searching/Bitstream",
+            "Download/Bitstream",
+            "Upload/Searching"
+        ],
+        "answer": "Upload/Download"
+    },
+    {
+        "question": "Il programma che serve al sistema operativo per gestire una periferica prende il nome di :",
+        "options": [
+            "Driver",
+            "Clock",
+            "Case",
+            "Database"
+        ],
+        "answer": "Driver"
+    },
+    {
+        "question": "Sono supporti di memoria, apparentemente identici ai CD-ROM, che hanno capacità 26 volte superiore ai CD-ROM",
+        "options": [
+            "DVD (Digital Video Disc) ",
+            "Clock",
+            "Desktop",
+            "Case"
+        ],
+        "answer": "DVD (Digital Video Disc) "
+    },
+    {
+        "question": "Il commercio elettronico, ossia la vendita di oggetti o\nservizi per via telematica, viene più propriamente definito:",
+        "options": [
+            "E-commerce",
+            "Ergonomia",
+            "E-mail ",
+            "Economia"
+        ],
+        "answer": "E-commerce"
+    },
+    {
+        "question": "La posta elettronica, ossia i messaggi inviati tramite computer collegati a Internet, viene più propriamente chiamata:",
+        "options": [
+            "E-mail ",
+            "E-commerce",
+            "SMS",
+            "Chat"
+        ],
+        "answer": "E-mail "
+    },
+    {
+        "question": "Domande ricorrenti relative a un argomento, a un sito Internet, raccolte, assieme alle risposte, in un unico file",
+        "options": [
+            "FAQ",
+            "File",
+            "Forum",
+            "Community"
+        ],
+        "answer": "FAQ"
+    },
+    {
+        "question": "La cura dei fattori che permettono di migliorare\nle condizioni del posto di lavoro, prende il nome di :",
+        "options": [
+            "Ergonomia",
+            "Economia",
+            "Biotecnologia",
+            "Posturologia"
+        ],
+        "answer": "Ergonomia"
+    },
+    {
+        "question": "Il singolo documento di lavoro individuato da\nun nome si chiama:",
+        "options": [
+            "File",
+            "Font",
+            "FAQ",
+            "Frame"
+        ],
+        "answer": "File"
+    },
+    {
+        "question": "Il Software presente nella memoria ROM che\ngestisce le funzioni di base del sistema, prende il nome di:",
+        "options": [
+            "Firmware",
+            "Freeware",
+            "Frame",
+            "Font"
+        ],
+        "answer": "Firmware"
+    },
+    {
+        "question": "Le parti di una pagina web inserite in cornici e\nindipendenti l’una dall’altra, prende il nome di:",
+        "options": [
+            "Frame",
+            "Firmware",
+            "Freeware",
+            "File"
+        ],
+        "answer": "Frame"
+    },
+    {
+        "question": "L'insieme completo di caratteri con lo stesso stile, per esempio Arial, Times New Roman, prende il nome di:",
+        "options": [
+            "Font",
+            "Form",
+            "Fort",
+            "Front"
+        ],
+        "answer": "Font"
+    },
+    {
+        "question": "Lo spazio su Internet in cui si incontrano gruppi\ndi persone per scambiarsi opinioni su argomenti specifici, prende il nome di :",
+        "options": [
+            "Forum",
+            "FAQ",
+            "Community",
+            "Chat"
+        ],
+        "answer": "Forum"
+    },
+    {
+        "question": "Come si chiama il software tutelato dalle leggi sul copyright che può essere utilizzato gratuitamente ma non può essere venduto?",
+        "options": [
+            "Freeware",
+            "Frame",
+            "Firmware",
+            "Font"
+        ],
+        "answer": "Freeware"
+    },
+    {
+        "question": "Il Simbolo usato negli indirizzi di posta elettronica:",
+        "options": [
+            "si legge “at” o “chiocciolina”",
+            "si legge \"fn\"",
+            "si legge \"stamp r sist\"",
+            "si legge \"ins\""
+        ],
+        "answer": "si legge “at” o “chiocciolina”"
+    },
+    {
+        "question": "Per \"at\" si intende :",
+        "options": [
+            "Il simbolo usato negli indirizzi di posta elettronica",
+            "Un bus di comunicazione parallelo sincrono",
+            "Il trasferimento di file da pc a rete",
+            "La compravendita di azioni su Internet"
+        ],
+        "answer": "Il simbolo usato negli indirizzi di posta elettronica"
+    },
+    {
+        "question": "Il linguaggio di scrittura di ipertesti delle pagine web di Internet è denominato:",
+        "options": [
+            "HTML",
+            "JAVA",
+            "DREAMWEAVER",
+            "FTP"
+        ],
+        "answer": "HTML"
+    },
+    {
+        "question": "Nella posta elettronica, la presenza di un \"punto esclamativo\" di coloro rosso in corrispondenza di un messaggio, cosa indica?",
+        "options": [
+            "Che il messaggio è stato inviato con \"alta priorità\"",
+            "Che si è presentato un errore nel messaggio",
+            "Che al messaggio è allegato un file",
+            "Che il messaggio ha un contenuto dubbio, quindi occorre fare attenzione ad aprirlo"
+        ],
+        "answer": "Che il messaggio è stato inviato con \"alta priorità\""
+    },
+    {
+        "question": "Con quale programma di Office, è possibile salvare un file nel formato TIFF?",
+        "options": [
+            "Publisher",
+            "Excel",
+            "Power Point",
+            "Rich Text Format"
+        ],
+        "answer": "Publisher"
+    },
+    {
+        "question": "Che cos'è l'USB?",
+        "options": [
+            "Un bus seriale di comunicazione",
+            "Un bus di servizi unimodali",
+            "Un bus di servizio per sistemi uniprocessore ",
+            "Un bus di comunicazione parallelo sincrono"
+        ],
+        "answer": "Un bus seriale di comunicazione"
+    },
+    {
+        "question": "Il termine \"upload\" in internet, riguarda:",
+        "options": [
+            "Il trasferimento di file da pc a rete",
+            "L'accesso alla posta elettronica",
+            "Il salvataggio di un file",
+            "Il trasferimento di file da rete a pc"
+        ],
+        "answer": "Il trasferimento di file da pc a rete"
+    },
+    {
+        "question": "Possono esistere, su un computer, due file aventi lo stesso nome?",
+        "options": [
+            "Si, purchè siano in cartelle diverse",
+            "No in nessun caso",
+            "Si, purchè abbiano contenuti diversi",
+            "Si, purchè non siano stati creati nella stessa data"
+        ],
+        "answer": "Si, purchè siano in cartelle diverse"
+    },
+    {
+        "question": "Quale, tra i seguenti, è un rifrimento relativo ad un inserimento in una cella di excel?",
+        "options": [
+            "B20",
+            "B$20",
+            "&B$20",
+            "b$2$0"
+        ],
+        "answer": "B20"
+    },
+    {
+        "question": "Con il termine \"trading on line\" intendiamo:",
+        "options": [
+            "La compravendita di azioni su Internet",
+            "Commercio elettronico, vendita di oggetti o servizi per via telematica",
+            "Lo shopping on line",
+            "La pubblicazione su internet di informazioni false"
+        ],
+        "answer": "La compravendita di azioni su Internet"
+    },
+    {
+        "question": "Cos'è un file temporaneo?",
+        "options": [
+            "Un file creato temporaneamente per memorizzare le informazioni",
+            "Un antivirus",
+            "Un software privato",
+            "Un documento soggetto a scadenza"
+        ],
+        "answer": "Un file creato temporaneamente per memorizzare le informazioni"
+    },
+    {
+        "question": "Quale tra i seguenti programmi è un elaboratore di testi?",
+        "options": [
+            "Word",
+            "Power Point",
+            "Access",
+            "Excel"
+        ],
+        "answer": "Word"
+    },
+    {
+        "question": "Dove si trova l'Hard Disk?",
+        "options": [
+            "Nel case",
+            "Nella memoria",
+            "Nella RAM",
+            "Nella CPU"
+        ],
+        "answer": "Nel case"
+    },
+    {
+        "question": "Il protocollo https serve a :",
+        "options": [
+            "Instaurare una connessione sicura",
+            "Consentire la compressione dei messaggi inviati su una rete",
+            "Instaurare una connessione veloce in una rete di computer",
+            "Consentire la comunicazione tra computer che utilizzano diversi sistemi operativi"
+        ],
+        "answer": "Instaurare una connessione sicura"
+    },
+    {
+        "question": "Per selezionare più icone contemporaneamente sul desktop :",
+        "options": [
+            "Cliccare sulle icone da selezionare tenendo premuto il tasto CTRL sulla tastiera",
+            "Cliccare sulle icone da selezionare tenendo premuto il tasto ALT sulla tastiera",
+            "Cliccare sulle icone da selezionare tenendo premuto il tasto CANC sulla tastiera",
+            "Cliccare sulle icone da selezionare tenendo premuto il tasto ESC sulla tastiera"
+        ],
+        "answer": "Cliccare sulle icone da selezionare tenendo premuto il tasto CTRL sulla tastiera"
+    },
+    {
+        "question": "Per spyware si intende :",
+        "options": [
+            "Un software creato allo scopo di raccogliere informazioni su un utente a scopo potenzialmente fraudolento",
+            "Un software creato allo scopo di bloccare l'accesso ad una risorsa agli utenti che la richiedono",
+            "Un software creato allo scopo di fornire ad un utente informazioni su promozioni commerciali",
+            "Un software per statistiche on line"
+        ],
+        "answer": "Un software creato allo scopo di raccogliere informazioni su un utente a scopo potenzialmente fraudolento"
+    },
+    {
+        "question": "Quale tra i seguenti è un sistema operativo per smartphone?",
+        "options": [
+            "Android",
+            "Java",
+            "Word",
+            "Powerpoint"
+        ],
+        "answer": "Android"
+    },
+    {
+        "question": "GAN è l'acronimo di:",
+        "options": [
+            "Global Area Network",
+            "Global Account Network",
+            "Games and News",
+            "Global Area News"
+        ],
+        "answer": "Global Area Network"
+    },
+    {
+        "question": "Quale tra i seguenti non è un linguaggio di programmazione del computer?",
+        "options": [
+            "Ubuntu",
+            "Java",
+            "Visual Basic",
+            "C++"
+        ],
+        "answer": "Ubuntu"
+    },
+    {
+        "question": "Quale tra i seguenti non è un linguaggio di programmazione del computer?",
+        "options": [
+            "Fdisk",
+            "Perl",
+            "PHP",
+            "Javascript"
+        ],
+        "answer": "Fdisk"
+    },
+    {
+        "question": "Il formato .AVI si riferisce a file contenenti :",
+        "options": [
+            "Filmati",
+            "Testo formattato",
+            "Dati in formato ASCII",
+            "Musica"
+        ],
+        "answer": "Filmati"
+    },
+    {
+        "question": "Quale tra i seguenti non è un componente software?",
+        "options": [
+            "Modem",
+            "Sistema operativo",
+            "Foglio di calcolo",
+            "Browser web"
+        ],
+        "answer": "Modem"
+    },
+    {
+        "question": "Per cancellare un file utilizzando la tastiera è necessario selezionarlo e premere il tasto:",
+        "options": [
+            "CANC",
+            "ESC",
+            "ALT",
+            "CTRL"
+        ],
+        "answer": "CANC"
+    },
+    {
+        "question": "Utilizzando il programma Microsoft Word è possibile applicare ad un testo contemporaneamente le formattazioni grassetto, corsivo, sottolineato?",
+        "options": [
+            "Si",
+            "Si, solo se si usa un font di carattere che lo consente",
+            "No",
+            "Sì, ma solo se il testo è scritto con font \"Arial\""
+        ],
+        "answer": "Si"
+    },
+    {
+        "question": "In un file di testo, il \"corsivo\" è:",
+        "options": [
+            "Uno stile del carattere",
+            "Un tipo di carattere",
+            "Un effetto del carattere",
+            "Una dimensione del carattere diversa dallo standard"
+        ],
+        "answer": "Uno stile del carattere"
+    },
+    {
+        "question": "L'ECDL è:",
+        "options": [
+            "È un attestato che certifica il possesso di competenze informatiche",
+            "Un software di calcolo",
+            "Un programma di video scrittura",
+            "Un tipo particolare di scanner"
+        ],
+        "answer": "È un attestato che certifica il possesso di competenze informatiche"
+    },
+    {
+        "question": "Un servizio VOIP consente di:",
+        "options": [
+            "Effettuare una conversazione telefonica utilizzando un collegamento ad internet",
+            "Usare il computer per ricevere ed inviare email",
+            "Effettuare una conversazione telefonica utilizzando un modem 56K",
+            "Effettuare una conversazione telefonica utilizzando una normale linea telefonica domestica"
+        ],
+        "answer": "Effettuare una conversazione telefonica utilizzando un collegamento ad internet"
+    },
+    {
+        "question": "Quale tra i seguenti è un servizio VOIP?",
+        "options": [
+            "Skype",
+            "Thunderbird",
+            "Outlook",
+            "Chrome"
+        ],
+        "answer": "Skype"
+    },
+    {
+        "question": "Un cookie è :",
+        "options": [
+            "Una sorta di promemoria della pagina Internet visitata",
+            "Un componente hardware",
+            "Un biscotto virtuale",
+            "Un programma per visualizzare video su You Tube"
+        ],
+        "answer": "Una sorta di promemoria della pagina Internet visitata"
+    },
+    {
+        "question": "Bill Gates è noto per essere il fondatore di quale società informatica?",
+        "options": [
+            "Microsoft",
+            "Olivetti",
+            "IBM",
+            "Apple"
+        ],
+        "answer": "Microsoft"
+    },
+    {
+        "question": "L'alfabeto binario è composto dai simboli :",
+        "options": [
+            "0 e 1",
+            "Da 1 a 16",
+            "Da 0 a 9",
+            "Da 1 a 9"
+        ],
+        "answer": "0 e 1"
+    },
+    {
+        "question": "Il programma Photoshop serve per :",
+        "options": [
+            "Visualizzare ed elaborare fotografie",
+            "Scrivere testi",
+            "Gestire database",
+            "Effettuare calcoli numerici"
+        ],
+        "answer": "Visualizzare ed elaborare fotografie"
+    },
+    {
+        "question": "Cos'è un hashtag?",
+        "options": [
+            "Una parola o una frase priva di spazi preceduta dal simbolo cancelletto (#)",
+            "Un programma di Windows",
+            "Un modello di smartphone",
+            "Un social network"
+        ],
+        "answer": "Una parola o una frase priva di spazi preceduta dal simbolo cancelletto (#)"
+    },
+    {
+        "question": "Cosa è una Newsletter?",
+        "options": [
+            "É un comunicato contenente informazioni di vario genere diffuso via posta elettronica",
+            "É una lista nera di siti poco affidabili che è bene non visitare",
+            "É un portale on line dove trovare informazioni di vario genere in base all'argomento cui si è interessati",
+            "É un servizio esclusivamente a pagamento che consente di ricevere via mail o smartphone"
+        ],
+        "answer": "É un comunicato contenente informazioni di vario genere diffuso via posta elettronica"
+    },
+    {
+        "question": "Il comando Ordina di Microsoft Word, serve a :",
+        "options": [
+            "Disporre la selezione corrente in ordine alfabetico e numerico",
+            "Ordinare dei dati esclusivamente numerici",
+            "Ordinare i documenti presenti in una cartella",
+            "Ordinare i documenti presenti nell'elenco dei documenti recenti"
+        ],
+        "answer": "Disporre la selezione corrente in ordine alfabetico e numerico"
+    },
+    {
+        "question": "Le porte USB servono a :",
+        "options": [
+            "Collegare una periferica al computer",
+            "Masterizzare un CD/DVD",
+            "Inviare un messaggio di posta elettronica",
+            "Memorizzare informazioni"
+        ],
+        "answer": "Collegare una periferica al computer"
+    },
+    {
+        "question": "É possibile proteggere un file Excel con password?",
+        "options": [
+            "Si",
+            "Sì, solo se viene creato con la versione 2007",
+            "Sì, solo se viene creato con la versione 2016",
+            "No"
+        ],
+        "answer": "Si"
+    },
+    {
+        "question": "Chi fu il co-fondatore della Apple insieme a Steve Jobs?",
+        "options": [
+            "Steve Wozniak",
+            "Alan Turing",
+            "Charles Babbage",
+            "Bill Gates"
+        ],
+        "answer": "Steve Wozniak"
+    },
+    {
+        "question": "In Windows i file con estensione .txt contengono:",
+        "options": [
+            "Testo",
+            "Fogli di calcolo",
+            "Musica",
+            "Immagini"
+        ],
+        "answer": "Testo"
+    },
+    {
+        "question": "Come possono essere definite le \"emoticon\"?",
+        "options": [
+            "Combinazioni grafiche di caratteri della tastiera che rassomigliano ad un volto umano e rappresentano una reazione emotiva",
+            "Disegni che si muovono al tocco del mouse",
+            "Reazioni emotive che si hanno se si fissa lo schermo del pc per un certo periodo di tempo",
+            "Combinazioni audio per comporre suonerie di cellulari"
+        ],
+        "answer": "Combinazioni grafiche di caratteri della tastiera che rassomigliano ad un volto umano e rappresentano una reazione emotiva"
+    },
+    {
+        "question": "Il mouse è un dispositivo che permette :",
+        "options": [
+            "La selezione di file e cartelle",
+            "L'utilizzo della rete",
+            "La stampa di dati",
+            "La visualizzazione di dati"
+        ],
+        "answer": "La selezione di file e cartelle"
+    },
+    {
+        "question": "Il programma Windows Media Player serve per :",
+        "options": [
+            "Visualizzare file multimediali contenenti musica o filmati",
+            "Visualizzare documenti Word o Excel",
+            "Visualizzare le pagine web",
+            "Gestire le comunicazioni con le periferiche"
+        ],
+        "answer": "Visualizzare file multimediali contenenti musica o filmati"
+    },
+    {
+        "question": "Nella posta elettronica l'oggetto di un messaggio ha lo scopo di:",
+        "options": [
+            "Riassumere il contenuto del messaggio",
+            "Specificare destinatari aggiuntivi",
+            "Specificare un destinatario univoco",
+            "Specificare un elenco di destinatari che non visualizzeranno l'oggetto del messaggio"
+        ],
+        "answer": "Riassumere il contenuto del messaggio"
+    },
+    {
+        "question": "Cos'è un Trojan?",
+        "options": [
+            "È un virus che viene mascherato all'interno di un'applicazione apparentemente inoffensiva",
+            "È un cookie",
+            "È un programma di download di applicazioni",
+            "È un programma di antivirus"
+        ],
+        "answer": "È un virus che viene mascherato all'interno di un'applicazione apparentemente inoffensiva"
+    },
+    {
+        "question": "Il programma Paint in Windows serve per :",
+        "options": [
+            "Disegnare",
+            "Effettuare calcoli",
+            "Scrivere",
+            "Inviare messaggi"
+        ],
+        "answer": "Disegnare"
+    },
+    {
+        "question": "La webcam è una periferica di:",
+        "options": [
+            "Input",
+            "Puntamento",
+            "Archiviazione",
+            "Output"
+        ],
+        "answer": "Input"
+    },
+    {
+        "question": "Quale tra i seguenti è un software per la navigazione in Internet?",
+        "options": [
+            "Google Chrome",
+            "Excite",
+            "Yahoo",
+            "Libero"
+        ],
+        "answer": "Google Chrome"
+    },
+    {
+        "question": "Quale tra i seguenti software è un browser?",
+        "options": [
+            "Mozilla Firefox",
+            "Filezilla",
+            "Adobe Flash Player",
+            "Yahoo"
+        ],
+        "answer": "Mozilla Firefox"
+    },
+    {
+        "question": "Cosa è \"Android\"?",
+        "options": [
+            "È un sistema operativo per dispositivi mobili sviluppato da Google Inc",
+            "È un sistema operativo per tablet sviluppato da Microsoft",
+            "È un sistema operativo per personal computer sviluppato da Apple",
+            "Nessuna delle risposte precedenti è corretta"
+        ],
+        "answer": "È un sistema operativo per dispositivi mobili sviluppato da Google Inc"
+    },
+    {
+        "question": "In Microsoft Outlook, l'opzione \"Segna come da leggere\":",
+        "options": [
+            "Ripristina un messaggio come se non fosse mai stato aperto",
+            "È applicabile solo ai messaggi della cartella \"Posta in uscita\"",
+            "Indica all'utente che il messaggio selezionato deve essere letto attentamente",
+            "È applicabile solo ai messaggi della cartella \"Bozza\""
+        ],
+        "answer": "Ripristina un messaggio come se non fosse mai stato aperto"
+    },
+    {
+        "question": "In ambiente Windows, premendo la sequenza di tasti \"CTRL+X\" :",
+        "options": [
+            "Si cancella ciò che era stato selezionato e si salva negli appunti",
+            "Si salva ciò che era stato selezionato negli appunti",
+            "Si copia, ciò che era stato salvato negli appunti, a partire dalla posizione del cursore",
+            "Si incolla ciò che era stato selezionato e si salva negli appunti"
+        ],
+        "answer": "Si cancella ciò che era stato selezionato e si salva negli appunti"
+    },
+    {
+        "question": "In ambiente Windows, premendo la sequenza di tasti \"CTRL+C\" :",
+        "options": [
+            "Si copia ciò che era stato selezionato e si salva negli appunti",
+            "Si cancella ciò che era stato selezionato e si salva negli appunti",
+            "Si salva ciò che era stato selezionato negli appunti",
+            "Si incolla ciò che era stato selezionato e si salva negli appunti"
+        ],
+        "answer": "Si copia ciò che era stato selezionato e si salva negli appunti"
+    },
+    {
+        "question": "In ambiente Windows, premendo la sequenza di tasti \"CTRL+V\" :",
+        "options": [
+            "Si incolla ciò che era stato selezionato e si salva negli appunti",
+            "Si cancella ciò che era stato selezionato e si salva negli appunti",
+            "Si salva ciò che era stato selezionato negli appunti",
+            "Si copia ciò che era stato selezionato e si salva negli appunti"
+        ],
+        "answer": "Si incolla ciò che era stato selezionato e si salva negli appunti"
+    },
+    {
+        "question": "Il nome di un file di Windows, può contenere degli spazi?",
+        "options": [
+            "Si",
+            "Si, ma solo tra il nome e l'estensione",
+            "No",
+            "Nessuna delle risposte precedenti è corretta"
+        ],
+        "answer": "Si"
+    },
+    {
+        "question": "Quale combinazione di tasti permette di cancellare ciò che era stato selezionato e si salva negli appunti?",
+        "options": [
+            "CTRL+X",
+            "CTRL+C",
+            "CTRL+V",
+            "CTRL+P"
+        ],
+        "answer": "CTRL+X"
+    },
+    {
+        "question": "Quale combinazione di tasti permette di copiare ciò che era stato selezionato e si salva negli appunti?",
+        "options": [
+            "CTRL+C",
+            "CTRL+X",
+            "CTRL+V",
+            "CTRL+P"
+        ],
+        "answer": "CTRL+C"
+    },
+    {
+        "question": "Quale combinazione di tasti permette di incollare ciò che era stato selezionato e si salva negli appunti?",
+        "options": [
+            "CTRL+V",
+            "CTRL+X",
+            "CTRL+C",
+            "CTRL+P"
+        ],
+        "answer": "CTRL+V"
+    },
+    {
+        "question": "L' UPS collegato ad un computer serve a :",
+        "options": [
+            "Proteggere il computer da cadute o sbalzi di tensione della rete elettrica",
+            "Aumentare temporaneamente la potenza di elaborazione",
+            "Servire come dispositivo di storage aggiuntivo",
+            "Fungere da supporto di memoria"
+        ],
+        "answer": "Proteggere il computer da cadute o sbalzi di tensione della rete elettrica"
+    },
+    {
+        "question": "Quale dispositivo permette di utilizzare la rete telefonica per la trasmissione di dati tra computer?",
+        "options": [
+            "Il modem",
+            "La scheda di rete",
+            "La scheda madre",
+            "Il firewall"
+        ],
+        "answer": "Il modem"
+    },
+    {
+        "question": "Nel \"cestino\" di un computer, si trovano:",
+        "options": [
+            "I file cancellati",
+            "I file con errori",
+            "I file di configurazione",
+            "I file creati 5 anni prima"
+        ],
+        "answer": "I file cancellati"
+    },
+    {
+        "question": "Cosa si intende per streaming?",
+        "options": [
+            "Un tipo di trasferimento di dati continuo ed ininterrotto, che si attua mediante la suddivisione del file in pacchetti che vengono caricati uno alla volta dall'utente",
+            "Un sito che permette di vedere solo e soltanto video musicali",
+            "Una tecnologia che non funziona con l'ADSL",
+            "Un social network Statunitense"
+        ],
+        "answer": "Un tipo di trasferimento di dati continuo ed ininterrotto, che si attua mediante la suddivisione del file in pacchetti che vengono caricati uno alla volta dall'utente"
+    },
+    {
+        "question": "Cosa permette di fare il comando \"Annulla\" in word?",
+        "options": [
+            "Ripristinare il documento nella versione precedente all'ultima modifica",
+            "Chiudere il documento salvandolo",
+            "Riportare il carattere utilizzato ad Arial di dimensione 11 punti",
+            "Salvare un documento in una cartella diversa da quella originale"
+        ],
+        "answer": "Ripristinare il documento nella versione precedente all'ultima modifica"
+    },
+    {
+        "question": "E' possibile stampare una e-mail ricevuta in Outlook?",
+        "options": [
+            "Si, sempre",
+            "Si, ma solo se è scritta in HTML",
+            "No, a meno che non si disponga di uno specifico plug-in",
+            "No, mai"
+        ],
+        "answer": "Si, sempre"
+    },
+    {
+        "question": "Fra i vari tipi di software utilizzati dai PC, Outlook è:",
+        "options": [
+            "Un client di posta elettronica",
+            "Un provider",
+            "Un browser",
+            "Un foglio elettronico"
+        ],
+        "answer": "Un client di posta elettronica"
+    },
+    {
+        "question": "Il fenomeno dello SPAM nella posta elettronica consiste in :",
+        "options": [
+            "Ricevere senza consenso messaggi pubblicitari",
+            "Ricevere proposte di lavoro",
+            "Ricevere proposte commerciali da partner con cui si lavora",
+            "Ricevere mail dai parenti"
+        ],
+        "answer": "Ricevere senza consenso messaggi pubblicitari"
+    },
+    {
+        "question": "E' possibile modificare la dimensione del carattere utilizzato nel documento word, servendosi del comando del menu Formato:",
+        "options": [
+            "Carattere",
+            "Paragrafo",
+            "Simboli",
+            "Illustrazioni"
+        ],
+        "answer": "Carattere"
+    },
+    {
+        "question": "Qual è l'opzione che permettere di vedere com apparirà un documento da stampare?",
+        "options": [
+            "Anteprima di stampa",
+            "Layout area di stampa",
+            "Visualizza/Struttura",
+            "Visualizza/Zoom"
+        ],
+        "answer": "Anteprima di stampa"
+    },
+    {
+        "question": "In Excel, cosa si ottiene se si cambia il \"riempimento\" di una cella?",
+        "options": [
+            "La cella diviene colorata in base al colore selezionato",
+            "Il testo diviene colorato in base al colore selezionato",
+            "I bordi della cella diventano colorati in base al colore prescelto ",
+            "La cella è piena e non permette di scrivere"
+        ],
+        "answer": "La cella diviene colorata in base al colore selezionato"
+    },
+    {
+        "question": "Cosa si intende con il termine \"anteprima\"?",
+        "options": [
+            "Permette di visualizzare come sarà la stampa del documento",
+            "Avere una visuale parziale ed ingrandita del contenuto del documento",
+            "Predisporre il documento in modo opportuno prima di iniziare l'attività lavorativa",
+            "Inserire uno sfondo nel documento prima dell'immissione dei dati"
+        ],
+        "answer": "Permette di visualizzare come sarà la stampa del documento"
+    },
+    {
+        "question": "Si può ripristinare un file presente nel cestino?",
+        "options": [
+            "Si, con l'azione di ripristino",
+            "No, è irrecuperabile",
+            "Si, ma solo con un programma accessorio particolare",
+            "Si, ma solo entro un limite di tempo impostato nelle risorse del sistema"
+        ],
+        "answer": "Si, con l'azione di ripristino"
+    },
+    {
+        "question": "In un computer, le caratteristiche di un processore influenzano:",
+        "options": [
+            "La rapidità di elaborazione del computer",
+            "La possibilità di memorizzare un maggior numero di informazioni",
+            "La qualità delle stampe",
+            "La qualità di RAM installabile"
+        ],
+        "answer": "La rapidità di elaborazione del computer"
+    },
+    {
+        "question": "Quale è il suffisso del programma \"Blocco Note\"?",
+        "options": [
+            ".Txt",
+            ".Doc",
+            ".Docx",
+            ".Bdm"
+        ],
+        "answer": ".Txt"
+    },
+    {
+        "question": "Come viene definito un calcolatore, di grandi dimensioni, che può essere usato da più di un centinaio di utenti contemporaneamente?",
+        "options": [
+            "Mainframe",
+            "Mega-Computer",
+            "Workstation",
+            "MainPC"
+        ],
+        "answer": "Mainframe"
+    },
+    {
+        "question": "Il programma VLC permette di :",
+        "options": [
+            "Riprodurre contenuti multimediali",
+            "Riprodurre presentazioni in Power Point",
+            "Riprodurre solo fotografie",
+            "Riprodurre solo documenti scansionati"
+        ],
+        "answer": "Riprodurre contenuti multimediali"
+    },
+    {
+        "question": "E' possibile variare il tempo di stand by del monitor connesso al PC?",
+        "options": [
+            "Si",
+            "No",
+            "Dipende dal sistema operativo",
+            "Dipende dai software che sono aperti"
+        ],
+        "answer": "Si"
+    },
+    {
+        "question": "L'UPS permette di :",
+        "options": [
+            "Non far spegnere il PC quando manca la rete elettrica",
+            "Raffreddare meglio il PC",
+            "Mantenere i dati al sicuro",
+            "Dare maggiore potenza al computer"
+        ],
+        "answer": "Non far spegnere il PC quando manca la rete elettrica"
+    },
+    {
+        "question": "Alla porta HDMI di un personal computer si collega:",
+        "options": [
+            "Un monitor",
+            "Una stampante",
+            "Una pen drive",
+            "Un mouse"
+        ],
+        "answer": "Un monitor"
+    },
+    {
+        "question": "Qual è l'acronimo di HDMI ?",
+        "options": [
+            "High Definition Multimedia Interface",
+            "High Definition Multimedia Intelcore",
+            "High Definition Medium Interface",
+            "High Destination Multimedia Interface"
+        ],
+        "answer": "High Definition Multimedia Interface"
+    }
+]

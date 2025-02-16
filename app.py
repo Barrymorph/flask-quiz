@@ -1,100 +1,95 @@
-from flask import Flask, render_template, request, jsonify
+import os
 import json
 import random
-from datetime import datetime
-import os
-import unicodedata  
+import requests
+from flask import Flask, render_template, request, jsonify
 
 app = Flask(__name__)
 
-BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+# Percorso ai file JSON delle domande
+QUESTIONS_PATH = "questions/"
 
-files = {
-    "1": os.path.join(BASE_DIR, "materia1.json"),
-    "2": os.path.join(BASE_DIR, "materia2.json"),
-    "3": os.path.join(BASE_DIR, "materia3.json"),
-    "4": os.path.join(BASE_DIR, "materia4.json")
-}
-
-def normalize_text(text):
-    """Rimuove spazi extra, normalizza accenti e converte in minuscolo."""
-    return unicodedata.normalize("NFKC", str(text).strip().lower())
-
+# Funzione per caricare le domande da un file JSON
 def load_questions(filename):
-    """Carica e normalizza le domande da un file JSON."""
-    with open(filename, "r", encoding="utf-8") as f:
-        questions = json.load(f)
+    with open(os.path.join(QUESTIONS_PATH, filename), "r", encoding="utf-8") as f:
+        return json.load(f)
 
-    for q in questions:
-        q["question"] = normalize_text(q["question"])  
-        q["answer"] = normalize_text(q["answer"])  
-        q["options"] = [normalize_text(opt) for opt in q["options"]]  
-        random.shuffle(q["options"])  
-
-    return questions
-
-@app.route("/")
-def home():
-    return render_template("index.html")
-
+# API per ottenere domande casuali
 @app.route("/get_questions", methods=["POST"])
 def get_questions():
-    """Gestisce la richiesta di domande dal frontend."""
     data = request.json
+
+    if not data or "materia" not in data or "num_questions" not in data:
+        return jsonify({"error": "Dati mancanti"}), 400
+
     materia = data["materia"]
     num_questions = int(data["num_questions"])
 
-    time_limits = {30: 1200, 50: 2100, 70: 3300, 100: 4500}  # Secondi
+    files = {
+        "1": "materia1.json",
+        "2": "materia2.json",
+        "3": "materia3.json",
+        "4": "materia4.json",
+        "full": "materia_completa.json"
+    }
 
-    if materia not in files and materia != "full":
+    if materia not in files:
         return jsonify({"error": "Materia non valida"}), 400
 
-    if materia == "full":
-        all_questions = {
-            "1": load_questions(files["1"]),
-            "2": load_questions(files["2"]),
-            "3": load_questions(files["3"]),
-            "4": load_questions(files["4"])
-        }
-        selected_questions = (
-            random.sample(all_questions["1"], 50) +
-            random.sample(all_questions["2"], 25) +
-            random.sample(all_questions["3"], 15) +
-            random.sample(all_questions["4"], 10)
-        )
-    else:
-        questions = load_questions(files[materia])
-        if len(questions) < num_questions:
-            return jsonify({"error": "Non ci sono abbastanza domande disponibili"}), 400
-        selected_questions = random.sample(questions, num_questions)
+    questions = load_questions(files[materia])
+    selected_questions = random.sample(questions, min(num_questions, len(questions)))
 
-    return jsonify({"questions": selected_questions, "time_limit": time_limits[num_questions]})
+    for q in selected_questions:
+        random.shuffle(q["options"])  # Mischia le risposte
 
+    return jsonify(selected_questions)
+
+# Funzione per inviare i punteggi a WordPress
+def save_score_to_wp(name, test_type, total, score, correct, wrong, skipped):
+    url = "https://www.generazionefuturacaivano.it/wp-json/quiz/v1/save_score"
+    data = {
+        "user_name": name,
+        "test_type": test_type,
+        "total_questions": total,
+        "score": score,
+        "correct_percentage": (correct / total) * 100 if total > 0 else 0,
+        "wrong_percentage": (wrong / total) * 100 if total > 0 else 0,
+        "skipped_percentage": (skipped / total) * 100 if total > 0 else 0,
+    }
+
+    print("📢 Dati inviati a WordPress:", data)  # Debug per verificare i dati
+
+    try:
+        response = requests.post(url, json=data)
+        print("📩 Risposta di WordPress:", response.text)  # Debug della risposta di WordPress
+        return response.json()
+    except requests.exceptions.RequestException as e:
+        print("❌ Errore nell'invio a WordPress:", e)
+        return {"error": str(e)}
+
+# API per salvare il punteggio quando il quiz finisce
 @app.route("/save_score", methods=["POST"])
 def save_score():
-    """Salva il punteggio del test in un file CSV."""
     data = request.json
-    player_name = data["name"]
-    score = round(data["score"], 2)
-    test_type = data["test_type"]
-    total_questions = data["total_questions"]
-    correct_answers = data["correct_answers"]
-    wrong_answers = data["wrong_answers"]
-    skipped_answers = data["skipped_answers"]
-    max_score = total_questions * 1  # Max punteggio possibile
-    score_percentage = round((score / max_score) * 100, 2)
-    date = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+    user_name = data.get("user_name")
+    test_type = data.get("test_type")
+    total_questions = int(data.get("total_questions", 0))
+    correct_answers = int(data.get("correct_answers", 0))
+    wrong_answers = int(data.get("wrong_answers", 0))
+    skipped_answers = int(data.get("skipped_answers", 0))
 
-    correct_percentage = round((correct_answers / total_questions) * 100, 2)
-    wrong_percentage = round((wrong_answers / total_questions) * 100, 2)
-    skipped_percentage = round((skipped_answers / total_questions) * 100, 2)
+    # Calcolo del punteggio
+    final_score = correct_answers - (wrong_answers * 0.33)
 
-    filename = os.path.join(BASE_DIR, f"static/{player_name}_scores.csv")
+    # Invia i dati a WordPress
+    result = save_score_to_wp(user_name, test_type, total_questions, final_score, correct_answers, wrong_answers, skipped_answers)
 
-    with open(filename, "a", encoding="utf-8") as f:
-        f.write(f"{date},{test_type},{total_questions},{score},{score_percentage}%,{correct_percentage}%,{wrong_percentage}%,{skipped_percentage}%\n")
+    return jsonify({"message": "Punteggio salvato", "wordpress_response": result})
 
-    return jsonify({"message": "Punteggio salvato!", "file": f"/static/{player_name}_scores.csv"})
+# Pagina principale
+@app.route("/")
+def index():
+    return render_template("index.html")
 
 if __name__ == "__main__":
     app.run(debug=True)

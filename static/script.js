@@ -1,157 +1,172 @@
-document.getElementById("start-btn").addEventListener("click", function() {
-    document.getElementById("intro").style.display = "none";
-    document.getElementById("setup").style.display = "block";
-});
+document.addEventListener("DOMContentLoaded", function () {
+    const startButton = document.getElementById("start-btn");
+    const setupContainer = document.getElementById("setup");
+    const questionOptions = document.getElementById("question-options");
+    const quizContainer = document.getElementById("quiz-container");
+    const progressBar = document.getElementById("progress-bar");
+    const progressContainer = document.getElementById("progress");
+    const scoreDisplay = document.getElementById("score-display");
+    const timerElement = document.getElementById("time-left");
+    let playerName = "";
+    let selectedMateria = "";
+    let totalQuestions = 0;
+    let currentQuestionIndex = 0;
+    let score = 0;
+    let correctAnswers = 0;
+    let wrongAnswers = 0;
+    let skippedAnswers = 0;
+    let questions = [];
+    let timeRemaining = 0;
+    let timerInterval;
 
-let selectedMateria = "";
-document.querySelectorAll(".test-btn").forEach(btn => {
-    btn.addEventListener("click", function() {
-        selectedMateria = this.getAttribute("data-materia");
-        document.getElementById("question-options").style.display = "block";
+    startButton.addEventListener("click", function () {
+        document.getElementById("intro").style.display = "none";
+        setupContainer.style.display = "block";
     });
-});
 
-document.querySelectorAll(".num-questions").forEach(btn => {
-    btn.addEventListener("click", function() {
-        const numQuestions = parseInt(this.getAttribute("data-num"));
-        const playerName = document.getElementById("player-name").value.trim();
+    document.querySelectorAll(".test-btn").forEach(button => {
+        button.addEventListener("click", function () {
+            selectedMateria = this.getAttribute("data-materia");
+            questionOptions.style.display = "block";
+        });
+    });
 
-        if (!playerName) {
-            alert("❌ Inserisci il tuo nome!");
-            return;
-        }
+    document.querySelectorAll(".num-questions").forEach(button => {
+        button.addEventListener("click", function () {
+            totalQuestions = parseInt(this.getAttribute("data-num"));
+            playerName = document.getElementById("player-name").value || "Anonimo";
+            setTimer();
+            fetchQuestions();
+        });
+    });
 
+    function setTimer() {
+        if (totalQuestions === 30) timeRemaining = 1500; // 25 min
+        else if (totalQuestions === 50) timeRemaining = 2100; // 35 min
+        else if (totalQuestions === 70) timeRemaining = 3300; // 55 min
+        else timeRemaining = 4500; // 100 domande = 75 min
+
+        timerElement.innerText = Math.floor(timeRemaining / 60) + " min " + (timeRemaining % 60) + " sec";
+        document.getElementById("timer").style.display = "block";
+
+        timerInterval = setInterval(() => {
+            timeRemaining--;
+            timerElement.innerText = Math.floor(timeRemaining / 60) + " min " + (timeRemaining % 60) + " sec";
+
+            if (timeRemaining <= 0) {
+                clearInterval(timerInterval);
+                alert("Tempo scaduto! Il quiz è terminato.");
+                sendResults();
+            }
+        }, 1000);
+    }
+
+    function fetchQuestions() {
         fetch("/get_questions", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({ materia: selectedMateria, num_questions: numQuestions })
+            body: JSON.stringify({
+                materia: selectedMateria,
+                num_questions: totalQuestions
+            })
         })
         .then(response => response.json())
         .then(data => {
-            startQuiz(playerName, data.questions, selectedMateria, data.time_limit);
+            if (!data || data.error) {
+                alert("Errore nel caricamento delle domande: " + (data.error || "Risposta vuota"));
+                return;
+            }
+
+            questions = data;
+            setupContainer.style.display = "none";
+            quizContainer.style.display = "block";
+            progressContainer.style.display = "block";
+            scoreDisplay.innerText = `Punteggio: 0`;
+            showQuestion();
         })
-        .catch(error => {
-            console.error("Errore nel caricamento delle domande:", error);
-            alert("❌ Errore di connessione al server.");
-        });
-    });
-});
-
-function startQuiz(playerName, questions, materia, timeLimit) {
-    document.getElementById("setup").style.display = "none";
-    document.getElementById("quiz-container").style.display = "block";
-    document.getElementById("timer").style.display = "block";
-    document.getElementById("progress").style.display = "block";
-
-    let score = 0, index = 0;
-    let correctAnswers = 0, wrongAnswers = 0, skippedAnswers = 0;
-    
-    let timeLeft = timeLimit;
-    let timerInterval = setInterval(() => {
-        timeLeft--;
-        document.getElementById("time-left").innerText = `Tempo rimasto: ${Math.floor(timeLeft / 60)}m ${timeLeft % 60}s`;
-        if (timeLeft <= 0) {
-            clearInterval(timerInterval);
-            alert("⏳ Tempo scaduto!");
-            endQuiz(playerName, score, questions.length, materia, correctAnswers, wrongAnswers, skippedAnswers);
-        }
-    }, 1000);
-
-    function updateProgress() {
-        const progress = (index / questions.length) * 100;
-        document.getElementById("progress-bar").style.width = progress + "%";
-        document.getElementById("score-display").innerText = `Punteggio: ${score.toFixed(2)}`;
+        .catch(error => console.error("❌ Errore nel caricamento delle domande:", error));
     }
 
     function showQuestion() {
-        if (index >= questions.length) {
+        if (currentQuestionIndex >= questions.length) {
             clearInterval(timerInterval);
-            endQuiz(playerName, score, questions.length, materia, correctAnswers, wrongAnswers, skippedAnswers);
+           alert(`Quiz terminato! Punteggio finale: ${score.toFixed(2)}`);
+            sendResults();
             return;
         }
 
-        const q = questions[index];
-        let options = [...q.options].sort(() => Math.random() - 0.5);
+        const questionData = questions[currentQuestionIndex];
+        quizContainer.innerHTML = `<h2>${questionData.question}</h2>`;
 
-        document.getElementById("quiz-container").innerHTML = `
-            <h2>${q.question}</h2>
-            ${options.map(opt => `<button class="answer-btn">${opt}</button>`).join("")}
-            <button class="skip-btn">⏭️ Salta</button>
-        `;
-
-        document.querySelectorAll(".answer-btn").forEach(btn => {
-            btn.addEventListener("click", function() {
-                const userAnswer = this.innerText.trim().toLowerCase();
-                const correctAnswer = q.answer.trim().toLowerCase();
-
-                if (userAnswer === correctAnswer) {
+        questionData.options.forEach((option, index) => {
+            const button = document.createElement("button");
+            button.textContent = option;
+            button.classList.add("option");
+            button.addEventListener("click", function () {
+                if (option === questionData.answer) {
+                    button.style.backgroundColor = "green"; // Risposta corretta
                     score += 1;
                     correctAnswers++;
-                    this.classList.add("correct");
                 } else {
+                    button.style.backgroundColor = "red"; // Risposta errata
                     score -= 0.33;
                     wrongAnswers++;
-                    this.classList.add("wrong");
-
-                    document.querySelectorAll(".answer-btn").forEach(btn => {
-                        if (btn.innerText.trim().toLowerCase() === correctAnswer) {
-                            btn.classList.add("correct");
+                    document.querySelectorAll(".option").forEach(btn => {
+                        if (btn.textContent === questionData.answer) {
+                            btn.style.backgroundColor = "green"; // Mostra la risposta giusta
                         }
                     });
                 }
-
+                updateScore();
                 setTimeout(() => {
-                    index++;
-                    updateProgress();
+                    currentQuestionIndex++;
                     showQuestion();
                 }, 1000);
             });
+            quizContainer.appendChild(button);
         });
 
-        document.querySelector(".skip-btn").addEventListener("click", function() {
+        // Aggiunge il pulsante "Salta"
+        const skipButton = document.createElement("button");
+        skipButton.textContent = "Salta";
+        skipButton.classList.add("skip-btn");
+        skipButton.addEventListener("click", function () {
             skippedAnswers++;
-            alert(`🔵 Hai saltato la domanda. La risposta corretta era: "${q.answer}"`);
-            index++;
-            updateProgress();
+            currentQuestionIndex++;
             showQuestion();
         });
+        quizContainer.appendChild(skipButton);
+
+        updateProgress();
     }
 
-    showQuestion();
-}
+    function updateProgress() {
+        const progress = ((currentQuestionIndex + 1) / totalQuestions) * 100;
+        progressBar.style.width = progress + "%";
+    }
 
-function endQuiz(name, score, total, materia, correct, wrong, skipped) {
-    saveScore(name, score, total, materia, correct, wrong, skipped);
+    function updateScore() {
+        scoreDisplay.innerText = `Punteggio: ${score.toFixed(2)}`;
+    }
 
-    document.getElementById("quiz-container").innerHTML = `
-        <h2>Quiz Completato!</h2>
-        <p>Punteggio: ${score.toFixed(2)} / ${total}</p>
-        <p>Risposte corrette: ${correct} (${((correct / total) * 100).toFixed(2)}%)</p>
-        <p>Risposte errate: ${wrong} (${((wrong / total) * 100).toFixed(2)}%)</p>
-        <p>Domande saltate: ${skipped} (${((skipped / total) * 100).toFixed(2)}%)</p>
-        <button onclick="location.reload()">🔄 Ripeti il test</button>
-    `;
-}
-
-function saveScore(name, score, total, materia, correct, wrong, skipped) {
-    fetch("/save_score", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ 
-            name, 
-            score, 
-            test_type: materia, 
-            total_questions: total, 
-            correct_answers: correct, 
-            wrong_answers: wrong, 
-            skipped_answers: skipped 
+    function sendResults() {
+        fetch("/save_score", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({
+                user_name: playerName,
+                test_type: selectedMateria,
+                total_questions: totalQuestions,
+                correct_answers: correctAnswers,
+                wrong_answers: wrongAnswers,
+                skipped_answers: skippedAnswers
+            })
         })
-    })
-    .then(response => response.json())
-    .then(data => {
-        document.getElementById("quiz-container").innerHTML += `
-            <p>✅ Risultato salvato!</p>
-            <a href="${data.file}" download>📄 Scarica il tuo punteggio</a>
-        `;
-    });
-}
+        .then(response => response.json())
+        .then(data => {
+            alert("Punteggio inviato a WordPress!");
+            console.log("Risultato salvato:", data);
+        })
+        .catch(error => console.error("❌ Errore nel salvataggio del punteggio:", error));
+    }
+});
