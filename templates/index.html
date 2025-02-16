@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Online</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <script src="{{ url_for('static', filename='script.js') }}" defer></script>
+</head>
+<body>
+
+    <div class="container">
+        <h1>🎓 Benvenuto al Quiz!</h1>
+        <div id="intro">
+            <p>Premi il pulsante per iniziare!</p>
+            <button id="start-btn">Inizia il Test</button>
+        </div>
+
+        <div id="setup" style="display: none;">
+            <h2>Inserisci il tuo nome</h2>
+            <input type="text" id="player-name" placeholder="Nome...">
+            <h2>Scegli il test</h2>
+            <button class="test-btn" data-materia="1">Cultura Specifica</button>
+            <button class="test-btn" data-materia="2">Cultura Generale</button>
+            <button class="test-btn" data-materia="3">Informatica</button>
+            <button class="test-btn" data-materia="4">Logica</button>
+            <button class="test-btn" data-materia="full">Test Completo (100 domande)</button>
+            <div id="question-options" style="display: none;">
+                <h2>Quante domande vuoi?</h2>
+                <button class="num-questions" data-num="30">30</button>
+                <button class="num-questions" data-num="50">50</button>
+                <button class="num-questions" data-num="70">70</button>
+            </div>
+        </div>
+
+        <div id="quiz-container" style="display: none;"></div>
+        <p id="timer" style="display: none;">Tempo rimanente: <span id="time-left">60</span> secondi</p>
+
+        <div id="progress" style="display: none;">
+            <div id="progress-container">
+                <div id="progress-bar"></div>
+            </div>
+            <p id="score-display">Punteggio: 0</p>
+        </div>
+    </div>
+
+</body>
+</html>
