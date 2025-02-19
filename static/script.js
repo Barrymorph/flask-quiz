@@ -35,7 +35,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     function fetchQuestions(materia, numQuestions) {
-        fetch("/get_questions", {
+        fetch("https://flask-quiz.onrender.com/get_questions", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ materia: materia, num_questions: numQuestions })
