@@ -1,184 +1,115 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const startButton = document.getElementById("start-btn");
-    const setupContainer = document.getElementById("setup");
+    console.log("📜 Script JavaScript Caricato ✅");
+
+    const startBtn = document.getElementById("start-btn");
+    const testButtons = document.querySelectorAll(".test-btn");
     const questionOptions = document.getElementById("question-options");
     const quizContainer = document.getElementById("quiz-container");
-    const progressBar = document.getElementById("progress-bar");
-    const progressContainer = document.getElementById("progress");
-    const scoreDisplay = document.getElementById("score-display");
-    const timerElement = document.getElementById("time-left");
-    let playerName = "";
-    let selectedMateria = "";
-    let totalQuestions = 0;
+    const timerDisplay = document.getElementById("timer");
+    const timeLeftSpan = document.getElementById("time-left");
+    let timer, totalTime, score = 0;
     let currentQuestionIndex = 0;
-    let score = 0;
-    let correctAnswers = 0;
-    let wrongAnswers = 0;
-    let skippedAnswers = 0;
     let questions = [];
-    let timeRemaining = 0;
-    let timerInterval;
 
-    startButton.addEventListener("click", function () {
+    startBtn.addEventListener("click", function () {
         document.getElementById("intro").style.display = "none";
-        setupContainer.style.display = "block";
+        document.getElementById("setup").style.display = "block";
     });
 
-    document.querySelectorAll(".test-btn").forEach(button => {
+    testButtons.forEach(button => {
         button.addEventListener("click", function () {
-            selectedMateria = this.getAttribute("data-materia");
-            questionOptions.style.display = "block";
+            const materia = this.dataset.materia;
+            
+            if (materia === "full") {
+                // Test Completo: invia direttamente richiesta senza chiedere il numero di domande
+                fetchQuestions("full", 100);
+            } else {
+                questionOptions.style.display = "block";
+                document.querySelectorAll(".num-questions").forEach(numButton => {
+                    numButton.addEventListener("click", function () {
+                        fetchQuestions(materia, parseInt(this.dataset.num));
+                    });
+                });
+            }
         });
     });
 
-    document.querySelectorAll(".num-questions").forEach(button => {
-        button.addEventListener("click", function () {
-            totalQuestions = parseInt(this.getAttribute("data-num"));
-            playerName = document.getElementById("player-name").value || "Anonimo";
-            setTimer();
-            fetchQuestions();
-        });
-    });
+    function fetchQuestions(materia, numQuestions) {
+        fetch("/get_questions", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ materia: materia, num_questions: numQuestions })
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+                questions = data.questions;
+                startQuiz(numQuestions);
+            } else {
+                alert("Errore nel caricamento delle domande.");
+            }
+        })
+        .catch(error => console.error("Errore:", error));
+    }
 
-    function setTimer() {
-        if (totalQuestions === 30) timeRemaining = 1500; // 25 min
-        else if (totalQuestions === 50) timeRemaining = 2100; // 35 min
-        else if (totalQuestions === 70) timeRemaining = 3300; // 55 min
-        else timeRemaining = 4500; // 100 domande = 75 min
+    function startQuiz(numQuestions) {
+        document.getElementById("setup").style.display = "none";
+        quizContainer.style.display = "block";
+        timerDisplay.style.display = "block";
 
-        timerElement.innerText = Math.floor(timeRemaining / 60) + " min " + (timeRemaining % 60) + " sec";
-        document.getElementById("timer").style.display = "block";
+        // Imposta il timer in base al numero di domande
+        if (numQuestions === 30) totalTime = 25 * 60;
+        else if (numQuestions === 50) totalTime = 35 * 60;
+        else if (numQuestions === 70) totalTime = 55 * 60;
+        else totalTime = 75 * 60; // Test completo
 
-        timerInterval = setInterval(() => {
-            timeRemaining--;
-            timerElement.innerText = Math.floor(timeRemaining / 60) + " min " + (timeRemaining % 60) + " sec";
+        startTimer();
+        showQuestion();
+    }
 
-            if (timeRemaining <= 0) {
-                clearInterval(timerInterval);
-                alert("Tempo scaduto! Il quiz è terminato.");
-                sendResults();
+    function startTimer() {
+        timer = setInterval(() => {
+            if (totalTime > 0) {
+                totalTime--;
+                timeLeftSpan.textContent = totalTime;
+            } else {
+                clearInterval(timer);
+                alert("Tempo scaduto!");
+                endQuiz();
             }
         }, 1000);
     }
 
-    function fetchQuestions() {
-        fetch("/get_questions", {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({
-                materia: selectedMateria,
-                num_questions: totalQuestions
-            })
-        })
-        .then(response => response.json())
-        .then(data => {
-            if (!data || data.error) {
-                alert("Errore nel caricamento delle domande: " + (data.error || "Risposta vuota"));
-                return;
-            }
-
-            questions = data;
-            setupContainer.style.display = "none";
-            quizContainer.style.display = "block";
-            progressContainer.style.display = "block";
-            scoreDisplay.innerText = `Punteggio: 0`;
-            showQuestion();
-        })
-        .catch(error => console.error("❌ Errore nel caricamento delle domande:", error));
-    }
-
     function showQuestion() {
         if (currentQuestionIndex >= questions.length) {
-            clearInterval(timerInterval);
-            showFinalScore();
-            sendResults();
+            endQuiz();
             return;
         }
 
-        const questionData = questions[currentQuestionIndex];
-        quizContainer.innerHTML = `<h2>${questionData.question}</h2>`;
-
-        questionData.options.forEach((option, index) => {
-            const button = document.createElement("button");
-            button.textContent = option;
-            button.classList.add("option");
-            button.addEventListener("click", function () {
-                if (option === questionData.answer) {
-                    button.style.backgroundColor = "green"; // Risposta corretta
-                    score += 1;
-                    correctAnswers++;
-                } else {
-                    button.style.backgroundColor = "red"; // Risposta errata
-                    score -= 0.33;
-                    wrongAnswers++;
-                    document.querySelectorAll(".option").forEach(btn => {
-                        if (btn.textContent === questionData.answer) {
-                            btn.style.backgroundColor = "green"; // Mostra la risposta giusta
-                        }
-                    });
-                }
-                updateScore();
-                setTimeout(() => {
-                    currentQuestionIndex++;
-                    showQuestion();
-                }, 1000);
-            });
-            quizContainer.appendChild(button);
-        });
-
-        const skipButton = document.createElement("button");
-        skipButton.textContent = "Salta";
-        skipButton.classList.add("skip-btn");
-        skipButton.addEventListener("click", function () {
-            skippedAnswers++;
-            currentQuestionIndex++;
-            showQuestion();
-        });
-        quizContainer.appendChild(skipButton);
-
-        updateProgress();
-    }
-
-    function updateProgress() {
-        const progress = ((currentQuestionIndex + 1) / totalQuestions) * 100;
-        progressBar.style.width = progress + "%";
-    }
-
-    function updateScore() {
-        scoreDisplay.innerText = `Punteggio: ${score.toFixed(2)}`;
-    }
-
-    function showFinalScore() {
+        let q = questions[currentQuestionIndex];
         quizContainer.innerHTML = `
-            <h2>Quiz terminato!</h2>
-            <p><strong>Punteggio finale:</strong> ${score.toFixed(2)}</p>
-            <p><strong>Risposte corrette:</strong> ${correctAnswers} (${((correctAnswers / totalQuestions) * 100).toFixed(2)}%)</p>
-            <p><strong>Risposte sbagliate:</strong> ${wrongAnswers} (${((wrongAnswers / totalQuestions) * 100).toFixed(2)}%)</p>
-            <p><strong>Domande saltate:</strong> ${skippedAnswers} (${((skippedAnswers / totalQuestions) * 100).toFixed(2)}%)</p>
-            <button onclick="location.reload()">Riprova il Test</button>
+            <h3>${q.question}</h3>
+            ${q.options.map((opt, index) => `<button class="option" data-index="${index}">${opt}</button>`).join("")}
         `;
+
+        document.querySelectorAll(".option").forEach(btn => {
+            btn.addEventListener("click", function () {
+                let userAnswer = parseInt(this.dataset.index);
+                checkAnswer(userAnswer, q.correct_index);
+            });
+        });
     }
 
-    function sendResults() {
-        const formData = new FormData();
-        formData.append("action", "save_quiz_score");
-        formData.append("user_name", playerName);
-        formData.append("test_type", selectedMateria);
-        formData.append("total_questions", totalQuestions);
-        formData.append("score", score.toFixed(2));
-        formData.append("correct_percentage", ((correctAnswers / totalQuestions) * 100).toFixed(2));
-        formData.append("wrong_percentage", ((wrongAnswers / totalQuestions) * 100).toFixed(2));
-        formData.append("skipped_percentage", ((skippedAnswers / totalQuestions) * 100).toFixed(2));
+    function checkAnswer(userAnswer, correctIndex) {
+        if (userAnswer === correctIndex) {
+            score++;
+        }
+        currentQuestionIndex++;
+        showQuestion();
+    }
 
-        fetch("https://www.generazionefuturacaivano.it/wp-admin/admin-post.php", {
-            method: "POST",
-            body: formData
-        })
-        .then(response => response.text())
-        .then(data => {
-            alert("Punteggio inviato a WordPress!");
-            console.log("Risultato salvato:", data);
-        })
-        .catch(error => console.error("❌ Errore nel salvataggio del punteggio:", error));
+    function endQuiz() {
+        clearInterval(timer);
+        quizContainer.innerHTML = `<h2>Quiz completato!</h2><p>Punteggio: ${score}</p>`;
     }
 });
