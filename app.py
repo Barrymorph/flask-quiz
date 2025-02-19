@@ -39,25 +39,30 @@ def get_questions():
 
     selected_questions = []
 
-    if materia == "full":  # Test completo (100 domande)
+    if materia == "full":  # Test completo (100 domande suddivise tra le materie)
         questions_1 = load_questions(files["1"])
         questions_2 = load_questions(files["2"])
         questions_3 = load_questions(files["3"])
         questions_4 = load_questions(files["4"])
 
-        selected_questions.extend(random.sample(questions_1, min(45, len(questions_1))))
-        selected_questions.extend(random.sample(questions_2, min(25, len(questions_2))))
-        selected_questions.extend(random.sample(questions_3, min(20, len(questions_3))))
-        selected_questions.extend(random.sample(questions_4, min(10, len(questions_4))))
+        if len(questions_1) < 45 or len(questions_2) < 25 or len(questions_3) < 20 or len(questions_4) < 10:
+            return jsonify({"error": "Non ci sono abbastanza domande per il test completo"}), 400
+
+        selected_questions.extend(random.sample(questions_1, 45))
+        selected_questions.extend(random.sample(questions_2, 25))
+        selected_questions.extend(random.sample(questions_3, 20))
+        selected_questions.extend(random.sample(questions_4, 10))
 
     elif materia in files:
         questions = load_questions(files[materia])
-        selected_questions = random.sample(questions, min(num_questions, len(questions)))
+        if len(questions) < num_questions:
+            return jsonify({"error": "Numero di domande richieste superiore alla disponibilità"}), 400
+        selected_questions = random.sample(questions, num_questions)
 
     else:
         return jsonify({"error": "Materia non valida"}), 400
 
-    return jsonify(selected_questions)
+    return jsonify({"success": True, "questions": selected_questions})
 
 # Avvio dell'app Flask
 if __name__ == "__main__":
