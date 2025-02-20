@@ -57,7 +57,24 @@
 
             fullTestButton.addEventListener("click", function () {
                 const playerName = document.getElementById("player-name").value || "Anonimo";
-                window.location.href = "/start_quiz?materia=full&player=" + encodeURIComponent(playerName);
+
+                fetch("/get_questions", {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify({ materia: "full", num_questions: 100 })
+                })
+                .then(response => response.json())
+                .then(data => {
+                    if (!data.success) {
+                        alert("Errore nel caricamento delle domande: " + (data.error || "Risposta vuota"));
+                        return;
+                    }
+
+                    localStorage.setItem("quizQuestions", JSON.stringify(data.questions));
+                    localStorage.setItem("playerName", playerName);
+                    window.location.href = "/quiz";
+                })
+                .catch(error => console.error("❌ Errore nel caricamento delle domande:", error));
             });
         });
     </script>

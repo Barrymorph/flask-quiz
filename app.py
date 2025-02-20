@@ -1,10 +1,10 @@
-from flask import Flask, request, jsonify, render_template
-from flask_cors import CORS
 import os
 import json
 import random
+from flask import Flask, request, jsonify, render_template
+from flask_cors import CORS
 
-app = Flask(__name__)
+app = Flask(__name__, template_folder="templates", static_folder="static")
 CORS(app)
 
 # Percorso della cartella delle domande
@@ -31,10 +31,15 @@ def load_questions(filename):
         print(f"⚠️ Errore: file {filepath} non valido JSON.")
         return []
 
-# Route principale per servire l'index.html
+# Route per la homepage
 @app.route("/")
 def index():
     return render_template("index.html")
+
+# Route per la pagina del quiz
+@app.route("/start_quiz")
+def start_quiz():
+    return render_template("quiz.html")
 
 # Route per ottenere le domande
 @app.route("/get_questions", methods=["POST"])
@@ -45,13 +50,12 @@ def get_questions():
 
     selected_questions = []
 
-    if materia == "full":  # Test completo con 100 domande
+    if materia == "full":  # Test completo (100 domande)
         questions_1 = load_questions(files["1"])
         questions_2 = load_questions(files["2"])
         questions_3 = load_questions(files["3"])
         questions_4 = load_questions(files["4"])
 
-        # Verifica che ci siano abbastanza domande
         if len(questions_1) < 45 or len(questions_2) < 25 or len(questions_3) < 20 or len(questions_4) < 10:
             return jsonify({"error": "Non ci sono abbastanza domande disponibili."}), 400
 
@@ -69,7 +73,7 @@ def get_questions():
     else:
         return jsonify({"error": "Materia non valida"}), 400
 
-    # Mischia le opzioni di risposta per ogni domanda
+    # Mischia le opzioni delle risposte per ogni domanda
     for question in selected_questions:
         random.shuffle(question["options"])
 
