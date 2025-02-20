@@ -1,10 +1,10 @@
 import os
 import json
 import random
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, render_template
 from flask_cors import CORS
 
-app = Flask(__name__, static_folder="static", static_url_path="/static")
+app = Flask(__name__)
 CORS(app)
 
 # Percorso della cartella delle domande
@@ -23,7 +23,8 @@ def load_questions(filename):
     filepath = os.path.join(QUESTIONS_DIR, filename)
     try:
         with open(filepath, "r", encoding="utf-8") as f:
-            return json.load(f)
+            questions = json.load(f)
+            return questions
     except FileNotFoundError:
         print(f"⚠️ Errore: file {filepath} non trovato.")
         return []
@@ -31,7 +32,10 @@ def load_questions(filename):
         print(f"⚠️ Errore: file {filepath} non valido JSON.")
         return []
 
-# Route per ottenere le domande
+@app.route("/")
+def index():
+    return render_template("index.html")
+
 @app.route("/get_questions", methods=["POST"])
 def get_questions():
     data = request.get_json()
@@ -40,7 +44,7 @@ def get_questions():
 
     selected_questions = []
 
-    if materia == "full":  # Test completo (100 domande fisse)
+    if materia == "full":  # Test completo (100 domande)
         questions_1 = load_questions(files["1"])
         questions_2 = load_questions(files["2"])
         questions_3 = load_questions(files["3"])
@@ -53,7 +57,7 @@ def get_questions():
         selected_questions.extend(random.sample(questions_2, 25))
         selected_questions.extend(random.sample(questions_3, 20))
         selected_questions.extend(random.sample(questions_4, 10))
-
+    
     elif materia in files:
         questions = load_questions(files[materia])
         if len(questions) < num_questions:
@@ -63,18 +67,12 @@ def get_questions():
     else:
         return jsonify({"error": "Materia non valida"}), 400
 
-    # Mischia le opzioni delle domande
+    # Mischia le risposte di ogni domanda
     for question in selected_questions:
         random.shuffle(question["options"])
 
     return jsonify({"success": True, "questions": selected_questions})
 
-# Route per servire il file HTML
-@app.route("/")
-def home():
-    return app.send_static_file("index.html")
-
 # Avvio dell'app Flask
 if __name__ == "__main__":
-    port = int(os.environ.get("PORT", 5000))
-    app.run(debug=True, host="0.0.0.0", port=port)
+    app.run(debug=True, host="0.0.0.0", port=5000)
