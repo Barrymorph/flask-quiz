@@ -8,8 +8,6 @@ document.addEventListener("DOMContentLoaded", function () {
     const scoreDisplay = document.getElementById("score-display");
     const timerElement = document.getElementById("time-left");
 
-    const API_URL = "https://flask-quiz.onrender.com/get_questions";  // ✅ Usa URL corretto
-
     let playerName = "";
     let selectedMateria = "";
     let totalQuestions = 0;
@@ -30,7 +28,14 @@ document.addEventListener("DOMContentLoaded", function () {
     document.querySelectorAll(".test-btn").forEach(button => {
         button.addEventListener("click", function () {
             selectedMateria = this.getAttribute("data-materia");
-            questionOptions.style.display = "block";
+            if (selectedMateria === "full") {
+                totalQuestions = 100;
+                playerName = document.getElementById("player-name").value || "Anonimo";
+                setTimer();
+                fetchQuestions();
+            } else {
+                questionOptions.style.display = "block";
+            }
         });
     });
 
@@ -44,17 +49,15 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     function setTimer() {
-        if (totalQuestions === 30) timeRemaining = 1500;
-        else if (totalQuestions === 50) timeRemaining = 2100;
-        else if (totalQuestions === 70) timeRemaining = 3300;
-        else timeRemaining = 4500;
+        const timeMapping = { 30: 1500, 50: 2100, 70: 3300, 100: 4500 };
+        timeRemaining = timeMapping[totalQuestions] || 4500;
 
-        timerElement.innerText = Math.floor(timeRemaining / 60) + " min " + (timeRemaining % 60) + " sec";
+        timerElement.innerText = `${Math.floor(timeRemaining / 60)} min ${timeRemaining % 60} sec`;
         document.getElementById("timer").style.display = "block";
 
         timerInterval = setInterval(() => {
             timeRemaining--;
-            timerElement.innerText = Math.floor(timeRemaining / 60) + " min " + (timeRemaining % 60) + " sec";
+            timerElement.innerText = `${Math.floor(timeRemaining / 60)} min ${timeRemaining % 60} sec`;
 
             if (timeRemaining <= 0) {
                 clearInterval(timerInterval);
@@ -65,40 +68,34 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     function fetchQuestions() {
-    let requestBody = { materia: selectedMateria };
+        fetch("https://flask-quiz.onrender.com/get_questions", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({
+                materia: selectedMateria,
+                num_questions: totalQuestions
+            })
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (!data.success) {
+                alert("Errore nel caricamento delle domande: " + (data.error || "Risposta vuota"));
+                return;
+            }
 
-    // Se NON è un test completo, invia anche il numero di domande
-    if (selectedMateria !== "full") {
-        requestBody.num_questions = totalQuestions;
+            questions = data.questions.map(q => ({
+                ...q,
+                options: q.options.sort(() => Math.random() - 0.5)  // Mischia le risposte
+            }));
+
+            setupContainer.style.display = "none";
+            quizContainer.style.display = "block";
+            progressContainer.style.display = "block";
+            scoreDisplay.innerText = `Punteggio: 0`;
+            showQuestion();
+        })
+        .catch(error => console.error("❌ Errore nel caricamento delle domande:", error));
     }
-
-    fetch("https://flask-quiz.onrender.com/get_questions", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(requestBody)
-    })
-    .then(response => {
-        if (!response.ok) {
-            throw new Error("Errore HTTP, status " + response.status);
-        }
-        return response.json();
-    })
-    .then(data => {
-        if (!data.success) {
-            alert("Errore nel caricamento delle domande: " + (data.message || "Risposta vuota"));
-            return;
-        }
-
-        questions = data.questions;
-        setupContainer.style.display = "none";
-        quizContainer.style.display = "block";
-        progressContainer.style.display = "block";
-        scoreDisplay.innerText = `Punteggio: 0`;
-        showQuestion();
-    })
-    .catch(error => console.error("❌ Errore nel caricamento delle domande:", error));
-}
-
 
     function showQuestion() {
         if (currentQuestionIndex >= questions.length) {
@@ -154,7 +151,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     function updateProgress() {
         const progress = ((currentQuestionIndex + 1) / totalQuestions) * 100;
-        progressBar.style.width = progress + "%";
+        progressBar.style.width = Math.min(progress, 100) + "%";  // Impedisce che vada fuori bordo
     }
 
     function updateScore() {
