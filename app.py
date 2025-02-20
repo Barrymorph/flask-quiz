@@ -4,7 +4,7 @@ import random
 from flask import Flask, request, jsonify
 from flask_cors import CORS
 
-app = Flask(__name__)
+app = Flask(__name__, static_folder="static", static_url_path="/static")
 CORS(app)
 
 # Percorso della cartella delle domande
@@ -69,10 +69,10 @@ def get_questions():
 
     return jsonify({"success": True, "questions": selected_questions})
 
-# Route di test per verificare se il server è attivo
+# Route per servire il file HTML
 @app.route("/")
 def home():
-    return "Server Flask Attivo!"
+    return app.send_static_file("index.html")
 
 # Avvio dell'app Flask
 if __name__ == "__main__":

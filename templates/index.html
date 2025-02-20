@@ -24,7 +24,8 @@
             <button class="test-btn" data-materia="2">Cultura Generale</button>
             <button class="test-btn" data-materia="3">Informatica</button>
             <button class="test-btn" data-materia="4">Logica</button>
-            <button class="test-btn" data-materia="full">Test Completo (100 domande)</button>
+            <button class="test-btn" id="full-test-btn" data-materia="full">Test Completo (100 domande)</button>
+
             <div id="question-options" style="display: none;">
                 <h2>Quante domande vuoi?</h2>
                 <button class="num-questions" data-num="30">30</button>
@@ -43,6 +44,23 @@
             <p id="score-display">Punteggio: 0</p>
         </div>
     </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const startButton = document.getElementById("start-btn");
+            const fullTestButton = document.getElementById("full-test-btn");
+
+            startButton.addEventListener("click", function () {
+                document.getElementById("intro").style.display = "none";
+                document.getElementById("setup").style.display = "block";
+            });
+
+            fullTestButton.addEventListener("click", function () {
+                const playerName = document.getElementById("player-name").value || "Anonimo";
+                window.location.href = "/start_quiz?materia=full&player=" + encodeURIComponent(playerName);
+            });
+        });
+    </script>
 
 </body>
 </html>
