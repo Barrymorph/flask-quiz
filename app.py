@@ -1,11 +1,10 @@
 import os
 import json
 import random
-from flask import Flask, request, jsonify, render_template
+from flask import Flask, request, jsonify
 from flask_cors import CORS
 
-# Creazione dell'app Flask e configurazione delle cartelle statiche
-app = Flask(__name__, static_folder="static", template_folder="templates")
+app = Flask(__name__)
 CORS(app)
 
 # Percorso della cartella delle domande
@@ -31,11 +30,6 @@ def load_questions(filename):
     except json.JSONDecodeError:
         print(f"⚠️ Errore: file {filepath} non valido JSON.")
         return []
-
-# Route per servire la pagina HTML principale
-@app.route("/")
-def index():
-    return render_template("index.html")  # Assicurati che index.html sia in "templates/"
 
 # Route per ottenere le domande
 @app.route("/get_questions", methods=["POST"])
@@ -69,9 +63,19 @@ def get_questions():
     else:
         return jsonify({"error": "Materia non valida"}), 400
 
+    # Mischia le opzioni delle domande
+    for question in selected_questions:
+        options = question["options"]
+        random.shuffle(options)
+
     return jsonify({"success": True, "questions": selected_questions})
 
-# Avvio dell'app Flask con Gunicorn
+# Route di test per verificare se il server è attivo
+@app.route("/")
+def home():
+    return "Server Flask Attivo!"
+
+# Avvio dell'app Flask
 if __name__ == "__main__":
-    port = int(os.environ.get("PORT", 5000))  # Usa la variabile d'ambiente PORT se disponibile
+    port = int(os.environ.get("PORT", 5000))
     app.run(debug=True, host="0.0.0.0", port=port)
