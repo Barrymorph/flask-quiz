@@ -62,7 +62,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     function fetchQuestions() {
-        fetch("/get_questions", {
+        fetch("https://flask-quiz.onrender.com/get_questions", {  // URL corretto per il server Flask
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({
@@ -70,14 +70,19 @@ document.addEventListener("DOMContentLoaded", function () {
                 num_questions: totalQuestions
             })
         })
-        .then(response => response.json())
+        .then(response => {
+            if (!response.ok) {
+                throw new Error("Errore HTTP, status " + response.status);
+            }
+            return response.json();
+        })
         .then(data => {
-            if (!data || data.error) {
-                alert("Errore nel caricamento delle domande: " + (data.error || "Risposta vuota"));
+            if (!data.success) {
+                alert("Errore nel caricamento delle domande: " + (data.message || "Risposta vuota"));
                 return;
             }
 
-            questions = data;
+            questions = data.questions;
             setupContainer.style.display = "none";
             quizContainer.style.display = "block";
             progressContainer.style.display = "block";
