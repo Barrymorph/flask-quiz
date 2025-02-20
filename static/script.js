@@ -1,5 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
     const startButton = document.getElementById("start-btn");
+    const fullTestButton = document.getElementById("full-test-btn");
     const setupContainer = document.getElementById("setup");
     const questionOptions = document.getElementById("question-options");
     const quizContainer = document.getElementById("quiz-container");
@@ -20,25 +21,20 @@ document.addEventListener("DOMContentLoaded", function () {
     let timeRemaining = 0;
     let timerInterval;
 
-    const API_URL = "https://flask-quiz.onrender.com/get_questions";
-
     startButton.addEventListener("click", function () {
         document.getElementById("intro").style.display = "none";
         setupContainer.style.display = "block";
     });
 
+    fullTestButton.addEventListener("click", function () {
+        playerName = document.getElementById("player-name").value || "Anonimo";
+        fetchQuestions("full", 100);  // ✅ Avvia il test completo con 100 domande
+    });
+
     document.querySelectorAll(".test-btn").forEach(button => {
         button.addEventListener("click", function () {
             selectedMateria = this.getAttribute("data-materia");
-
-            if (selectedMateria === "full") {
-                totalQuestions = 100; // Test completo ha sempre 100 domande
-                playerName = document.getElementById("player-name").value || "Anonimo";
-                setTimer();
-                fetchQuestions();
-            } else {
-                questionOptions.style.display = "block";
-            }
+            questionOptions.style.display = "block";
         });
     });
 
@@ -47,7 +43,7 @@ document.addEventListener("DOMContentLoaded", function () {
             totalQuestions = parseInt(this.getAttribute("data-num"));
             playerName = document.getElementById("player-name").value || "Anonimo";
             setTimer();
-            fetchQuestions();
+            fetchQuestions(selectedMateria, totalQuestions);
         });
     });
 
@@ -72,14 +68,11 @@ document.addEventListener("DOMContentLoaded", function () {
         }, 1000);
     }
 
-    function fetchQuestions() {
-        fetch(API_URL, {
+    function fetchQuestions(materia, num_questions) {
+        fetch("https://flask-quiz.onrender.com/get_questions", {  // ✅ URL corretto per Flask
             method: "POST",
             headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({
-                materia: selectedMateria,
-                num_questions: totalQuestions
-            })
+            body: JSON.stringify({ materia, num_questions })
         })
         .then(response => response.json())
         .then(data => {
@@ -89,8 +82,7 @@ document.addEventListener("DOMContentLoaded", function () {
             }
 
             questions = data.questions;
-            questions.forEach(q => q.options = shuffleArray(q.options)); // Mischia le risposte
-
+            shuffleAnswers(); // ✅ Mischia le risposte
             setupContainer.style.display = "none";
             quizContainer.style.display = "block";
             progressContainer.style.display = "block";
@@ -98,6 +90,12 @@ document.addEventListener("DOMContentLoaded", function () {
             showQuestion();
         })
         .catch(error => console.error("❌ Errore nel caricamento delle domande:", error));
+    }
+
+    function shuffleAnswers() {
+        questions.forEach(question => {
+            question.options = question.options.sort(() => Math.random() - 0.5);
+        });
     }
 
     function showQuestion() {
@@ -188,11 +186,10 @@ document.addEventListener("DOMContentLoaded", function () {
             body: formData
         })
         .then(response => response.text())
-        .then(data => console.log("Punteggio inviato a WordPress!"))
+        .then(data => {
+            alert("Punteggio inviato a WordPress!");
+            console.log("Risultato salvato:", data);
+        })
         .catch(error => console.error("❌ Errore nel salvataggio del punteggio:", error));
-    }
-
-    function shuffleArray(array) {
-        return array.sort(() => Math.random() - 0.5);
     }
 });
