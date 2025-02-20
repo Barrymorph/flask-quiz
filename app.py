@@ -40,7 +40,7 @@ def get_questions():
 
     selected_questions = []
 
-    if materia == "full":  # Test completo (100 domande)
+    if materia == "full":  # Test completo (100 domande fisse)
         questions_1 = load_questions(files["1"])
         questions_2 = load_questions(files["2"])
         questions_3 = load_questions(files["3"])
@@ -65,8 +65,7 @@ def get_questions():
 
     # Mischia le opzioni delle domande
     for question in selected_questions:
-        options = question["options"]
-        random.shuffle(options)
+        random.shuffle(question["options"])
 
     return jsonify({"success": True, "questions": selected_questions})
 
