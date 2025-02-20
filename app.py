@@ -1,16 +1,17 @@
 import os
 import json
 import random
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, render_template
 from flask_cors import CORS
 
-app = Flask(__name__)
+# Creazione dell'app Flask e configurazione delle cartelle statiche
+app = Flask(__name__, static_folder="static", template_folder="templates")
 CORS(app)
 
-# 📂 Percorso della cartella delle domande
+# Percorso della cartella delle domande
 QUESTIONS_DIR = os.path.join(os.getcwd(), "questions")
 
-# 📌 Mappa dei file JSON per ogni materia
+# Mappa dei file JSON per ogni materia
 files = {
     "1": "materia1.json",
     "2": "materia2.json",
@@ -18,7 +19,7 @@ files = {
     "4": "materia4.json"
 }
 
-# 📥 Funzione per caricare le domande da un file JSON
+# Funzione per caricare le domande da un file JSON
 def load_questions(filename):
     filepath = os.path.join(QUESTIONS_DIR, filename)
     try:
@@ -31,7 +32,12 @@ def load_questions(filename):
         print(f"⚠️ Errore: file {filepath} non valido JSON.")
         return []
 
-# 🔄 Route per ottenere le domande
+# Route per servire la pagina HTML principale
+@app.route("/")
+def index():
+    return render_template("index.html")  # Assicurati che index.html sia in "templates/"
+
+# Route per ottenere le domande
 @app.route("/get_questions", methods=["POST"])
 def get_questions():
     data = request.get_json()
@@ -40,8 +46,7 @@ def get_questions():
 
     selected_questions = []
 
-    # 🟢 Test completo (100 domande)
-    if materia == "full":
+    if materia == "full":  # Test completo (100 domande)
         questions_1 = load_questions(files["1"])
         questions_2 = load_questions(files["2"])
         questions_3 = load_questions(files["3"])
@@ -55,7 +60,6 @@ def get_questions():
         selected_questions.extend(random.sample(questions_3, 20))
         selected_questions.extend(random.sample(questions_4, 10))
 
-    # 🟢 Test di una singola materia
     elif materia in files:
         questions = load_questions(files[materia])
         if len(questions) < num_questions:
@@ -67,12 +71,7 @@ def get_questions():
 
     return jsonify({"success": True, "questions": selected_questions})
 
-# ✅ Route di test per verificare che il server funzioni
-@app.route("/")
-def home():
-    return "Server Flask Attivo!"
-
-# 🚀 Avvio dell'app Flask su Render
+# Avvio dell'app Flask con Gunicorn
 if __name__ == "__main__":
-    port = int(os.environ.get("PORT", 10000))
+    port = int(os.environ.get("PORT", 5000))  # Usa la variabile d'ambiente PORT se disponibile
     app.run(debug=True, host="0.0.0.0", port=port)
