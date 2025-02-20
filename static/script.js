@@ -7,6 +7,9 @@ document.addEventListener("DOMContentLoaded", function () {
     const progressContainer = document.getElementById("progress");
     const scoreDisplay = document.getElementById("score-display");
     const timerElement = document.getElementById("time-left");
+
+    const API_URL = "https://flask-quiz.onrender.com/get_questions";  // ✅ Usa URL corretto
+
     let playerName = "";
     let selectedMateria = "";
     let totalQuestions = 0;
@@ -41,10 +44,10 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     function setTimer() {
-        if (totalQuestions === 30) timeRemaining = 1500; // 25 min
-        else if (totalQuestions === 50) timeRemaining = 2100; // 35 min
-        else if (totalQuestions === 70) timeRemaining = 3300; // 55 min
-        else timeRemaining = 4500; // 100 domande = 75 min
+        if (totalQuestions === 30) timeRemaining = 1500;
+        else if (totalQuestions === 50) timeRemaining = 2100;
+        else if (totalQuestions === 70) timeRemaining = 3300;
+        else timeRemaining = 4500;
 
         timerElement.innerText = Math.floor(timeRemaining / 60) + " min " + (timeRemaining % 60) + " sec";
         document.getElementById("timer").style.display = "block";
@@ -62,7 +65,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     function fetchQuestions() {
-        fetch("https://flask-quiz.onrender.com/get_questions", {  // URL corretto per il server Flask
+        fetch(API_URL, {  // ✅ Usa l'URL completo
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({
@@ -72,7 +75,7 @@ document.addEventListener("DOMContentLoaded", function () {
         })
         .then(response => {
             if (!response.ok) {
-                throw new Error("Errore HTTP, status " + response.status);
+                throw new Error(`Errore HTTP ${response.status}`);
             }
             return response.json();
         })
@@ -89,7 +92,10 @@ document.addEventListener("DOMContentLoaded", function () {
             scoreDisplay.innerText = `Punteggio: 0`;
             showQuestion();
         })
-        .catch(error => console.error("❌ Errore nel caricamento delle domande:", error));
+        .catch(error => {
+            console.error("❌ Errore nel caricamento delle domande:", error);
+            alert("Impossibile caricare le domande. Controlla la connessione o riprova più tardi.");
+        });
     }
 
     function showQuestion() {
@@ -103,22 +109,22 @@ document.addEventListener("DOMContentLoaded", function () {
         const questionData = questions[currentQuestionIndex];
         quizContainer.innerHTML = `<h2>${questionData.question}</h2>`;
 
-        questionData.options.forEach((option, index) => {
+        questionData.options.forEach(option => {
             const button = document.createElement("button");
             button.textContent = option;
             button.classList.add("option");
             button.addEventListener("click", function () {
                 if (option === questionData.answer) {
-                    button.style.backgroundColor = "green"; // Risposta corretta
+                    button.style.backgroundColor = "green";
                     score += 1;
                     correctAnswers++;
                 } else {
-                    button.style.backgroundColor = "red"; // Risposta errata
+                    button.style.backgroundColor = "red";
                     score -= 0.33;
                     wrongAnswers++;
                     document.querySelectorAll(".option").forEach(btn => {
                         if (btn.textContent === questionData.answer) {
-                            btn.style.backgroundColor = "green"; // Mostra la risposta giusta
+                            btn.style.backgroundColor = "green";
                         }
                     });
                 }
