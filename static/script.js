@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const progressContainer = document.getElementById("progress");
     const scoreDisplay = document.getElementById("score-display");
     const timerElement = document.getElementById("time-left");
-
+    
     let playerName = "";
     let selectedMateria = "";
     let totalQuestions = 0;
@@ -20,6 +20,8 @@ document.addEventListener("DOMContentLoaded", function () {
     let timeRemaining = 0;
     let timerInterval;
 
+    const API_URL = "https://flask-quiz.onrender.com/get_questions";
+
     startButton.addEventListener("click", function () {
         document.getElementById("intro").style.display = "none";
         setupContainer.style.display = "block";
@@ -28,8 +30,9 @@ document.addEventListener("DOMContentLoaded", function () {
     document.querySelectorAll(".test-btn").forEach(button => {
         button.addEventListener("click", function () {
             selectedMateria = this.getAttribute("data-materia");
+
             if (selectedMateria === "full") {
-                totalQuestions = 100;
+                totalQuestions = 100; // Test completo ha sempre 100 domande
                 playerName = document.getElementById("player-name").value || "Anonimo";
                 setTimer();
                 fetchQuestions();
@@ -49,15 +52,17 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     function setTimer() {
-        const timeMapping = { 30: 1500, 50: 2100, 70: 3300, 100: 4500 };
-        timeRemaining = timeMapping[totalQuestions] || 4500;
+        if (totalQuestions === 30) timeRemaining = 1500; // 25 min
+        else if (totalQuestions === 50) timeRemaining = 2100; // 35 min
+        else if (totalQuestions === 70) timeRemaining = 3300; // 55 min
+        else timeRemaining = 4500; // 100 domande = 75 min
 
-        timerElement.innerText = `${Math.floor(timeRemaining / 60)} min ${timeRemaining % 60} sec`;
+        timerElement.innerText = Math.floor(timeRemaining / 60) + " min " + (timeRemaining % 60) + " sec";
         document.getElementById("timer").style.display = "block";
 
         timerInterval = setInterval(() => {
             timeRemaining--;
-            timerElement.innerText = `${Math.floor(timeRemaining / 60)} min ${timeRemaining % 60} sec`;
+            timerElement.innerText = Math.floor(timeRemaining / 60) + " min " + (timeRemaining % 60) + " sec";
 
             if (timeRemaining <= 0) {
                 clearInterval(timerInterval);
@@ -68,36 +73,32 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     function fetchQuestions() {
-    fetch("https://flask-quiz.onrender.com/get_questions", {  
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-            materia: selectedMateria,
-            num_questions: selectedMateria === "full" ? 100 : totalQuestions 
+        fetch(API_URL, {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({
+                materia: selectedMateria,
+                num_questions: totalQuestions
+            })
         })
-    })
-    .then(response => {
-        if (!response.ok) {
-            throw new Error("Errore HTTP, status " + response.status);
-        }
-        return response.json();
-    })
-    .then(data => {
-        if (!data.success) {
-            alert("Errore nel caricamento delle domande: " + (data.message || "Risposta vuota"));
-            return;
-        }
+        .then(response => response.json())
+        .then(data => {
+            if (!data.success) {
+                alert("Errore nel caricamento delle domande: " + (data.message || "Risposta vuota"));
+                return;
+            }
 
-        questions = data.questions;
-        setupContainer.style.display = "none";
-        quizContainer.style.display = "block";
-        progressContainer.style.display = "block";
-        scoreDisplay.innerText = `Punteggio: 0`;
-        showQuestion();
-    })
-    .catch(error => console.error("❌ Errore nel caricamento delle domande:", error));
-}
+            questions = data.questions;
+            questions.forEach(q => q.options = shuffleArray(q.options)); // Mischia le risposte
 
+            setupContainer.style.display = "none";
+            quizContainer.style.display = "block";
+            progressContainer.style.display = "block";
+            scoreDisplay.innerText = `Punteggio: 0`;
+            showQuestion();
+        })
+        .catch(error => console.error("❌ Errore nel caricamento delle domande:", error));
+    }
 
     function showQuestion() {
         if (currentQuestionIndex >= questions.length) {
@@ -116,16 +117,16 @@ document.addEventListener("DOMContentLoaded", function () {
             button.classList.add("option");
             button.addEventListener("click", function () {
                 if (option === questionData.answer) {
-                    button.style.backgroundColor = "green";
+                    button.style.backgroundColor = "green"; // Risposta corretta
                     score += 1;
                     correctAnswers++;
                 } else {
-                    button.style.backgroundColor = "red";
+                    button.style.backgroundColor = "red"; // Risposta errata
                     score -= 0.33;
                     wrongAnswers++;
                     document.querySelectorAll(".option").forEach(btn => {
                         if (btn.textContent === questionData.answer) {
-                            btn.style.backgroundColor = "green";
+                            btn.style.backgroundColor = "green"; // Mostra la risposta giusta
                         }
                     });
                 }
@@ -153,7 +154,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     function updateProgress() {
         const progress = ((currentQuestionIndex + 1) / totalQuestions) * 100;
-        progressBar.style.width = Math.min(progress, 100) + "%";  // Impedisce che vada fuori bordo
+        progressBar.style.width = progress + "%";
     }
 
     function updateScore() {
@@ -187,10 +188,11 @@ document.addEventListener("DOMContentLoaded", function () {
             body: formData
         })
         .then(response => response.text())
-        .then(data => {
-            alert("Punteggio inviato a WordPress!");
-            console.log("Risultato salvato:", data);
-        })
+        .then(data => console.log("Punteggio inviato a WordPress!"))
         .catch(error => console.error("❌ Errore nel salvataggio del punteggio:", error));
+    }
+
+    function shuffleArray(array) {
+        return array.sort(() => Math.random() - 0.5);
     }
 });
