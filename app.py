@@ -1,8 +1,8 @@
+from flask import Flask, request, jsonify, render_template
+from flask_cors import CORS
 import os
 import json
 import random
-from flask import Flask, request, jsonify, render_template
-from flask_cors import CORS
 
 app = Flask(__name__)
 CORS(app)
@@ -23,8 +23,7 @@ def load_questions(filename):
     filepath = os.path.join(QUESTIONS_DIR, filename)
     try:
         with open(filepath, "r", encoding="utf-8") as f:
-            questions = json.load(f)
-            return questions
+            return json.load(f)
     except FileNotFoundError:
         print(f"⚠️ Errore: file {filepath} non trovato.")
         return []
@@ -32,10 +31,12 @@ def load_questions(filename):
         print(f"⚠️ Errore: file {filepath} non valido JSON.")
         return []
 
+# Route principale per servire l'index.html
 @app.route("/")
 def index():
     return render_template("index.html")
 
+# Route per ottenere le domande
 @app.route("/get_questions", methods=["POST"])
 def get_questions():
     data = request.get_json()
@@ -44,12 +45,13 @@ def get_questions():
 
     selected_questions = []
 
-    if materia == "full":  # Test completo (100 domande)
+    if materia == "full":  # Test completo con 100 domande
         questions_1 = load_questions(files["1"])
         questions_2 = load_questions(files["2"])
         questions_3 = load_questions(files["3"])
         questions_4 = load_questions(files["4"])
 
+        # Verifica che ci siano abbastanza domande
         if len(questions_1) < 45 or len(questions_2) < 25 or len(questions_3) < 20 or len(questions_4) < 10:
             return jsonify({"error": "Non ci sono abbastanza domande disponibili."}), 400
 
@@ -57,7 +59,7 @@ def get_questions():
         selected_questions.extend(random.sample(questions_2, 25))
         selected_questions.extend(random.sample(questions_3, 20))
         selected_questions.extend(random.sample(questions_4, 10))
-    
+
     elif materia in files:
         questions = load_questions(files[materia])
         if len(questions) < num_questions:
@@ -67,7 +69,7 @@ def get_questions():
     else:
         return jsonify({"error": "Materia non valida"}), 400
 
-    # Mischia le risposte di ogni domanda
+    # Mischia le opzioni di risposta per ogni domanda
     for question in selected_questions:
         random.shuffle(question["options"])
 

@@ -68,34 +68,36 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     function fetchQuestions() {
-        fetch("https://flask-quiz.onrender.com/get_questions", {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({
-                materia: selectedMateria,
-                num_questions: totalQuestions
-            })
+    fetch("https://flask-quiz.onrender.com/get_questions", {  
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+            materia: selectedMateria,
+            num_questions: selectedMateria === "full" ? 100 : totalQuestions 
         })
-        .then(response => response.json())
-        .then(data => {
-            if (!data.success) {
-                alert("Errore nel caricamento delle domande: " + (data.error || "Risposta vuota"));
-                return;
-            }
+    })
+    .then(response => {
+        if (!response.ok) {
+            throw new Error("Errore HTTP, status " + response.status);
+        }
+        return response.json();
+    })
+    .then(data => {
+        if (!data.success) {
+            alert("Errore nel caricamento delle domande: " + (data.message || "Risposta vuota"));
+            return;
+        }
 
-            questions = data.questions.map(q => ({
-                ...q,
-                options: q.options.sort(() => Math.random() - 0.5)  // Mischia le risposte
-            }));
+        questions = data.questions;
+        setupContainer.style.display = "none";
+        quizContainer.style.display = "block";
+        progressContainer.style.display = "block";
+        scoreDisplay.innerText = `Punteggio: 0`;
+        showQuestion();
+    })
+    .catch(error => console.error("❌ Errore nel caricamento delle domande:", error));
+}
 
-            setupContainer.style.display = "none";
-            quizContainer.style.display = "block";
-            progressContainer.style.display = "block";
-            scoreDisplay.innerText = `Punteggio: 0`;
-            showQuestion();
-        })
-        .catch(error => console.error("❌ Errore nel caricamento delle domande:", error));
-    }
 
     function showQuestion() {
         if (currentQuestionIndex >= questions.length) {
