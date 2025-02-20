@@ -31,6 +31,11 @@ def load_questions(filename):
         print(f"⚠️ Errore: file {filepath} non valido JSON.")
         return []
 
+# Route per verificare che il server sia attivo
+@app.route("/")
+def home():
+    return "✅ Server Flask Attivo!"
+
 # Route per ottenere le domande
 @app.route("/get_questions", methods=["POST"])
 def get_questions():
@@ -65,6 +70,7 @@ def get_questions():
 
     return jsonify({"success": True, "questions": selected_questions})
 
-# Avvio dell'app Flask
+# Avvio dell'app Flask con Gunicorn
 if __name__ == "__main__":
-    app.run(debug=True, host="0.0.0.0", port=5000)
+    port = int(os.environ.get("PORT", 5000))
+    app.run(debug=True, host="0.0.0.0", port=port)
