@@ -1,10 +1,10 @@
 import os
 import json
 import random
-from flask import Flask, request, jsonify, render_template
+from flask import Flask, render_template, request, jsonify
 from flask_cors import CORS
 
-app = Flask(__name__, template_folder="templates", static_folder="static")
+app = Flask(__name__)
 CORS(app)
 
 # Percorso della cartella delle domande
@@ -31,15 +31,10 @@ def load_questions(filename):
         print(f"⚠️ Errore: file {filepath} non valido JSON.")
         return []
 
-# Route per la homepage
+# Route principale
 @app.route("/")
 def index():
     return render_template("index.html")
-
-# Route per la pagina del quiz
-@app.route("/start_quiz")
-def start_quiz():
-    return render_template("quiz.html")
 
 # Route per ottenere le domande
 @app.route("/get_questions", methods=["POST"])
@@ -73,7 +68,7 @@ def get_questions():
     else:
         return jsonify({"error": "Materia non valida"}), 400
 
-    # Mischia le opzioni delle risposte per ogni domanda
+    # Mischia le opzioni delle domande
     for question in selected_questions:
         random.shuffle(question["options"])
 
@@ -81,4 +76,5 @@ def get_questions():
 
 # Avvio dell'app Flask
 if __name__ == "__main__":
-    app.run(debug=True, host="0.0.0.0", port=5000)
+    port = int(os.environ.get("PORT", 5000))
+    app.run(debug=True, host="0.0.0.0", port=port)

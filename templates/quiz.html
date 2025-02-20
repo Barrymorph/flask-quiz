@@ -10,16 +10,24 @@
 <body>
 
     <div class="container">
-        <h1>🎓 Quiz Online</h1>
-        <div id="quiz-container"></div>
-        <p id="timer" style="display: none;">Tempo rimanente: <span id="time-left">60</span> secondi</p>
+        <h1>🎓 Quiz in corso</h1>
+        <p id="quiz-title"></p>
 
-        <div id="progress" style="display: none;">
+        <div id="quiz-container">
+            <h2 id="question-text"></h2>
+            <div id="answer-buttons"></div>
+        </div>
+
+        <p id="timer">Tempo rimanente: <span id="time-left">60</span> secondi</p>
+
+        <div id="progress">
             <div id="progress-container">
                 <div id="progress-bar"></div>
             </div>
             <p id="score-display">Punteggio: 0</p>
         </div>
+
+        <button id="next-btn" style="display: none;">Prossima domanda</button>
     </div>
 
 </body>

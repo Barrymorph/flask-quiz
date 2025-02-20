@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const progressContainer = document.getElementById("progress");
     const scoreDisplay = document.getElementById("score-display");
     const timerElement = document.getElementById("time-left");
-    
+
     let playerName = "";
     let selectedMateria = "";
     let totalQuestions = 0;
@@ -26,15 +26,16 @@ document.addEventListener("DOMContentLoaded", function () {
         setupContainer.style.display = "block";
     });
 
-    fullTestButton.addEventListener("click", function () {
-        playerName = document.getElementById("player-name").value || "Anonimo";
-        fetchQuestions("full", 100);  // ✅ Avvia il test completo con 100 domande
-    });
-
     document.querySelectorAll(".test-btn").forEach(button => {
         button.addEventListener("click", function () {
             selectedMateria = this.getAttribute("data-materia");
-            questionOptions.style.display = "block";
+
+            if (selectedMateria === "full") {
+                playerName = document.getElementById("player-name").value || "Anonimo";
+                fetchQuestions(true);
+            } else {
+                questionOptions.style.display = "block";
+            }
         });
     });
 
@@ -42,37 +43,19 @@ document.addEventListener("DOMContentLoaded", function () {
         button.addEventListener("click", function () {
             totalQuestions = parseInt(this.getAttribute("data-num"));
             playerName = document.getElementById("player-name").value || "Anonimo";
-            setTimer();
-            fetchQuestions(selectedMateria, totalQuestions);
+            fetchQuestions(false);
         });
     });
 
-    function setTimer() {
-        if (totalQuestions === 30) timeRemaining = 1500; // 25 min
-        else if (totalQuestions === 50) timeRemaining = 2100; // 35 min
-        else if (totalQuestions === 70) timeRemaining = 3300; // 55 min
-        else timeRemaining = 4500; // 100 domande = 75 min
+    function fetchQuestions(isFullTest) {
+        let requestBody = isFullTest
+            ? { materia: "full" }
+            : { materia: selectedMateria, num_questions: totalQuestions };
 
-        timerElement.innerText = Math.floor(timeRemaining / 60) + " min " + (timeRemaining % 60) + " sec";
-        document.getElementById("timer").style.display = "block";
-
-        timerInterval = setInterval(() => {
-            timeRemaining--;
-            timerElement.innerText = Math.floor(timeRemaining / 60) + " min " + (timeRemaining % 60) + " sec";
-
-            if (timeRemaining <= 0) {
-                clearInterval(timerInterval);
-                alert("Tempo scaduto! Il quiz è terminato.");
-                sendResults();
-            }
-        }, 1000);
-    }
-
-    function fetchQuestions(materia, num_questions) {
-        fetch("https://flask-quiz.onrender.com/get_questions", {  // ✅ URL corretto per Flask
+        fetch("https://flask-quiz.onrender.com/get_questions", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({ materia, num_questions })
+            body: JSON.stringify(requestBody)
         })
         .then(response => response.json())
         .then(data => {
@@ -81,8 +64,11 @@ document.addEventListener("DOMContentLoaded", function () {
                 return;
             }
 
-            questions = data.questions;
-            shuffleAnswers(); // ✅ Mischia le risposte
+            questions = data.questions.map(q => ({
+                ...q,
+                options: shuffleArray(q.options) // Mischia le risposte
+            }));
+
             setupContainer.style.display = "none";
             quizContainer.style.display = "block";
             progressContainer.style.display = "block";
@@ -92,10 +78,8 @@ document.addEventListener("DOMContentLoaded", function () {
         .catch(error => console.error("❌ Errore nel caricamento delle domande:", error));
     }
 
-    function shuffleAnswers() {
-        questions.forEach(question => {
-            question.options = question.options.sort(() => Math.random() - 0.5);
-        });
+    function shuffleArray(array) {
+        return array.sort(() => Math.random() - 0.5);
     }
 
     function showQuestion() {
@@ -112,21 +96,16 @@ document.addEventListener("DOMContentLoaded", function () {
         questionData.options.forEach(option => {
             const button = document.createElement("button");
             button.textContent = option;
-            button.classList.add("option");
+            button.classList.add("answer-btn");
             button.addEventListener("click", function () {
                 if (option === questionData.answer) {
-                    button.style.backgroundColor = "green"; // Risposta corretta
+                    button.classList.add("correct");
                     score += 1;
                     correctAnswers++;
                 } else {
-                    button.style.backgroundColor = "red"; // Risposta errata
+                    button.classList.add("wrong");
                     score -= 0.33;
                     wrongAnswers++;
-                    document.querySelectorAll(".option").forEach(btn => {
-                        if (btn.textContent === questionData.answer) {
-                            btn.style.backgroundColor = "green"; // Mostra la risposta giusta
-                        }
-                    });
                 }
                 updateScore();
                 setTimeout(() => {
@@ -137,21 +116,11 @@ document.addEventListener("DOMContentLoaded", function () {
             quizContainer.appendChild(button);
         });
 
-        const skipButton = document.createElement("button");
-        skipButton.textContent = "Salta";
-        skipButton.classList.add("skip-btn");
-        skipButton.addEventListener("click", function () {
-            skippedAnswers++;
-            currentQuestionIndex++;
-            showQuestion();
-        });
-        quizContainer.appendChild(skipButton);
-
         updateProgress();
     }
 
     function updateProgress() {
-        const progress = ((currentQuestionIndex + 1) / totalQuestions) * 100;
+        const progress = ((currentQuestionIndex + 1) / questions.length) * 100;
         progressBar.style.width = progress + "%";
     }
 
@@ -163,9 +132,9 @@ document.addEventListener("DOMContentLoaded", function () {
         quizContainer.innerHTML = `
             <h2>Quiz terminato!</h2>
             <p><strong>Punteggio finale:</strong> ${score.toFixed(2)}</p>
-            <p><strong>Risposte corrette:</strong> ${correctAnswers} (${((correctAnswers / totalQuestions) * 100).toFixed(2)}%)</p>
-            <p><strong>Risposte sbagliate:</strong> ${wrongAnswers} (${((wrongAnswers / totalQuestions) * 100).toFixed(2)}%)</p>
-            <p><strong>Domande saltate:</strong> ${skippedAnswers} (${((skippedAnswers / totalQuestions) * 100).toFixed(2)}%)</p>
+            <p><strong>Risposte corrette:</strong> ${correctAnswers} (${((correctAnswers / questions.length) * 100).toFixed(2)}%)</p>
+            <p><strong>Risposte sbagliate:</strong> ${wrongAnswers} (${((wrongAnswers / questions.length) * 100).toFixed(2)}%)</p>
+            <p><strong>Domande saltate:</strong> ${skippedAnswers} (${((skippedAnswers / questions.length) * 100).toFixed(2)}%)</p>
             <button onclick="location.reload()">Riprova il Test</button>
         `;
     }
@@ -175,11 +144,11 @@ document.addEventListener("DOMContentLoaded", function () {
         formData.append("action", "save_quiz_score");
         formData.append("user_name", playerName);
         formData.append("test_type", selectedMateria);
-        formData.append("total_questions", totalQuestions);
+        formData.append("total_questions", questions.length);
         formData.append("score", score.toFixed(2));
-        formData.append("correct_percentage", ((correctAnswers / totalQuestions) * 100).toFixed(2));
-        formData.append("wrong_percentage", ((wrongAnswers / totalQuestions) * 100).toFixed(2));
-        formData.append("skipped_percentage", ((skippedAnswers / totalQuestions) * 100).toFixed(2));
+        formData.append("correct_percentage", ((correctAnswers / questions.length) * 100).toFixed(2));
+        formData.append("wrong_percentage", ((wrongAnswers / questions.length) * 100).toFixed(2));
+        formData.append("skipped_percentage", ((skippedAnswers / questions.length) * 100).toFixed(2));
 
         fetch("https://www.generazionefuturacaivano.it/wp-admin/admin-post.php", {
             method: "POST",
