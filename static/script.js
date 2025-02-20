@@ -65,38 +65,40 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     function fetchQuestions() {
-        fetch(API_URL, {  // ✅ Usa l'URL completo
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({
-                materia: selectedMateria,
-                num_questions: totalQuestions
-            })
-        })
-        .then(response => {
-            if (!response.ok) {
-                throw new Error(`Errore HTTP ${response.status}`);
-            }
-            return response.json();
-        })
-        .then(data => {
-            if (!data.success) {
-                alert("Errore nel caricamento delle domande: " + (data.message || "Risposta vuota"));
-                return;
-            }
+    let requestBody = { materia: selectedMateria };
 
-            questions = data.questions;
-            setupContainer.style.display = "none";
-            quizContainer.style.display = "block";
-            progressContainer.style.display = "block";
-            scoreDisplay.innerText = `Punteggio: 0`;
-            showQuestion();
-        })
-        .catch(error => {
-            console.error("❌ Errore nel caricamento delle domande:", error);
-            alert("Impossibile caricare le domande. Controlla la connessione o riprova più tardi.");
-        });
+    // Se NON è un test completo, invia anche il numero di domande
+    if (selectedMateria !== "full") {
+        requestBody.num_questions = totalQuestions;
     }
+
+    fetch("https://flask-quiz.onrender.com/get_questions", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(requestBody)
+    })
+    .then(response => {
+        if (!response.ok) {
+            throw new Error("Errore HTTP, status " + response.status);
+        }
+        return response.json();
+    })
+    .then(data => {
+        if (!data.success) {
+            alert("Errore nel caricamento delle domande: " + (data.message || "Risposta vuota"));
+            return;
+        }
+
+        questions = data.questions;
+        setupContainer.style.display = "none";
+        quizContainer.style.display = "block";
+        progressContainer.style.display = "block";
+        scoreDisplay.innerText = `Punteggio: 0`;
+        showQuestion();
+    })
+    .catch(error => console.error("❌ Errore nel caricamento delle domande:", error));
+}
+
 
     function showQuestion() {
         if (currentQuestionIndex >= questions.length) {
