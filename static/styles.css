@@ -74,8 +74,7 @@ button:hover {
 
 #time-left {
     position: absolute;
-    width: 100%;
-    text-align: center;
+    left: 10px; /* Sposta la scritta a sinistra */
     top: 50%;
     transform: translateY(-50%);
     font-weight: bold;
