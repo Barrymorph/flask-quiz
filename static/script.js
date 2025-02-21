@@ -1,42 +1,61 @@
 document.addEventListener("DOMContentLoaded", function () {
     const startButton = document.getElementById("start-btn");
-    const testButtons = document.querySelectorAll(".test-btn");
+    const fullTestButton = document.getElementById("full-test-btn");
+    const setupContainer = document.getElementById("setup");
+    const questionOptions = document.getElementById("question-options");
     const quizContainer = document.getElementById("quiz-container");
     const progressBar = document.getElementById("progress-bar");
+    const progressContainer = document.getElementById("progress");
     const scoreDisplay = document.getElementById("score-display");
     const timerElement = document.getElementById("time-left");
+
     let playerName = "";
     let selectedMateria = "";
-    let questions = [];
+    let totalQuestions = 0;
     let currentQuestionIndex = 0;
     let score = 0;
     let correctAnswers = 0;
     let wrongAnswers = 0;
     let skippedAnswers = 0;
+    let questions = [];
     let timeRemaining = 0;
     let timerInterval;
 
-    if (startButton) {
-        startButton.addEventListener("click", function () {
-            document.getElementById("intro").style.display = "none";
-            document.getElementById("setup").style.display = "block";
-        });
-    }
+    startButton.addEventListener("click", function () {
+        document.getElementById("intro").style.display = "none";
+        setupContainer.style.display = "block";
+    });
 
-    testButtons.forEach(button => {
+    document.querySelectorAll(".test-btn").forEach(button => {
         button.addEventListener("click", function () {
             selectedMateria = this.getAttribute("data-materia");
-            playerName = document.getElementById("player-name").value || "Anonimo";
 
-            fetchQuestions();
+            if (selectedMateria === "full") {
+                playerName = document.getElementById("player-name").value || "Anonimo";
+                fetchQuestions(true);
+            } else {
+                questionOptions.style.display = "block";
+            }
         });
     });
 
-    function fetchQuestions() {
-        fetch("https://flask-quiz.onrender.com/get_questions", { 
+    document.querySelectorAll(".num-questions").forEach(button => {
+        button.addEventListener("click", function () {
+            totalQuestions = parseInt(this.getAttribute("data-num"));
+            playerName = document.getElementById("player-name").value || "Anonimo";
+            fetchQuestions(false);
+        });
+    });
+
+    function fetchQuestions(isFullTest) {
+        let requestBody = isFullTest
+            ? { materia: "full" }
+            : { materia: selectedMateria, num_questions: totalQuestions };
+
+        fetch("https://flask-quiz.onrender.com/get_questions", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({ materia: selectedMateria })
+            body: JSON.stringify(requestBody)
         })
         .then(response => response.json())
         .then(data => {
@@ -44,31 +63,23 @@ document.addEventListener("DOMContentLoaded", function () {
                 alert("Errore nel caricamento delle domande: " + (data.message || "Risposta vuota"));
                 return;
             }
-            questions = data.questions;
-            document.getElementById("setup").style.display = "none";
+
+            questions = data.questions.map(q => ({
+                ...q,
+                options: shuffleArray(q.options) // Mischia le risposte
+            }));
+
+            setupContainer.style.display = "none";
             quizContainer.style.display = "block";
+            progressContainer.style.display = "block";
             scoreDisplay.innerText = `Punteggio: 0`;
-            startTimer();
             showQuestion();
         })
         .catch(error => console.error("❌ Errore nel caricamento delle domande:", error));
     }
 
-    function startTimer() {
-        timeRemaining = questions.length * 30;
-        timerElement.innerText = Math.floor(timeRemaining / 60) + " min " + (timeRemaining % 60) + " sec";
-        document.getElementById("timer").style.display = "block";
-
-        timerInterval = setInterval(() => {
-            timeRemaining--;
-            timerElement.innerText = Math.floor(timeRemaining / 60) + " min " + (timeRemaining % 60) + " sec";
-
-            if (timeRemaining <= 0) {
-                clearInterval(timerInterval);
-                alert("Tempo scaduto! Il quiz è terminato.");
-                sendResults();
-            }
-        }, 1000);
+    function shuffleArray(array) {
+        return array.sort(() => Math.random() - 0.5);
     }
 
     function showQuestion() {
@@ -82,26 +93,19 @@ document.addEventListener("DOMContentLoaded", function () {
         const questionData = questions[currentQuestionIndex];
         quizContainer.innerHTML = `<h2>${questionData.question}</h2>`;
 
-        const options = [...questionData.options].sort(() => Math.random() - 0.5); 
-
-        options.forEach(option => {
+        questionData.options.forEach(option => {
             const button = document.createElement("button");
             button.textContent = option;
-            button.classList.add("option");
+            button.classList.add("answer-btn");
             button.addEventListener("click", function () {
                 if (option === questionData.answer) {
-                    button.style.backgroundColor = "green";
+                    button.classList.add("correct");
                     score += 1;
                     correctAnswers++;
                 } else {
-                    button.style.backgroundColor = "red";
+                    button.classList.add("wrong");
                     score -= 0.33;
                     wrongAnswers++;
-                    document.querySelectorAll(".option").forEach(btn => {
-                        if (btn.textContent === questionData.answer) {
-                            btn.style.backgroundColor = "green";
-                        }
-                    });
                 }
                 updateScore();
                 setTimeout(() => {
@@ -111,16 +115,6 @@ document.addEventListener("DOMContentLoaded", function () {
             });
             quizContainer.appendChild(button);
         });
-
-        const skipButton = document.createElement("button");
-        skipButton.textContent = "Salta";
-        skipButton.classList.add("skip-btn");
-        skipButton.addEventListener("click", function () {
-            skippedAnswers++;
-            currentQuestionIndex++;
-            showQuestion();
-        });
-        quizContainer.appendChild(skipButton);
 
         updateProgress();
     }
