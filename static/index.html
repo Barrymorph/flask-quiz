@@ -5,17 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quiz Online</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
-    <script src="{{ url_for('static', filename='script.js') }}" defer></script>
 </head>
 <body>
 
     <div class="container">
         <h1>🎓 Benvenuto al Quiz!</h1>
+        
+        <!-- Schermata iniziale -->
         <div id="intro">
             <p>Premi il pulsante per iniziare!</p>
             <button id="start-btn">Inizia il Test</button>
         </div>
 
+        <!-- Setup del quiz -->
         <div id="setup" style="display: none;">
             <h2>Inserisci il tuo nome</h2>
             <input type="text" id="player-name" placeholder="Nome...">
@@ -34,9 +36,16 @@
             </div>
         </div>
 
-        <div id="quiz-container" style="display: none;"></div>
-        <p id="timer" style="display: none;">Tempo rimanente: <span id="time-left">60</span> secondi</p>
+        <!-- Timer visibile sopra le domande -->
+        <div id="timer-container" style="display: none;">
+            <div id="timer-bar"></div>
+            <span id="time-left">Tempo rimasto: 30s</span>
+        </div>
 
+        <!-- Contenitore del quiz -->
+        <div id="quiz-container" style="display: none;"></div>
+
+        <!-- Barra di progresso e punteggio -->
         <div id="progress" style="display: none;">
             <div id="progress-container">
                 <div id="progress-bar"></div>
@@ -45,39 +54,7 @@
         </div>
     </div>
 
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const startButton = document.getElementById("start-btn");
-            const fullTestButton = document.getElementById("full-test-btn");
-
-            startButton.addEventListener("click", function () {
-                document.getElementById("intro").style.display = "none";
-                document.getElementById("setup").style.display = "block";
-            });
-
-            fullTestButton.addEventListener("click", function () {
-                const playerName = document.getElementById("player-name").value || "Anonimo";
-
-                fetch("/get_questions", {
-                    method: "POST",
-                    headers: { "Content-Type": "application/json" },
-                    body: JSON.stringify({ materia: "full", num_questions: 100 })
-                })
-                .then(response => response.json())
-                .then(data => {
-                    if (!data.success) {
-                        alert("Errore nel caricamento delle domande: " + (data.error || "Risposta vuota"));
-                        return;
-                    }
-
-                    localStorage.setItem("quizQuestions", JSON.stringify(data.questions));
-                    localStorage.setItem("playerName", playerName);
-                    window.location.href = "/quiz";
-                })
-                .catch(error => console.error("❌ Errore nel caricamento delle domande:", error));
-            });
-        });
-    </script>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
 
 </body>
 </html>

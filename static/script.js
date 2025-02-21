@@ -1,13 +1,14 @@
 document.addEventListener("DOMContentLoaded", function () {
     const startButton = document.getElementById("start-btn");
-    const fullTestButton = document.getElementById("full-test-btn");
     const setupContainer = document.getElementById("setup");
     const questionOptions = document.getElementById("question-options");
     const quizContainer = document.getElementById("quiz-container");
     const progressBar = document.getElementById("progress-bar");
     const progressContainer = document.getElementById("progress");
     const scoreDisplay = document.getElementById("score-display");
+    const timerContainer = document.getElementById("timer-container");
     const timerElement = document.getElementById("time-left");
+    const timerBar = document.getElementById("timer-bar");
 
     let playerName = "";
     let selectedMateria = "";
@@ -72,6 +73,7 @@ document.addEventListener("DOMContentLoaded", function () {
             setupContainer.style.display = "none";
             quizContainer.style.display = "block";
             progressContainer.style.display = "block";
+            timerContainer.style.display = "block"; // Mostra il timer
             scoreDisplay.innerText = `Punteggio: 0`;
             showQuestion();
         })
@@ -93,9 +95,11 @@ document.addEventListener("DOMContentLoaded", function () {
         const questionData = questions[currentQuestionIndex];
         quizContainer.innerHTML = `<h2>${questionData.question}</h2>`;
 
-        // Aggiunta del timer
+        // Imposta il timer a 30 secondi
         timeRemaining = 30;
         updateTimerDisplay();
+        
+        // Resetta il timer precedente
         clearInterval(timerInterval);
         timerInterval = setInterval(() => {
             timeRemaining--;
@@ -133,7 +137,7 @@ document.addEventListener("DOMContentLoaded", function () {
             quizContainer.appendChild(button);
         });
 
-        // Aggiunta del pulsante "Salta"
+        // Pulsante "Salta"
         const skipButton = document.createElement("button");
         skipButton.textContent = "Salta";
         skipButton.classList.add("skip-btn");
@@ -150,6 +154,24 @@ document.addEventListener("DOMContentLoaded", function () {
 
     function updateTimerDisplay() {
         timerElement.innerText = `Tempo rimasto: ${timeRemaining}s`;
+        
+        // Calcola la percentuale di tempo rimanente
+        const percent = (timeRemaining / 30) * 100;
+        
+        // Modifica la larghezza della barra del timer
+        timerBar.style.width = percent + "%";
+        
+        // Cambia colore della barra in base al tempo rimanente
+        if (timeRemaining <= 10) {
+            timerBar.classList.remove("medium-time", "high-time");
+            timerBar.classList.add("low-time");
+        } else if (timeRemaining <= 20) {
+            timerBar.classList.remove("low-time", "high-time");
+            timerBar.classList.add("medium-time");
+        } else {
+            timerBar.classList.remove("low-time", "medium-time");
+            timerBar.classList.add("high-time");
+        }
     }
 
     function updateProgress() {
@@ -170,28 +192,5 @@ document.addEventListener("DOMContentLoaded", function () {
             <p><strong>Domande saltate:</strong> ${skippedAnswers} (${((skippedAnswers / questions.length) * 100).toFixed(2)}%)</p>
             <button onclick="location.reload()">Riprova il Test</button>
         `;
-    }
-
-    function sendResults() {
-        const formData = new FormData();
-        formData.append("action", "save_quiz_score");
-        formData.append("user_name", playerName);
-        formData.append("test_type", selectedMateria);
-        formData.append("total_questions", questions.length);
-        formData.append("score", score.toFixed(2));
-        formData.append("correct_percentage", ((correctAnswers / questions.length) * 100).toFixed(2));
-        formData.append("wrong_percentage", ((wrongAnswers / questions.length) * 100).toFixed(2));
-        formData.append("skipped_percentage", ((skippedAnswers / questions.length) * 100).toFixed(2));
-
-        fetch("https://www.generazionefuturacaivano.it/wp-admin/admin-post.php", {
-            method: "POST",
-            body: formData
-        })
-        .then(response => response.text())
-        .then(data => {
-            alert("Punteggio inviato a WordPress!");
-            console.log("Risultato salvato:", data);
-        })
-        .catch(error => console.error("❌ Errore nel salvataggio del punteggio:", error));
     }
 });

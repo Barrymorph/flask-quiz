@@ -53,15 +53,49 @@ button:hover {
     color: white;
 }
 
-/* Stile per il timer */
-#timer {
-    font-size: 20px;
-    font-weight: bold;
+/* Stile per il timer visibile */
+#timer-container {
+    width: 100%;
+    background-color: #ddd;
+    border-radius: 5px;
+    position: relative;
+    height: 25px;
     margin-top: 15px;
-    color: #d9534f;
+    overflow: hidden;
+    display: none; /* Inizialmente nascosto */
 }
 
-/* Barra di avanzamento */
+#timer-bar {
+    height: 100%;
+    width: 100%;
+    background-color: green;
+    transition: width 1s linear;
+}
+
+#time-left {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    top: 50%;
+    transform: translateY(-50%);
+    font-weight: bold;
+    color: black;
+}
+
+/* Cambio colore della barra del timer */
+.low-time {
+    background-color: red !important;
+}
+
+.medium-time {
+    background-color: orange !important;
+}
+
+.high-time {
+    background-color: green !important;
+}
+
+/* Barra di avanzamento del quiz */
 #progress-container {
     width: 100%;
     background-color: #ddd;
@@ -84,6 +118,17 @@ button:hover {
     font-size: 18px;
     margin-top: 10px;
     font-weight: bold;
+}
+
+/* Stile per il pulsante "Salta" */
+.skip-btn {
+    background-color: #FFA500;
+    color: white;
+    font-weight: bold;
+}
+
+.skip-btn:hover {
+    background-color: #FF8C00;
 }
 
 /* Stile per la schermata finale */
