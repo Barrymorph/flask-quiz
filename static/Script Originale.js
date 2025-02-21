@@ -66,7 +66,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
             questions = data.questions.map(q => ({
                 ...q,
-                options: shuffleArray(q.options)
+                options: shuffleArray(q.options) // Mischia le risposte
             }));
 
             setupContainer.style.display = "none";
@@ -93,28 +93,11 @@ document.addEventListener("DOMContentLoaded", function () {
         const questionData = questions[currentQuestionIndex];
         quizContainer.innerHTML = `<h2>${questionData.question}</h2>`;
 
-        // Aggiunta del timer
-        timeRemaining = 30;
-        updateTimerDisplay();
-        clearInterval(timerInterval);
-        timerInterval = setInterval(() => {
-            timeRemaining--;
-            updateTimerDisplay();
-
-            if (timeRemaining <= 0) {
-                clearInterval(timerInterval);
-                skippedAnswers++;
-                currentQuestionIndex++;
-                showQuestion();
-            }
-        }, 1000);
-
         questionData.options.forEach(option => {
             const button = document.createElement("button");
             button.textContent = option;
             button.classList.add("answer-btn");
             button.addEventListener("click", function () {
-                clearInterval(timerInterval);
                 if (option === questionData.answer) {
                     button.classList.add("correct");
                     score += 1;
@@ -133,23 +116,7 @@ document.addEventListener("DOMContentLoaded", function () {
             quizContainer.appendChild(button);
         });
 
-        // Aggiunta del pulsante "Salta"
-        const skipButton = document.createElement("button");
-        skipButton.textContent = "Salta";
-        skipButton.classList.add("skip-btn");
-        skipButton.addEventListener("click", function () {
-            clearInterval(timerInterval);
-            skippedAnswers++;
-            currentQuestionIndex++;
-            showQuestion();
-        });
-        quizContainer.appendChild(skipButton);
-
         updateProgress();
-    }
-
-    function updateTimerDisplay() {
-        timerElement.innerText = `Tempo rimasto: ${timeRemaining}s`;
     }
 
     function updateProgress() {
