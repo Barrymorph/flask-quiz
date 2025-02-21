@@ -88,7 +88,7 @@ document.addEventListener("DOMContentLoaded", function () {
         if (currentQuestionIndex >= questions.length) {
             clearInterval(timerInterval);
             showFinalScore();
-            sendResults();
+            sendResults(); // INVIO RISULTATI A WORDPRESS
             return;
         }
 
@@ -163,14 +163,11 @@ document.addEventListener("DOMContentLoaded", function () {
         
         // Cambia colore della barra in base al tempo rimanente
         if (timeRemaining <= 10) {
-            timerBar.classList.remove("medium-time", "high-time");
-            timerBar.classList.add("low-time");
+            timerBar.style.backgroundColor = "red";
         } else if (timeRemaining <= 20) {
-            timerBar.classList.remove("low-time", "high-time");
-            timerBar.classList.add("medium-time");
+            timerBar.style.backgroundColor = "orange";
         } else {
-            timerBar.classList.remove("low-time", "medium-time");
-            timerBar.classList.add("high-time");
+            timerBar.style.backgroundColor = "green";
         }
     }
 
@@ -192,5 +189,28 @@ document.addEventListener("DOMContentLoaded", function () {
             <p><strong>Domande saltate:</strong> ${skippedAnswers} (${((skippedAnswers / questions.length) * 100).toFixed(2)}%)</p>
             <button onclick="location.reload()">Riprova il Test</button>
         `;
+    }
+
+    function sendResults() {
+        const formData = new FormData();
+        formData.append("action", "save_quiz_score");
+        formData.append("user_name", playerName);
+        formData.append("test_type", selectedMateria);
+        formData.append("total_questions", questions.length);
+        formData.append("score", score.toFixed(2));
+        formData.append("correct_percentage", ((correctAnswers / questions.length) * 100).toFixed(2));
+        formData.append("wrong_percentage", ((wrongAnswers / questions.length) * 100).toFixed(2));
+        formData.append("skipped_percentage", ((skippedAnswers / questions.length) * 100).toFixed(2));
+
+        fetch("https://www.generazionefuturacaivano.it/wp-admin/admin-post.php", {
+            method: "POST",
+            body: formData
+        })
+        .then(response => response.text())
+        .then(data => {
+            alert("✅ Punteggio inviato con successo a WordPress!");
+            console.log("📩 Risultato salvato:", data);
+        })
+        .catch(error => console.error("❌ Errore nel salvataggio del punteggio:", error));
     }
 });
